@@ -51,13 +51,13 @@ function NavbarLinkedin() {
           <BellFill className="fs-5 ms-4" /> <h6 className="me-4">Notifiche</h6>
         </div>
 
-        <div className="d-flex flex-column justify-content-center align-items-center">
-          <PersonCircle className="text-secondary fs-5 me-4" />
-          <Nav className="ms-1 ">
+        <div className="d-flex flex-column justify-content-center align-items-center position-relative">
+          <PersonCircle className="text-secondary me-4 position-absolute top-0 start-50 translate-middle-x" />
+          <Nav className="ms-2 mt-2">
             <NavDropdown
               title="Tu"
               id="basic-nav-dropdown"
-              className=" text-secondary me-4"
+              className=" text-secondary"
             >
               <h6 className="ms-3 mt-2">Account</h6>
               <NavDropdown.Item href="#action/3.2">
