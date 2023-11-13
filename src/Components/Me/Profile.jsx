@@ -3,9 +3,12 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
 import "./Profile.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import LoadingSpinner from "./LoadingSpinner";
 
 function Profile() {
+   const [userData, setUserData] = useState(null);
+
    useEffect(() => {
       fetch(`https://striveschool-api.herokuapp.com/api/profile/me`, {
          headers: {
@@ -21,6 +24,7 @@ function Profile() {
          })
          .then((data) => {
             console.log("data retreaved fine!", data);
+            setUserData(data);
          })
          .catch((err) => console.log("ERROR: ", err));
    }, []);
@@ -29,18 +33,51 @@ function Profile() {
       <Container>
          <Row>
             <Col className="position-relative mx-2 px-0">
-               <Image
-                  className="profile-pic position-absolute start-0 top-0 mt-5 rounded-circle border border-white border-5 ms-3"
-                  src="https://placekitten.com/100"
-                  alt="profile picture"
-               />
-               <div className="profile-bg rounded-top">
-                  <Image
-                     className="profile-bg rounded-top"
-                     src="https://placekitten.com/800"
-                  />
-               </div>
-               <div className="color-2 profile-details rounded-bottom">ds</div>
+               {!userData && <LoadingSpinner />}
+               {userData && (
+                  <>
+                     <Image
+                        className="profile-pic position-absolute start-0 top-0 mt-5 rounded-circle border border-white border-5 ms-3"
+                        src={userData.image}
+                        alt="profile picture"
+                     />
+                     <div className="profile-cover rounded-top">
+                        <Image
+                           className="profile-cover rounded-top"
+                           src="https://placekitten.com/800"
+                           alt="profile-cover"
+                        />
+                     </div>
+                     <div className="color-2 profile-details rounded-bottom">
+                        <div className="ps-3 pt-5">
+                           <h5 className="mb-0">
+                              {userData.name} {userData.surname}
+                           </h5>
+                           <p className="mb-0 text-secondary">
+                              {userData.title}
+                           </p>
+
+                           <p className="mt-0 fs-7">
+                              {userData.area} &#x2022;{" "}
+                              <a
+                                 className="fw-bold link-underline link-underline-opacity-0"
+                                 href="#"
+                              >
+                                 Informazioni di contatto
+                              </a>
+                           </p>
+                           <p className="fs-7 fw-bold  ">
+                              <a
+                                 className="link-underline link-underline-opacity-0"
+                                 href="#"
+                              >
+                                 30 collegamenti
+                              </a>
+                           </p>
+                        </div>
+                     </div>
+                  </>
+               )}
             </Col>
          </Row>
       </Container>
