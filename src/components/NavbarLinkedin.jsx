@@ -1,4 +1,4 @@
-import { Container, Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
@@ -8,7 +8,7 @@ import { PeopleFill } from "react-bootstrap-icons";
 import { BellFill } from "react-bootstrap-icons";
 import { BriefcaseFill } from "react-bootstrap-icons";
 import { ChatDotsFill } from "react-bootstrap-icons";
-import { Grid3x3GapFill } from "react-bootstrap-icons";
+import { PersonCircle } from "react-bootstrap-icons";
 
 function NavbarLinkedin() {
   return (
@@ -51,8 +51,8 @@ function NavbarLinkedin() {
           <BellFill className="fs-5 ms-4" /> <h6 className="me-4">Notifiche</h6>
         </div>
 
-        <div className="d-flex flex-column justify-content-center align-items-center ">
-          <Grid3x3GapFill className="text-secondary me-4" />
+        <div className="d-flex flex-column justify-content-center align-items-center">
+          <PersonCircle className="text-secondary fs-5 me-4" />
           <Nav className="ms-1 ">
             <NavDropdown
               title="Tu"
