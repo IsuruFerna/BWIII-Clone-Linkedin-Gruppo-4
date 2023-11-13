@@ -26,3 +26,23 @@
    font-size: 0.8em;
    color: #888888;
 }
+
+.link-small {
+   color: #0d6efd;
+   cursor: pointer;
+}
+
+.link-small:hover {
+   text-decoration: underline;
+}
+
+#advice-button {
+   border: 1px solid gray !important;
+   border-radius: 999px;
+   color: gray;
+}
+#advice-button:hover {
+   border: 2px solid gray !important;
+   background-color: #e5e6e9;
+   padding-bottom: 4px;
+}
