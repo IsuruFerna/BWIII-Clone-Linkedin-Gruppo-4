@@ -7,11 +7,10 @@ import { useEffect } from "react";
 
 function Profile() {
    useEffect(() => {
-      fetch("https://striveschool-api.herokuapp.com/api/profile/me", {
+      fetch(`https://striveschool-api.herokuapp.com/api/profile/me`, {
          headers: {
-            "Content-Type": "application/json",
             Authorization:
-               "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTUxZWRmOGM1NWU3ZTAwMThmODNjMGUiLCJpYXQiOjE2OTk4NjgxNTIsImV4cCI6MTcwMTA3Nzc1Mn0.CBfPd6xhFicg1S-nnU0aS7XGgCdv1KkMH68c4w4c2OY",
+               "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTUxZWRmOGM1NWU3ZTAwMThmODNjMGUiLCJpYXQiOjE2OTk4NjgxNTIsImV4cCI6MTcwMTA3Nzc1Mn0.CBfPd6xhFicg1S-nnU0aS7XGgCdv1KkMH68c4w4c2OY",
          },
       })
          .then((response) => {
