@@ -1,7 +1,7 @@
-import MainContent from "../Components/Me/MainContent";
+import MainContent from "../Components/MainContent";
 
 const MePage = () => {
-   <MainContent />;
+   return <MainContent />;
 };
 
 export default MePage;
