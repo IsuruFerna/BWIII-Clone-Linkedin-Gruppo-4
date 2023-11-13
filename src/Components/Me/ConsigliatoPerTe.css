@@ -16,4 +16,37 @@
 }
 #close {
   cursor: pointer;
+  min-width: 12px;
+}
+span {
+  background-color: rgb(222, 219, 219);
+  border-radius: 10px;
+  padding: 3px 10px 3px 10px;
+}
+.list-group-flush {
+  border-left: 0 !important;
+  border-right: 0 !important;
+  border-bottom: 0 !important;
+  text-align: center;
+  color: gray !important;
+}
+b {
+  color: gray !important;
+}
+
+.list-group-item:hover {
+  background-color: rgb(222, 219, 219) !important;
+  cursor: pointer;
+}
+.pencil {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pencil:hover {
+  background-color: rgb(222, 219, 219);
 }

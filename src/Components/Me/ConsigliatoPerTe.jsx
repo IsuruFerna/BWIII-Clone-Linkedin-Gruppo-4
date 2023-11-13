@@ -7,7 +7,7 @@ import "./ConsigliatoPerTe.css";
 const ConsigliatoPerTe = () => {
   return (
     <>
-      <Container>
+      <Container className="my-3">
         <Row>
           <Col className="col-12">
             <Card>
