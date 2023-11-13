@@ -1,4 +1,4 @@
-import ConsigliatoPerTe from "../ConsigliatoPerTe";
+import ConsigliatoPerTe from "./Me/ConsigliatoPerTe";
 
 const { Container, Row, Col } = require("react-bootstrap");
 
