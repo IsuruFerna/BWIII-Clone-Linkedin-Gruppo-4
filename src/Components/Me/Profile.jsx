@@ -9,6 +9,7 @@ import Button from "react-bootstrap/Button";
 import Carousel from "react-bootstrap/Carousel";
 import Card from "react-bootstrap/Card";
 import ContactInfo from "./ContactInfo";
+import DetailsCard from "./DetailsCard";
 
 function Profile() {
    const [userData, setUserData] = useState(null);
@@ -113,73 +114,7 @@ function Profile() {
                         <div className="py-3 px-3">
                            {/* substitute carosel with models */}
                            {/* make full customized */}
-                           <Carousel>
-                              <Carousel.Item>
-                                 <div className="d-flex">
-                                    <Card className="w-100 flex-grow-1">
-                                       <Card.Body>
-                                          <Card.Title>
-                                             Disponobile a lovorare
-                                          </Card.Title>
-
-                                          <Card.Text>
-                                             Ruoli di Designer grafico, Web
-                                             desig...
-                                          </Card.Text>
-                                          <Card.Link href="#">
-                                             Mostra dettagli
-                                          </Card.Link>
-                                       </Card.Body>
-                                    </Card>
-                                    <Card className="w-100 flex-grow-1">
-                                       <Card.Body>
-                                          <Card.Title>
-                                             Fai sapere che stai facendo
-                                             selezione
-                                          </Card.Title>
-
-                                          <Card.Text>
-                                             e attrai candidati qualificati.
-                                          </Card.Text>
-                                          <Card.Link href="#">Inizia</Card.Link>
-                                       </Card.Body>
-                                    </Card>
-                                 </div>
-                              </Carousel.Item>
-                              <Carousel.Item>
-                                 <div className="d-flex">
-                                    <Card className="w-100 flex-grow-1">
-                                       <Card.Body>
-                                          <Card.Title>
-                                             Metti in risalto i servizi che
-                                             offri, così tu e la tua azienda
-                                             potrete apparire nei risultati di
-                                             ricerca.
-                                          </Card.Title>
-
-                                          {/* <Card.Text>
-                                             Ruoli di Designer grafico, Web
-                                             desig...
-                                          </Card.Text> */}
-                                          <Card.Link href="#">Inizia</Card.Link>
-                                       </Card.Body>
-                                    </Card>
-                                    <Card className="w-100 flex-grow-1">
-                                       <Card.Body>
-                                          <Card.Title>
-                                             Fai sapere che stai facendo
-                                             selezione
-                                          </Card.Title>
-
-                                          <Card.Text>
-                                             e attrai candidati qualificati.
-                                          </Card.Text>
-                                          <Card.Link href="#">Inizia</Card.Link>
-                                       </Card.Body>
-                                    </Card>
-                                 </div>
-                              </Carousel.Item>
-                           </Carousel>
+                           <DetailsCard handleShow={handleShow} />
                         </div>
                      </div>
                   </>
@@ -191,3 +126,55 @@ function Profile() {
 }
 
 export default Profile;
+
+// per rimuovere
+<>
+   <Carousel>
+      <Carousel.Item>
+         <div className="d-flex">
+            <Card className="w-100 flex-grow-1">
+               <Card.Body>
+                  <Card.Title>Disponobile a lovorare</Card.Title>
+
+                  <Card.Text>Ruoli di Designer grafico, Web desig...</Card.Text>
+                  <Card.Link href="#">Mostra dettagli</Card.Link>
+               </Card.Body>
+            </Card>
+            <Card className="w-100 flex-grow-1">
+               <Card.Body>
+                  <Card.Title>Fai sapere che stai facendo selezione</Card.Title>
+
+                  <Card.Text>e attrai candidati qualificati.</Card.Text>
+                  <Card.Link href="#">Inizia</Card.Link>
+               </Card.Body>
+            </Card>
+         </div>
+      </Carousel.Item>
+      <Carousel.Item>
+         <div className="d-flex">
+            <Card className="w-100 flex-grow-1">
+               <Card.Body>
+                  <Card.Title>
+                     Metti in risalto i servizi che offri, così tu e la tua
+                     azienda potrete apparire nei risultati di ricerca.
+                  </Card.Title>
+
+                  {/* <Card.Text>
+               Ruoli di Designer grafico, Web
+               desig...
+            </Card.Text> */}
+                  <Card.Link href="#">Inizia</Card.Link>
+               </Card.Body>
+            </Card>
+            <Card className="w-100 flex-grow-1">
+               <Card.Body>
+                  <Card.Title>Fai sapere che stai facendo selezione</Card.Title>
+
+                  <Card.Text>e attrai candidati qualificati.</Card.Text>
+                  <Card.Link href="#">Inizia</Card.Link>
+               </Card.Body>
+            </Card>
+         </div>
+      </Carousel.Item>
+   </Carousel>
+</>;
