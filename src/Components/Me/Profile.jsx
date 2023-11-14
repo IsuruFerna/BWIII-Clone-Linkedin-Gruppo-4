@@ -17,10 +17,12 @@ import {
   InfoSquareFill,
 } from "react-bootstrap-icons";
 import "./Profilestyle.css";
+import AggiungiEsperienza from "./AggiungiEsperienza";
 
 function Profile() {
   const [userData, setUserData] = useState(null);
   //  const [showInfomations, setShowInfomations] = useState(false);
+  const [modalShow, setModalShow] = useState(false);
 
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -101,9 +103,17 @@ function Profile() {
                   <Button className="rounded-5 me-2" variant="primary">
                     Disponobile per
                   </Button>
-                  <Button className="rounded-5 me-2" variant="outline-primary">
+                  <Button
+                    className="rounded-5 me-2"
+                    variant="outline-primary"
+                    onClick={() => setModalShow(true)}
+                  >
                     Aggiungi sezione del profilo
                   </Button>
+                  <AggiungiEsperienza
+                    show={modalShow}
+                    onHide={() => setModalShow(false)}
+                  ></AggiungiEsperienza>
                   <div id="backcolor">
                     <Dropdown className="d-flex justify-content-center">
                       <DropdownToggle

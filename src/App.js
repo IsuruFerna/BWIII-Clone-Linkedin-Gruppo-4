@@ -6,12 +6,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MePage from "./pages/MePage";
 import Footer from "./Components/main/footer";
 import NavbarLinkedin from "./Components/main/NavbarLinkedin";
+import AggiungiEsperienza from "./Components/Me/AggiungiEsperienza";
 
 function App() {
   return (
     <BrowserRouter>
       <NavbarLinkedin />
-
       <Routes>
         <Route element={<MePage />} path="/" />
       </Routes>
