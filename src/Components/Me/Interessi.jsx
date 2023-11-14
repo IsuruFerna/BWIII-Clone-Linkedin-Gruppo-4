@@ -67,7 +67,7 @@ const Interessi = () => {
             <Card.Title className="btn text-black fs-6 ps-0 pb-0">
               Intesa SanPaolo
             </Card.Title>
-            <Card.Text className="text-secondary">Dal</Card.Text>
+            <Card.Text className="text-secondary">Dal 2023</Card.Text>
           </Col>
         </Row>
         <hr />

@@ -27,6 +27,7 @@ const MePage = () => {
           <Experiences />
           <Competenze />
           <Formazione />
+          <Interessi />
         </Col>
         <Col className="col-2">
           <PotrestiConoscere />
