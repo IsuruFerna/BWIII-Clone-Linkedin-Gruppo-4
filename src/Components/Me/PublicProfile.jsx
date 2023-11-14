@@ -1,12 +1,24 @@
+import { Pencil } from "react-bootstrap-icons";
+
 const PublicProfile = () => {
   return (
     <div className="mb-3 d-flex flex-column">
       <div>
-        <div className="fw-bold">Lingua del profilo</div>
-        <div>
-          <p className="text-secondary">Italiano</p>
+        <div className="fw-bold d-flex justify-content-between">
+          <div>Lingua del profilo</div>
+          <div className="me-2">
+            <Pencil />
+          </div>
         </div>
-        <div className="fw-bold">Public profile & Url</div>
+        <div>
+          <div className="text-secondary">Italiano</div>
+        </div>
+        <div className="fw-bold d-flex justify-content-between">
+          <div>Public profile & Url</div>
+          <div className="me-2">
+            <Pencil />
+          </div>
+        </div>
         <div
           className="text-secondary smaller"
           style={{ "word-break": "break-all" }}
