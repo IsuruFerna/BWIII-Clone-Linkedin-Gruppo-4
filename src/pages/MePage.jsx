@@ -10,6 +10,7 @@ import Informazioni from "../Components/Me/Informazioni";
 import Attività from "../Components/Me/Attività";
 import Competenze from "../Components/Me/competenze";
 import Formazione from "../Components/Me/formazione";
+import AggiungiSezioneForm from "../Components/Me/AggiungiSezioneLavorativa";
 
 const MePage = () => {
    return (
@@ -24,6 +25,7 @@ const MePage = () => {
                <Attività />
                <Competenze />
                <Formazione />
+               
             </Col>
             <Col className="col-2">
                <PotrestiConoscere />

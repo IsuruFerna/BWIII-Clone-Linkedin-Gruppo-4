@@ -10,10 +10,14 @@ import Carousel from "react-bootstrap/Carousel";
 import Card from "react-bootstrap/Card";
 import ContactInfo from "./ContactInfo";
 import DetailsCard from "./DetailsCard";
+import AggiungiSezioneForm from "./AggiungiSezioneLavorativa";
+import { CloseButton } from "react-bootstrap";
 
 function Profile() {
    const [userData, setUserData] = useState(null);
    //  const [showInfomations, setShowInfomations] = useState(false);
+   const [showCard, setShowCard] = useState(false);
+
 
    const [show, setShow] = useState(false);
    const handleClose = () => setShow(false);
@@ -22,6 +26,14 @@ function Profile() {
    //  const showMoreInfo = () => {
    //     setShowInfomations(!showInfomations);
    //  };
+   const handleButtonClick = () => {
+      setShowCard(true);
+      
+    };
+
+    const closeCard = () => {
+      setShowCard(false);
+    };
 
    useEffect(() => {
       fetch(`https://striveschool-api.herokuapp.com/api/profile/me`, {
@@ -44,7 +56,11 @@ function Profile() {
    }, []);
 
    return (
+
+
       <Container>
+         
+         
          <Row>
             <Col className="position-relative mx-2 px-0">
                {!userData && <LoadingSpinner />}
@@ -57,7 +73,7 @@ function Profile() {
                            mail={userData.email}
                            user={"placeholder"}
                            name={userData.name}
-                           surname={userData.surname}
+                           surname={userData.surname} 
                         />
                      )}
                      <Image
@@ -73,6 +89,7 @@ function Profile() {
                            fluid
                         />
                      </div>
+                     
                      <div className="profile-details rounded-bottom">
                         <div className="ps-3 pt-5">
                            <h5 className="mb-0">
@@ -102,9 +119,26 @@ function Profile() {
                            <Button
                               className="rounded-5 me-2"
                               variant="outline-primary"
-                           >
+                              onClick={handleButtonClick }
+                           >{showCard && (
+                              
+                              <div className="overlay" >
+                              
+                              <AggiungiSezioneForm />
+                              
+                              
+
+                              </div>
+                              
+                              )}  
+                              
+                              <div className={showCard ? 'content blurred' : 'content'}></div>
+                             
+                              
                               Aggiungi sezione del profilo
                            </Button>
+                          
+                           
                            <Button
                               className="rounded-5"
                               variant="outline-secondary"
@@ -119,10 +153,13 @@ function Profile() {
                         </div>
                      </div>
                   </div>
-               )}
+              )}
             </Col>
          </Row>
       </Container>
+
+
+
    );
 }
 
@@ -179,3 +216,5 @@ export default Profile;
       </Carousel.Item>
    </Carousel>
 </>;
+
+
