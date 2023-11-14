@@ -30,7 +30,7 @@ const User = ({ user, add }) => {
             </div>
             <Card.Body className="pt-5">
               <Card.Title className="fw-bolder">
-                {user.name} {user.surname} /{" "}
+                {user.name} {user.surname} /
                 <span className="text-secondary smaller fw-normal">
                   {user.username}
                 </span>

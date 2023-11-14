@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
 import SinglePerson from "./SinglePerson";
+import PublicProfile from "./PublicProfile";
 const PotrestiConoscere = () => {
   const [persons, setPersons] = useState([]);
   const getPersons = () => {
@@ -28,12 +29,7 @@ const PotrestiConoscere = () => {
   }, []);
   return (
     <div className="d-none d-lg-flex flex-column">
-      <Container fluid className="border rounded border-secondary mb-3">
-        <div>
-          <PublicProfile />
-        </div>
-      </Container>
-      <Container fluid className="border rounded border-secondary mb-3">
+      <Container fluid className="border shadow rounded mb-3">
         <div className="d-flex flex-column">
           <h5 className="fw-bold smaller my-2 fs-6">
             Altri profili consultati
@@ -47,7 +43,7 @@ const PotrestiConoscere = () => {
             })}
         </div>
       </Container>
-      <Container fluid className="border rounded border-secondary">
+      <Container fluid className="border shadow rounded">
         <div className="d-flex flex-column my-2">
           <h5 className="fw-bold smaller fs-6">
             Persone che potresti conoscere
