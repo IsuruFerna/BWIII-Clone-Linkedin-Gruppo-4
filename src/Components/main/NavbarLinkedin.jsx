@@ -24,7 +24,7 @@ import { PersonCircle } from "react-bootstrap-icons";
 
 function NavbarLinkedin() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className="bg-body-tertiary position-sticky top-0 z-3 ">
       <Container>
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/640px-LinkedIn_logo_initials.png"
@@ -68,6 +68,7 @@ function NavbarLinkedin() {
           <Nav className="ms-2 mt-2">
             <NavDropdown
               title="Tu"
+              align={{ lg: "end" }}
               id="basic-nav-dropdown"
               className="mt-1 text-secondary"
             >
@@ -95,6 +96,7 @@ function NavbarLinkedin() {
           <Grid3x3GapFill className=" fs-5 text-secondary position-absolute top-0 start-50 translate-middle-x" />
           <Nav className="me-auto mt-2">
             <NavDropdown
+              align={{ lg: "end" }}
               title="Per le aziende"
               id="basic-nav-dropdown"
               className="mb-1 mt-1 text-secondary"
