@@ -8,15 +8,16 @@ import Footer from "./Components/main/footer";
 import NavbarLinkedin from "./Components/main/NavbarLinkedin";
 
 function App() {
-   return (
-      <BrowserRouter>
-         <NavbarLinkedin />
-         <Routes>
-            <Route element={<MePage />} path="/" />
-         </Routes>
-         <Footer />
-      </BrowserRouter>
-   );
+  return (
+    <BrowserRouter>
+      <NavbarLinkedin />
+
+      <Routes>
+        <Route element={<MePage />} path="/" />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
+  );
 }
 
 export default App;

@@ -10,7 +10,13 @@ import Carousel from "react-bootstrap/Carousel";
 import Card from "react-bootstrap/Card";
 import ContactInfo from "./ContactInfo";
 import DetailsCard from "./DetailsCard";
-import AggiungiEsperienza from "./AggiungiEsperienza";
+import { Dropdown, DropdownToggle } from "react-bootstrap";
+import {
+  Arrow90degRight,
+  Download,
+  InfoSquareFill,
+} from "react-bootstrap-icons";
+import "./Profilestyle.css";
 
 function Profile() {
   const [userData, setUserData] = useState(null);
@@ -19,7 +25,6 @@ function Profile() {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  const [modalShow, setModalShow] = useState(false);
 
   //  const showMoreInfo = () => {
   //     setShowInfomations(!showInfomations);
@@ -92,24 +97,40 @@ function Profile() {
                     30 collegamenti
                   </p>
                 </div>
-                <div className="ps-3">
+                <div className="d-flex ps-3">
                   <Button className="rounded-5 me-2" variant="primary">
                     Disponobile per
                   </Button>
                   <Button className="rounded-5 me-2" variant="outline-primary">
                     Aggiungi sezione del profilo
                   </Button>
-                  <Button
-                    className="rounded-5"
-                    variant="outline-secondary"
-                    onClick={() => setModalShow(true)}
-                  >
-                    Altro
-                  </Button>
-                  <AggiungiEsperienza
-                    show={modalShow}
-                    onHide={() => setModalShow(false)}
-                  />
+                  <div id="backcolor">
+                    <Dropdown className="d-flex justify-content-center">
+                      <DropdownToggle
+                        variant="outline-secondary"
+                        id="dropdown-basic"
+                        className="rounded-5"
+                      >
+                        Altro
+                      </DropdownToggle>
+                      <Dropdown.Menu>
+                        <div id="menucolor" className="d-flex flex-column ">
+                          <Dropdown.Item href="#/action-1">
+                            <Arrow90degRight className="me-2" />
+                            Invia il profilo in un messaggio
+                          </Dropdown.Item>
+                          <Dropdown.Item href="#/action-2">
+                            <Download className="me-2" />
+                            Salva come PDF
+                          </Dropdown.Item>
+                          <Dropdown.Item href="#/action-3">
+                            <InfoSquareFill className="me-2" />
+                            Informazioni su questo profilo
+                          </Dropdown.Item>
+                        </div>
+                      </Dropdown.Menu>
+                    </Dropdown>
+                  </div>
                 </div>
                 <div className="py-3 px-3">
                   {/* substitute carosel with models */}
