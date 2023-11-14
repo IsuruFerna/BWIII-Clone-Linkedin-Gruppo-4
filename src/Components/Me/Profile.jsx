@@ -49,7 +49,7 @@ function Profile() {
             <Col className="position-relative mx-2 px-0">
                {!userData && <LoadingSpinner />}
                {userData && (
-                  <>
+                  <div className="border rounded">
                      {show && (
                         <ContactInfo
                            show={show}
@@ -68,11 +68,12 @@ function Profile() {
                      <div className="profile-cover rounded-top">
                         <Image
                            className="profile-cover rounded-top"
-                           src="https://placekitten.com/800"
+                           src="https://placedog.net/900/200"
                            alt="profile-cover"
+                           fluid
                         />
                      </div>
-                     <div className="color-2 profile-details rounded-bottom">
+                     <div className="profile-details rounded-bottom">
                         <div className="ps-3 pt-5">
                            <h5 className="mb-0">
                               {userData.name} {userData.surname}
@@ -117,7 +118,7 @@ function Profile() {
                            <DetailsCard handleShow={handleShow} />
                         </div>
                      </div>
-                  </>
+                  </div>
                )}
             </Col>
          </Row>
