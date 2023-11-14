@@ -16,7 +16,10 @@ const Attività = () => {
                   </div>
                   <div className="d-flex">
                     <div>
-                      <Button className="post" variant="rounded-pill me-3">
+                      <Button
+                        className="post"
+                        variant="rounded-pill me-3 fix-hover"
+                      >
                         Crea un post
                       </Button>
                     </div>

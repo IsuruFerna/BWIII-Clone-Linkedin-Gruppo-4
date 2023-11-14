@@ -12,7 +12,6 @@
 #advice-button:hover {
   border: 2px solid gray !important;
   background-color: #e5e6e9;
-  padding-bottom: 4px;
 }
 #close {
   cursor: pointer;
@@ -61,9 +60,10 @@ b {
   border: 2px solid rgb(0, 132, 255);
   background-color: #e2f0fe;
   color: rgb(0, 132, 255);
+  margin: -2px;
 }
 
-.modal-body {
+.alert-body {
   background-color: #edf3f8;
 }
 .personal-link {
@@ -77,7 +77,20 @@ b {
 .form-select:hover {
   border-radius: 8px;
   border: 2px solid gray;
+  margin: -1px;
 }
 .form-control:hover {
   border: 2px solid gray;
+  margin: -2px;
+}
+.modal-body {
+  height: 80vh;
+  overflow-y: auto;
+}
+
+.fix-hover:hover {
+  margin: -1px;
+}
+.fix-hover-2:hover {
+  margin: -2px;
 }
