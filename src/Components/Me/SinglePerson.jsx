@@ -1,4 +1,5 @@
 import { Col, Container, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const SinglePerson = ({ person }) => {
   return (
@@ -13,16 +14,24 @@ const SinglePerson = ({ person }) => {
             />
           </Col>
           <Col>
-            <div className="smaller">
-              {person.name} {person.surname} /{" "}
-              <span className="text-secondary extrasmall">
-                {person.username}
-              </span>
+            <div className="smaller fw-bold d-flex flex-column">
+              <div>
+                {person.name} {person.surname}
+              </div>
+              <div>
+                <span className="text-secondary extrasmall fw-normal">
+                  {person.username}
+                </span>
+              </div>
             </div>
 
-            <div className="extrasmall">
+            <div className="extrasmall my-1">
               <div>{person.title}</div>
-              <div>{person._id}</div>
+              <Link to={`/profile/${person._id}`}>
+                <div className="btn btn-primary smaller py-1 px-2">
+                  Visita profilo
+                </div>
+              </Link>
             </div>
           </Col>
         </Row>

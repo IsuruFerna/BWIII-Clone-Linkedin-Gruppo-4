@@ -28,21 +28,39 @@ const PotrestiConoscere = () => {
     getPersons();
   }, []);
   return (
-    <Container fluid className="border rounded border-secondary">
-      <div className="d-flex flex-column">
-        <h5 className="fw-bold smaller">Persone che potresti conoscere</h5>
-        <span className="color-secondary extrasmall">
-          Dalla tua scuola o università
-        </span>
-      </div>
-      <div>
-        {persons
-          .filter((allPersons, i) => i < 10)
-          .map((singlePerson) => {
-            return <SinglePerson person={singlePerson} />;
-          })}
-      </div>
-    </Container>
+    <div className="d-none d-lg-flex flex-column">
+      <Container fluid className="border rounded border-secondary mb-3">
+        <div className="d-flex flex-column">
+          <h5 className="fw-bold smaller my-2 fs-6">
+            Altri profili consultati
+          </h5>
+        </div>
+        <div>
+          {persons
+            .filter((allPersons, i) => i > 10 && i < 16)
+            .map((singlePerson) => {
+              return <SinglePerson person={singlePerson} />;
+            })}
+        </div>
+      </Container>
+      <Container fluid className="border rounded border-secondary">
+        <div className="d-flex flex-column my-2">
+          <h5 className="fw-bold smaller fs-6">
+            Persone che potresti conoscere
+          </h5>
+          <span className="color-secondary extrasmall">
+            Dalla tua scuola o università
+          </span>
+        </div>
+        <div>
+          {persons
+            .filter((allPersons, i) => i < 10)
+            .map((singlePerson) => {
+              return <SinglePerson person={singlePerson} />;
+            })}
+        </div>
+      </Container>
+    </div>
   );
 };
 export default PotrestiConoscere;
