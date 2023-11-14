@@ -12,13 +12,6 @@ const PotrestiConoscere = () => {
           "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTUxZWQ0ZmM1NWU3ZTAwMThmODNjMGEiLCJpYXQiOjE2OTk4Njc5ODMsImV4cCI6MTcwMTA3NzU4M30.VgwY5-_3HqrYK9L5mB8w_n1YsAqrCrIk6q-aQXvo0wU",
       },
     })
-      .then((res) => {
-        if (res.ok) {
-          return res.json();
-        } else {
-          throw new Error("Error while getting the datas");
-        }
-      })
       .then((datas) => {
         console.log(datas);
         setPersons(datas);
@@ -29,13 +22,31 @@ const PotrestiConoscere = () => {
     getPersons();
   }, []);
   return (
-    <>
-      <Container fluid>
-        <PublicProfile />
+    <div className="d-none d-lg-flex flex-column">
+      <Container fluid className="border rounded border-secondary mb-3">
+        <div>
+          <PublicProfile />
+        </div>
       </Container>
-      <Container fluid className="border rounded">
+      <Container fluid className="border rounded border-secondary mb-3">
         <div className="d-flex flex-column">
-          <h5 className="fw-bold smaller">Persone che potresti conoscere</h5>
+          <h5 className="fw-bold smaller my-2 fs-6">
+            Altri profili consultati
+          </h5>
+        </div>
+        <div>
+          {persons
+            .filter((allPersons, i) => i > 10 && i < 16)
+            .map((singlePerson) => {
+              return <SinglePerson person={singlePerson} />;
+            })}
+        </div>
+      </Container>
+      <Container fluid className="border rounded border-secondary">
+        <div className="d-flex flex-column my-2">
+          <h5 className="fw-bold smaller fs-6">
+            Persone che potresti conoscere
+          </h5>
           <span className="color-secondary extrasmall">
             Dalla tua scuola o università
           </span>
@@ -48,7 +59,7 @@ const PotrestiConoscere = () => {
             })}
         </div>
       </Container>
-    </>
+    </div>
   );
 };
 export default PotrestiConoscere;

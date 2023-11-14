@@ -1,40 +1,32 @@
-import { Container, Row, Col } from "react-bootstrap";
-
 import { Pencil } from "react-bootstrap-icons";
 
 const PublicProfile = () => {
   return (
-    <Container fluid>
-      <Row>
-        <Col className=" border-rounded">
-          <div className="mb-4 ">
-            <div className="d-flex justify-content-between fw-bold">
-              <div>
-                <p>Lingua del profilo</p>
-              </div>
-              <div>
-                <Pencil className="" />
-              </div>
-            </div>
-
-            <div>
-              <p className="text-start text-secondary ">Italiano</p>
-            </div>
-            <div>
-              <p className="fw-bold text-start">Public profile & Url</p>
-            </div>
-            <div>
-              <Pencil />
-            </div>
-            <div>
-              <p className="text-secondary ">
-                www.linkedin.com/in/angela-prestano-603240243
-              </p>
-            </div>
+    <div className="mb-3 d-flex flex-column">
+      <div>
+        <div className="fw-bold d-flex justify-content-between">
+          <div>Lingua del profilo</div>
+          <div className="me-2">
+            <Pencil />
           </div>
-        </Col>
-      </Row>
-    </Container>
+        </div>
+        <div>
+          <div className="text-secondary">Italiano</div>
+        </div>
+        <div className="fw-bold d-flex justify-content-between">
+          <div>Public profile & Url</div>
+          <div className="me-2">
+            <Pencil />
+          </div>
+        </div>
+        <div
+          className="text-secondary smaller"
+          style={{ "word-break": "break-all" }}
+        >
+          www.linkedin.com/in/angela-prestano-603240243
+        </div>
+      </div>
+    </div>
   );
 };
 
