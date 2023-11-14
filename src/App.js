@@ -1,7 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import "./Components/main/Navbar.css";
-import "./Components/Me/PublicProfile.css";
 import "./pages/MePage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MePage from "./pages/MePage";
