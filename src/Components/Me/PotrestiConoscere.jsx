@@ -30,12 +30,9 @@ const PotrestiConoscere = () => {
     <div className="d-none d-lg-flex flex-column mb-5">
       <Container
         fluid
-        className="border rounded border-secondary mb-3 bg-white"
+        className="border rounded border shadow mb-3 bg-white"
       ></Container>
-      <Container
-        fluid
-        className="border rounded border-secondary mb-3 bg-white"
-      >
+      <Container fluid className="border rounded border shadow mb-3 bg-white">
         <div className="d-flex flex-column">
           <h5 className="fw-bold smaller my-2 fs-6">
             Altri profili consultati

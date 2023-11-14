@@ -8,15 +8,13 @@ const Attività = () => {
       <Container className="my-3">
         <Row>
           <Col className="col-12">
-            <Card>
+            <Card className="shadow">
               <Card.Body className="p-0">
-                <div className="d-flex">
+                <div className="d-flex align-items-center">
                   <div className="px-3 pt-3 ">
                     <Card.Title>Attività</Card.Title>
                   </div>
-                  <Card.Subtitle className="mb-2 text-muted px-3">
-                    1 follower
-                  </Card.Subtitle>
+                  <div className="align-self-center px-3">1 follower</div>
                   <div className="pencil">
                     <Pencil></Pencil>
                   </div>

@@ -6,8 +6,8 @@ import PotrestiConoscere from "../Components/Me/PotrestiConoscere";
 import ConsigliatoPerTe from "../Components/Me/ConsigliatoPerTe";
 import Analisi from "../Components/Me/Analisi";
 import Risorse from "../Components/Me/Risorse";
-import Informazioni from "../Components/Me/Informazioni";
 import Attività from "../Components/Me/Attività";
+import Informazioni from "../Components/Me/Informazioni";
 import Competenze from "../Components/Me/competenze";
 import Formazione from "../Components/Me/formazione";
 import Interessi from "../Components/Me/Interessi";
@@ -22,9 +22,10 @@ const MePage = () => {
           <Profile />
           <ConsigliatoPerTe />
           <Analisi />
+
           <Risorse />
-          <Informazioni />
           <Attività />
+          <Informazioni />
           <Experiences />
           <Competenze />
           <Formazione />

@@ -2,7 +2,7 @@ import { Row, Col, Card, Button } from "react-bootstrap";
 
 const Competenze = () => {
   return (
-    <Card className="my-5">
+    <Card className="my-5 shadow">
       <Card.Header className="container-fluid bg-white mt-1">
         <Row className="d-flex justify-content-between ">
           <Col sm={7} md={5} lg={4} xl={4} xxl={5}>
@@ -35,7 +35,6 @@ const Competenze = () => {
           </Col>
           <Col className="d-flex flex-row">
             <Col sm={3} md={2}>
-              {" "}
               <Card.Img
                 src="https://tse4.mm.bing.net/th?id=OIP.Jh62oHE_WaBtTkyWxdSkbwHaHa&pid=Api&P=0&h=180"
                 className="iconaCompetenze mt-2   rounded-circle"

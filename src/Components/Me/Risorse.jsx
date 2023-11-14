@@ -9,7 +9,7 @@ const Risorse = () => {
       <Container className="my-3">
         <Row>
           <Col className="col-12">
-            <Card>
+            <Card className="shadow">
               <Card.Body className="p-0">
                 <div className="px-3 pt-3 ">
                   <Card.Title>Risorse</Card.Title>
@@ -38,7 +38,7 @@ const Risorse = () => {
                             profilo e accedi agli strumenti di creazione
                           </p>
                         </div>
-                      </div>{" "}
+                      </div>
                     </Col>
                     <hr />
                     <Col className="col-12 ps-0">

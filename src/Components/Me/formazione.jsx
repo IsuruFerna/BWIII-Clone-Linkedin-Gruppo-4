@@ -3,7 +3,7 @@ import { Button, Card } from "react-bootstrap";
 
 const Formazione = () => {
   return (
-    <Card className="my-5">
+    <Card className="my-5 shadow">
       <Card.Header className="container-fluid bg-white mt-1">
         <Row className="d-flex justify-content-between">
           <Col sm={7} md={6} lg={9}>

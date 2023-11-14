@@ -56,7 +56,7 @@ function Profile() {
         <Col className="position-relative mx-2 px-0">
           {!userData && <LoadingSpinner />}
           {userData && (
-            <div className="border rounded">
+            <div className="border rounded shadow">
               {show && (
                 <ContactInfo
                   show={show}

@@ -8,7 +8,7 @@ const Analisi = () => {
       <Container className="my-3">
         <Row>
           <Col className="col-12">
-            <Card>
+            <Card className="shadow">
               <Card.Body>
                 <div>
                   <Card.Title>Analisi</Card.Title>

@@ -9,7 +9,7 @@ const Informazioni = () => {
       <Container>
         <Row>
           <Col className="col-12">
-            <Card>
+            <Card className="shadow">
               <Card.Body>
                 <div className="d-flex justify-content-between ">
                   <Card.Title>Informazioni</Card.Title>
