@@ -54,14 +54,12 @@ const Risorse = () => {
                         </div>
                       </div>
                     </Col>
-                    <ListGroup variant="flush border pe-0">
-                      <ListGroup.Item>
-                        <b>Mostra tutte le risorse (5)</b> <ArrowRight />
-                      </ListGroup.Item>
-                    </ListGroup>
                   </Row>
                 </Container>
               </Card.Body>
+              <Card.Footer>
+                <b>Mostra tutte le risorse (5)</b> <ArrowRight />
+              </Card.Footer>
             </Card>
           </Col>
         </Row>

@@ -1,52 +1,57 @@
 #advice {
-   background-color: #f8fafd !important;
-   padding: 15px;
-   border-radius: 10px;
-   border: 1px solid gainsboro;
+  background-color: #f8fafd !important;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid gainsboro;
 }
 #advice-button {
-   border: 1px solid gray !important;
-   border-radius: 999px;
-   color: gray;
+  border: 1px solid gray !important;
+  border-radius: 999px;
+  color: gray;
 }
 #advice-button:hover {
-   border: 2px solid gray !important;
-   background-color: #e5e6e9;
-   padding-bottom: 4px;
+  border: 2px solid gray !important;
+  background-color: #e5e6e9;
+  padding-bottom: 4px;
 }
 #close {
-   cursor: pointer;
-   min-width: 12px;
+  cursor: pointer;
+  min-width: 12px;
 }
 span {
-   background-color: rgb(222, 219, 219);
-   border-radius: 10px;
-   padding: 3px 10px 3px 10px;
-}
-.list-group-flush {
-   border-left: 0 !important;
-   border-right: 0 !important;
-   border-bottom: 0 !important;
-   text-align: center;
-   color: gray !important;
-}
-b {
-   color: gray !important;
+  background-color: rgb(222, 219, 219);
+  border-radius: 10px;
+  padding: 3px 10px 3px 10px;
 }
 
-.list-group-item:hover {
-   background-color: rgb(222, 219, 219) !important;
-   cursor: pointer;
+b {
+  color: gray !important;
+}
+.card-footer {
+  background-color: white;
+  text-align: center;
+}
+.card-footer:hover {
+  background-color: rgb(222, 219, 219) !important;
+  cursor: pointer;
 }
 .pencil {
-   width: 30px;
-   height: 30px;
-   cursor: pointer;
-   border-radius: 999px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .pencil:hover {
-   background-color: rgb(222, 219, 219);
+  background-color: rgb(222, 219, 219);
+}
+
+#followers {
+  color: rgb(0, 132, 255);
+  border-radius: 999px !important;
+}
+#post {
+  border: 1px solid rgb(0, 132, 255);
 }
