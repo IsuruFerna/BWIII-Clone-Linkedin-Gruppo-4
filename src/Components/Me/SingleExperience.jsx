@@ -44,11 +44,12 @@ const SingleExperience = () => {
                role: "Full Stack Web Developer",
                company: "FizzBuzz",
                startDate: "2022-06-16",
-               endDate: "2023-06-16",
+               endDate: "",
                description: "Implementing new features",
                area: "Milan",
             }),
             headers: {
+               "Content-Type": "application/json",
                Authorization: token,
             },
          }
@@ -61,7 +62,6 @@ const SingleExperience = () => {
          })
          .then((data) => {
             console.log("User experience retreaved!", data);
-            setUserExperience(data);
          })
          .catch((err) => console.log("ERROR", err));
    };
