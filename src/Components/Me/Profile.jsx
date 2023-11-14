@@ -17,10 +17,12 @@ import {
   InfoSquareFill,
 } from "react-bootstrap-icons";
 import "./Profilestyle.css";
+import AggiungiEsperienza from "./AggiungiEsperienza";
 
 function Profile() {
   const [userData, setUserData] = useState(null);
   //  const [showInfomations, setShowInfomations] = useState(false);
+  const [modalShow, setModalShow] = useState(false);
 
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -34,7 +36,7 @@ function Profile() {
     fetch(`https://striveschool-api.herokuapp.com/api/profile/me`, {
       headers: {
         Authorization:
-          "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTUxZWRmOGM1NWU3ZTAwMThmODNjMGUiLCJpYXQiOjE2OTk4NjgxNTIsImV4cCI6MTcwMTA3Nzc1Mn0.CBfPd6xhFicg1S-nnU0aS7XGgCdv1KkMH68c4w4c2OY",
+          "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTUxZWQ0ZmM1NWU3ZTAwMThmODNjMGEiLCJpYXQiOjE2OTk4Njc5ODMsImV4cCI6MTcwMTA3NzU4M30.VgwY5-_3HqrYK9L5mB8w_n1YsAqrCrIk6q-aQXvo0wU",
       },
     })
       .then((response) => {
@@ -56,7 +58,7 @@ function Profile() {
         <Col className="position-relative mx-2 px-0">
           {!userData && <LoadingSpinner />}
           {userData && (
-            <div className="border rounded">
+            <div className="border rounded shadow">
               {show && (
                 <ContactInfo
                   show={show}
@@ -101,9 +103,17 @@ function Profile() {
                   <Button className="rounded-5 me-2" variant="primary">
                     Disponobile per
                   </Button>
-                  <Button className="rounded-5 me-2" variant="outline-primary">
+                  <Button
+                    className="rounded-5 me-2"
+                    variant="outline-primary"
+                    onClick={() => setModalShow(true)}
+                  >
                     Aggiungi sezione del profilo
                   </Button>
+                  <AggiungiEsperienza
+                    show={modalShow}
+                    onHide={() => setModalShow(false)}
+                  ></AggiungiEsperienza>
                   <div id="backcolor">
                     <Dropdown className="d-flex justify-content-center">
                       <DropdownToggle

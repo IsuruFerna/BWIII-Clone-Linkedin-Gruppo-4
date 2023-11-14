@@ -1,9 +1,10 @@
+import { Container } from "react-bootstrap";
 import { Pencil } from "react-bootstrap-icons";
 import "./PublicProfile.css";
 
 const PublicProfile = () => {
   return (
-    <div className="mb-3 d-flex flex-column">
+    <Container className="mb-3 d-flex flex-column border shadow rounded bg-white">
       <div>
         <div className="fw-bold d-flex justify-content-between mt-2">
           <div>Lingua del profilo</div>
@@ -24,10 +25,10 @@ const PublicProfile = () => {
           className="text-secondary smaller"
           style={{ "word-break": "break-all" }}
         >
-          www.linkedin.com/in/angela-prestano-603240243
+          fetchper avere email di me
         </div>
       </div>
-    </div>
+    </Container>
   );
 };
 

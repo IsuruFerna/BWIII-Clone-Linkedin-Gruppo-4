@@ -1,4 +1,4 @@
-import { Row, ListGroup } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 import { ArrowRight, EyeFill, PeopleFill } from "react-bootstrap-icons";
 import { Card, Col, Container } from "react-bootstrap/esm";
 import Satellite from "../../assets/icons8-satellite-16.png";
@@ -9,7 +9,7 @@ const Risorse = () => {
       <Container className="my-3">
         <Row>
           <Col className="col-12">
-            <Card>
+            <Card className="shadow">
               <Card.Body className="p-0">
                 <div className="px-3 pt-3 ">
                   <Card.Title>Risorse</Card.Title>
@@ -31,14 +31,15 @@ const Risorse = () => {
                         </div>
                         <div>
                           <h6 className="mt-1">
-                            Modalità creazione di contenuti <span>No</span>
+                            Modalità creazione di contenuti{" "}
+                            <span id="no">No</span>
                           </h6>
                           <p>
                             Fatti scoprire, metti in risalto i contenuti sul tuo
                             profilo e accedi agli strumenti di creazione
                           </p>
                         </div>
-                      </div>{" "}
+                      </div>
                     </Col>
                     <hr />
                     <Col className="col-12 ps-0">
@@ -54,14 +55,12 @@ const Risorse = () => {
                         </div>
                       </div>
                     </Col>
-                    <ListGroup variant="flush border pe-0">
-                      <ListGroup.Item>
-                        <b>Mostra tutte le risorse (5)</b> <ArrowRight />
-                      </ListGroup.Item>
-                    </ListGroup>
                   </Row>
                 </Container>
               </Card.Body>
+              <Card.Footer>
+                <b>Mostra tutte le risorse (5)</b> <ArrowRight />
+              </Card.Footer>
             </Card>
           </Col>
         </Row>

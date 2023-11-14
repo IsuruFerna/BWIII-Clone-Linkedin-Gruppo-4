@@ -10,7 +10,7 @@ const ConsigliatoPerTe = () => {
       <Container className="my-3">
         <Row>
           <Col className="col-12">
-            <Card>
+            <Card className="shadow">
               <Card.Body>
                 <div>
                   <Card.Title>Consigliato per te</Card.Title>
@@ -30,7 +30,7 @@ const ConsigliatoPerTe = () => {
                     Tenere aggiornato il tuo profilo ti aiuta a farti notare per
                     le opportunità giuste.
                   </p>
-                  <Button variant="rounded-pill" id="advice-button">
+                  <Button variant="rounded-pill" id="advice-button" size="sm">
                     Conferma posizione lavorativa attuale
                   </Button>
                 </div>

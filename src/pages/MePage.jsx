@@ -6,12 +6,13 @@ import PotrestiConoscere from "../Components/Me/PotrestiConoscere";
 import ConsigliatoPerTe from "../Components/Me/ConsigliatoPerTe";
 import Analisi from "../Components/Me/Analisi";
 import Risorse from "../Components/Me/Risorse";
-import Informazioni from "../Components/Me/Informazioni";
 import Attività from "../Components/Me/Attività";
+import Informazioni from "../Components/Me/Informazioni";
 import Competenze from "../Components/Me/competenze";
 import Formazione from "../Components/Me/formazione";
 import Interessi from "../Components/Me/Interessi";
 import Experiences from "../Components/Me/Experience";
+import PublicProfile from "../Components/Me/PublicProfile";
 
 const MePage = () => {
   return (
@@ -21,15 +22,17 @@ const MePage = () => {
           <Profile />
           <ConsigliatoPerTe />
           <Analisi />
+
           <Risorse />
-          <Informazioni />
           <Attività />
+          <Informazioni />
           <Experiences />
           <Competenze />
           <Formazione />
           <Interessi />
         </Col>
         <Col className="col-2">
+          <PublicProfile />
           <PotrestiConoscere />
         </Col>
       </Row>
