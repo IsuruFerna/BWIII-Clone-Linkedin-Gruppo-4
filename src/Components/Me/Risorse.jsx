@@ -1,4 +1,4 @@
-import { Row, ListGroup } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 import { ArrowRight, EyeFill, PeopleFill } from "react-bootstrap-icons";
 import { Card, Col, Container } from "react-bootstrap/esm";
 import Satellite from "../../assets/icons8-satellite-16.png";

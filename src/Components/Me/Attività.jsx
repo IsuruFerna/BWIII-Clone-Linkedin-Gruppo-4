@@ -16,7 +16,7 @@ const Attività = () => {
                   </div>
                   <div className="d-flex">
                     <div>
-                      <Button id="post" variant="rounded-pill">
+                      <Button id="post" variant="rounded-pill me-3">
                         Crea un post
                       </Button>
                     </div>
@@ -28,7 +28,10 @@ const Attività = () => {
                 <Card.Subtitle className="mb-2" id="followers">
                   1 follower
                 </Card.Subtitle>
-
+                <div>
+                  <h6 className="mb-0">Non hai ancora pubblicato nulla</h6>
+                  <p>I post che condividi appariranno qui</p>
+                </div>
                 <Container className="d-flex flex-row px-3 "></Container>
               </Card.Body>
               <Card.Footer>

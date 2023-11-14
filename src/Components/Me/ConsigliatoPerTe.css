@@ -50,8 +50,15 @@ b {
 
 #followers {
   color: rgb(0, 132, 255);
-  border-radius: 999px !important;
 }
 #post {
   border: 1px solid rgb(0, 132, 255);
+  border-radius: 999px;
+  color: rgb(0, 132, 255);
+}
+
+#post:hover {
+  border: 2px solid rgb(0, 132, 255);
+  background-color: #e2f0fe;
+  color: rgb(0, 132, 255);
 }
