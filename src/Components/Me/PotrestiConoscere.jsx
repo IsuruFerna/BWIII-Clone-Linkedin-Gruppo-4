@@ -50,7 +50,7 @@ const PotrestiConoscere = () => {
             })}
         </div>
       </Container>
-      <Container fluid className="border rounded border-secondary bg-white">
+      <Container fluid className="border shadow rounded bg-white">
         <div className="d-flex flex-column my-2">
           <h5 className="fw-bold smaller fs-6">
             Persone che potresti conoscere
@@ -65,7 +65,7 @@ const PotrestiConoscere = () => {
             .map((singlePerson) => {
               return (
                 <div key={singlePerson._id}>
-                  <SinglePerson person={singlePerson} />;
+                  <SinglePerson person={singlePerson} />
                 </div>
               );
             })}

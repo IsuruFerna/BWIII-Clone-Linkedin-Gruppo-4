@@ -12,7 +12,7 @@ const User = ({ user, add }) => {
     <Container>
       <Row className="justify-content-center">
         <Col className="col-6">
-          <Card>
+          <Card className="shadow">
             <div className="position-relative">
               <Card.Img
                 variant="top"
