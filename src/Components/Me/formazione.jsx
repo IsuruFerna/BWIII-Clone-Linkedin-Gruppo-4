@@ -15,13 +15,13 @@ const Formazione = () => {
               variant="outline-secondary"
               className="butt border-0 rounded-circle"
             >
-              <i class="bi bi-plus-lg"></i>
+              <i className="bi bi-plus-lg"></i>
             </Button>
             <Button
               variant="outline-secondary"
               className="butt border-0 rounded-circle"
             >
-              <i class="bi bi-pencil"></i>
+              <i className="bi bi-pencil"></i>
             </Button>
           </Col>
         </Row>

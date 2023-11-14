@@ -12,6 +12,7 @@ import Competenze from "../Components/Me/competenze";
 import Formazione from "../Components/Me/formazione";
 import Interessi from "../Components/Me/Interessi";
 import Experiences from "../Components/Me/Experience";
+import PublicProfile from "../Components/Me/PublicProfile";
 
 const MePage = () => {
   return (
@@ -30,6 +31,7 @@ const MePage = () => {
           <Interessi />
         </Col>
         <Col className="col-2">
+          <PublicProfile />
           <PotrestiConoscere />
         </Col>
       </Row>
