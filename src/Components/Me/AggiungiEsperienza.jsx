@@ -22,6 +22,11 @@ function AggiungiEsperienza(props) {
     anno: "",
   });
 
+  const [selectedOption, setSelectedOption] = useState("");
+  const handleSelectChange = (e) => {
+    setSelectedOption(e.target.value);
+  };
+
   const token = `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTUxZWQ3NWM1NWU3ZTAwMThmODNjMGMiLCJpYXQiOjE2OTk4NjgwMjEsImV4cCI6MTcwMTA3NzYyMX0.MaefAedXN33dNfhoWKrtbaRpMDXC487KQz_7broOWxU`;
 
   const handleSubmit = (e) => {
@@ -29,6 +34,7 @@ function AggiungiEsperienza(props) {
     const dataIniziale = `${initialDate.anno}-${initialDate.mese}-00`;
     const dataFinale = `${finalDate.anno}-${finalDate.mese}-00`;
     setFormData({ ...formData, startDate: dataIniziale, endDate: dataFinale });
+    console.log(formData);
     const post = (token) => {
       fetch(
         `https://striveschool-api.herokuapp.com/api/profile/6551ed75c55e7e0018f83c0c/experiences`,
@@ -92,12 +98,12 @@ function AggiungiEsperienza(props) {
                   <p className="mb-0 me-3 ">Sì</p>
                 </div>
                 <div>
-                  <Form.Check // prettier-ignore
+                  {/* <Form.Check // prettier-ignore
                     type="switch"
                     id="custom-switch"
-                    checked="true"
+                    checked={true}
                     className="fs-3"
-                  />
+                  /> */}
                 </div>
               </div>
             </div>
@@ -177,12 +183,12 @@ function AggiungiEsperienza(props) {
             </div>
             <div className="my-4 d-flex align-items-center ">
               {" "}
-              <Form.Check // prettier-ignore
-                // type={type}
+              {/* <Form.Check // prettier-ignore */}
+              {/* // type={type}
                 // id={`default-${type}`}
-                className="fs-4"
-                checked="true"
-              />
+                // className="fs-4"
+                // checked={true}
+            //   /> */}
               <p className="mb-0 ms-3">Attualmente ricopro questo ruolo</p>
             </div>{" "}
             <Form.Label htmlFor="inputPassword5">Data di inizio*</Form.Label>
@@ -190,9 +196,8 @@ function AggiungiEsperienza(props) {
               <Col className="col-12 col-md-6">
                 <Form.Select
                   className="mb-1"
-                  onChange={(e) =>
-                    setInitialDate({ ...initialDate, mese: e.target.value })
-                  }
+                  onChange={handleSelectChange}
+                  value={selectedOption}
                 >
                   <option>Mese</option>
                   <option value="01">Gennaio</option>
@@ -215,6 +220,7 @@ function AggiungiEsperienza(props) {
                   onChange={(e) =>
                     setInitialDate({ ...initialDate, anno: e.target.value })
                   }
+                  value={initialDate.anno}
                 >
                   <option>Anno</option>
                   <option>2023</option>
@@ -241,7 +247,13 @@ function AggiungiEsperienza(props) {
             <Form.Label htmlFor="inputPassword5">Data di fine*</Form.Label>
             <Row>
               <Col className="col-12 col-md-6">
-                <Form.Select className="mb-1">
+                <Form.Select
+                  className="mb-1"
+                  onChange={(e) =>
+                    setFinalDate({ ...finalDate, mese: e.target.value })
+                  }
+                  value={finalDate.mese}
+                >
                   <option>Mese</option>
                   <option value="01">Gennaio</option>
                   <option value="02">Febbraio</option>
@@ -258,26 +270,32 @@ function AggiungiEsperienza(props) {
                 </Form.Select>
               </Col>
               <Col className="col-12 col-md-6">
-                <Form.Select className="mb-3 fix-hover-2">
+                <Form.Select
+                  className="mb-3 fix-hover-2"
+                  onChange={(e) =>
+                    setFinalDate({ ...finalDate, anno: e.target.value })
+                  }
+                  value={finalDate.anno}
+                >
                   <option>Anno</option>
-                  <option value="1">2023</option>
-                  <option value="1">2022</option>
-                  <option value="1">2021</option>
-                  <option value="1">2020</option>
-                  <option value="1">2019</option>
-                  <option value="1">2018</option>
-                  <option value="1">2017</option>
-                  <option value="1">2016</option>
-                  <option value="1">2015</option>
-                  <option value="1">2014</option>
-                  <option value="1">2013</option>
-                  <option value="1">2012</option>
-                  <option value="1">2011</option>
-                  <option value="1">2010</option>
-                  <option value="1">2009</option>
-                  <option value="1">2008</option>
-                  <option value="2">2007</option>
-                  <option value="3">Non ti hanno ancora licenziato??</option>
+                  <option>2023</option>
+                  <option>2022</option>
+                  <option>2021</option>
+                  <option>2020</option>
+                  <option>2019</option>
+                  <option>2018</option>
+                  <option>2017</option>
+                  <option>2016</option>
+                  <option>2015</option>
+                  <option>2014</option>
+                  <option>2013</option>
+                  <option>2012</option>
+                  <option>2011</option>
+                  <option>2010</option>
+                  <option>2009</option>
+                  <option>2008</option>
+                  <option>2007</option>
+                  <option>Non ti hanno ancora licenziato??</option>
                 </Form.Select>
               </Col>
             </Row>
