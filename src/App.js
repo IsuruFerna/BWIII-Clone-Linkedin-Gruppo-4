@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MePage from "./pages/MePage";
 import Footer from "./Components/main/footer";
 import NavbarLinkedin from "./Components/main/NavbarLinkedin";
+import ProfilePage from "./pages/ProfilePage";
 import AggiungiEsperienza from "./Components/Me/AggiungiEsperienza";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <NavbarLinkedin />
       <Routes>
         <Route element={<MePage />} path="/" />
+        <Route element={<ProfilePage />} path="/profile/:id" />
       </Routes>
       <Footer />
     </BrowserRouter>
