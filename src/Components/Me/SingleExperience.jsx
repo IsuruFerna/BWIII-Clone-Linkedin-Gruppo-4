@@ -1,6 +1,21 @@
+import { useEffect, useState } from "react";
 import Image from "react-bootstrap/Image";
+import { useDispatch, useSelector } from "react-redux";
+import { getUserAction } from "../../redux/actions";
 
 const SingleExperience = () => {
+   const [user, setUser] = useState(null);
+
+   const dispatch = useDispatch();
+   const userFormReduxStore = useSelector((state) => state.user.user);
+
+   useEffect(() => {
+      dispatch(getUserAction());
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+   }, []);
+
+   console.log("this is user: ", userFormReduxStore);
+
    return (
       <>
          <div className="d-flex">
