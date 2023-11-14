@@ -9,14 +9,24 @@ const Attività = () => {
         <Row>
           <Col className="col-12">
             <Card className="shadow">
-              <Card.Body className="p-0">
-                <div className="d-flex align-items-center">
-                  <div className="px-3 pt-3 ">
+              <Card.Body>
+                <div className="d-flex justify-content-between ">
+                  <div>
                     <Card.Title>Attività</Card.Title>
                   </div>
-                  <div className="align-self-center px-3">1 follower</div>
-                  <div className="pencil">
-                    <Pencil></Pencil>
+                  <div className="d-flex">
+                    <div>
+                      <Button
+                        size="sm"
+                        className="post"
+                        variant="rounded-pill me-3 fix-hover"
+                      >
+                        Crea un post
+                      </Button>
+                    </div>
+                    <div className="pencil">
+                      <Pencil></Pencil>
+                    </div>
                   </div>
                 </div>
                 <Card.Subtitle className="mb-2" id="followers">
