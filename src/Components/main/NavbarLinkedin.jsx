@@ -73,6 +73,7 @@ function NavbarLinkedin() {
                <Nav className="ms-2 mt-2">
                   <NavDropdown
                      title="Tu"
+                     align={{ lg: "end" }}
                      id="basic-nav-dropdown"
                      className="mt-1 text-secondary"
                   >
