@@ -10,7 +10,7 @@ const ConsigliatoPerTe = () => {
       <Container className="my-3">
         <Row>
           <Col className="col-12">
-            <Card>
+            <Card className="shadow">
               <Card.Body>
                 <div>
                   <Card.Title>Consigliato per te</Card.Title>
