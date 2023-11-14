@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
 import SinglePerson from "./SinglePerson";
-import PublicProfile from "./PublicProfile";
+
 const PotrestiConoscere = () => {
   const [persons, setPersons] = useState([]);
   const getPersons = () => {
