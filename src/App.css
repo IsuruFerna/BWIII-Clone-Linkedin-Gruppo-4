@@ -5,6 +5,9 @@
   transform: translate(25%, -50%);
   width: 15%;
 }
+body {
+  background-color: #f4f2ee;
+}
 /* footer qui */
 
 .ancor {

@@ -24,10 +24,6 @@ const ProfilePage = () => {
       })
       .catch((err) => console.log("Error: ", err));
   }, [id]);
-  return (
-    <div>
-      <User user={user} />
-    </div>
-  );
+  return <User user={user} />;
 };
 export default ProfilePage;
