@@ -4,10 +4,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MePage from "./pages/MePage";
 import Footer from "./Components/Me/footer";
 import "./pages/MePage";
+import NavbarLinkedin from "./components/NavbarLinkedin";
+import "./components/Navbar.css";
 
 function App() {
    return (
       <BrowserRouter>
+         <NavbarLinkedin />
          <div>Header</div>
          <Routes>
             <Route element={<MePage />} path="/" />
