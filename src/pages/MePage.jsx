@@ -11,6 +11,7 @@ import Attività from "../Components/Me/Attività";
 import Competenze from "../Components/Me/competenze";
 import Formazione from "../Components/Me/formazione";
 import Interessi from "../Components/Me/Interessi";
+import Experiences from "../Components/Me/Experience";
 
 const MePage = () => {
   return (
@@ -23,9 +24,9 @@ const MePage = () => {
           <Risorse />
           <Informazioni />
           <Attività />
+          <Experiences />
           <Competenze />
           <Formazione />
-          <Interessi />
         </Col>
         <Col className="col-2">
           <PotrestiConoscere />

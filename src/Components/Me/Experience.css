@@ -1,0 +1,23 @@
+.btn-circle {
+   padding: 0.8em;
+   border-radius: 2em;
+   width: 2.9em;
+   height: 2.9em;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.btn-circle:hover {
+   background-color: #8888883a;
+}
+
+.logo-experience {
+   width: 4.8em;
+   height: 4.8em;
+}
+
+.experience-tools {
+   background-color: none !important;
+}
