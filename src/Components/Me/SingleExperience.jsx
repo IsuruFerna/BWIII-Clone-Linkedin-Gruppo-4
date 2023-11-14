@@ -61,6 +61,7 @@ const SingleExperience = () => {
          })
          .then((data) => {
             console.log("User experience retreaved!", data);
+            setUserExperience(data);
          })
          .catch((err) => console.log("ERROR", err));
    };
