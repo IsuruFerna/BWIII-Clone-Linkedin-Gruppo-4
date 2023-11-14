@@ -27,8 +27,8 @@ const SinglePerson = ({ person }) => {
 
             <div className="extrasmall my-1">
               <div>{person.title}</div>
-              <Link to={`/profile/${person._id}`}>
-                <div className="btn btn-primary smaller py-1 px-2">
+              <Link to={`/profile/${person._id}`} className="nav-link">
+                <div className="btn btn-white border border-secondary rounded-4 smaller py-1 px-2">
                   Visita profilo
                 </div>
               </Link>
