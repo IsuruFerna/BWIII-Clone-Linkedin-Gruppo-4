@@ -1,0 +1,14 @@
+
+.pencil:hover{
+    background-color: rgb(190, 182, 182) !important;
+}
+
+.pencil {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

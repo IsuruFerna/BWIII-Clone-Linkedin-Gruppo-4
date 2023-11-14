@@ -1,6 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import "./Components/main/Navbar.css";
+import "./Components/Me/PublicProfile.css";
 import "./pages/MePage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MePage from "./pages/MePage";
@@ -8,15 +9,16 @@ import Footer from "./Components/main/footer";
 import NavbarLinkedin from "./Components/main/NavbarLinkedin";
 
 function App() {
-   return (
-      <BrowserRouter>
-         <NavbarLinkedin />
-         <Routes>
-            <Route element={<MePage />} path="/" />
-         </Routes>
-         <Footer />
-      </BrowserRouter>
-   );
+  return (
+    <BrowserRouter>
+      <NavbarLinkedin />
+
+      <Routes>
+        <Route element={<MePage />} path="/" />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
+  );
 }
 
 export default App;

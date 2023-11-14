@@ -15,7 +15,7 @@ const PublicProfile = () => {
         </div>
         <div className="fw-bold d-flex justify-content-between">
           <div>Public profile & Url</div>
-          <div className="me-2">
+          <div className="me-2" id="pencil">
             <Pencil />
           </div>
         </div>
