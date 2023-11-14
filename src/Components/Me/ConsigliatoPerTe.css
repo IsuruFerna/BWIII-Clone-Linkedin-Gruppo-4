@@ -18,7 +18,7 @@
   cursor: pointer;
   min-width: 12px;
 }
-span {
+#no {
   background-color: rgb(222, 219, 219);
   border-radius: 10px;
   padding: 3px 10px 3px 10px;
@@ -51,14 +51,33 @@ b {
 #followers {
   color: rgb(0, 132, 255);
 }
-#post {
+.post {
   border: 1px solid rgb(0, 132, 255);
   border-radius: 999px;
   color: rgb(0, 132, 255);
 }
 
-#post:hover {
+.post:hover {
   border: 2px solid rgb(0, 132, 255);
   background-color: #e2f0fe;
   color: rgb(0, 132, 255);
+}
+
+.modal-body {
+  background-color: #edf3f8;
+}
+.personal-link {
+  color: rgb(0, 132, 255);
+  cursor: pointer;
+}
+.personal-link:hover {
+  text-decoration: underline;
+}
+
+.form-select:hover {
+  border-radius: 8px;
+  border: 2px solid gray;
+}
+.form-control:hover {
+  border: 2px solid gray;
 }

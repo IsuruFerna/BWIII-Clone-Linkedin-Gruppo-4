@@ -31,7 +31,8 @@ const Risorse = () => {
                         </div>
                         <div>
                           <h6 className="mt-1">
-                            Modalità creazione di contenuti <span>No</span>
+                            Modalità creazione di contenuti{" "}
+                            <span id="no">No</span>
                           </h6>
                           <p>
                             Fatti scoprire, metti in risalto i contenuti sul tuo
