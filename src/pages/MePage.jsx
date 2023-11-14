@@ -10,7 +10,6 @@ import Informazioni from "../Components/Me/Informazioni";
 import Attività from "../Components/Me/Attività";
 import Competenze from "../Components/Me/competenze";
 import Formazione from "../Components/Me/formazione";
-import PublicProfile from "../Components/Me/PublicProfile";
 
 const MePage = () => {
   return (
