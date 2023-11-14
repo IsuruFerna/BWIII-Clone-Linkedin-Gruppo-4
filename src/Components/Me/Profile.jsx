@@ -109,21 +109,21 @@ function Profile() {
                       <DropdownToggle
                         variant="outline-secondary"
                         id="dropdown-basic"
-                        className="rounded-5"
+                        className="rounded-5 dropdown-menu-altro"
                       >
                         Altro
                       </DropdownToggle>
                       <Dropdown.Menu>
                         <div id="menucolor" className="d-flex flex-column ">
-                          <Dropdown.Item href="#/action-1">
+                          <Dropdown.Item href="#/action-1" className="Mydrop">
                             <Arrow90degRight className="me-2" />
                             Invia il profilo in un messaggio
                           </Dropdown.Item>
-                          <Dropdown.Item href="#/action-2">
+                          <Dropdown.Item href="#/action-2" className="Mydrop2">
                             <Download className="me-2" />
                             Salva come PDF
                           </Dropdown.Item>
-                          <Dropdown.Item href="#/action-3">
+                          <Dropdown.Item href="#/action-3" className="Mydrop">
                             <InfoSquareFill className="me-2" />
                             Informazioni su questo profilo
                           </Dropdown.Item>

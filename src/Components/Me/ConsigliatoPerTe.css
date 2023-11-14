@@ -18,11 +18,7 @@
    cursor: pointer;
    min-width: 12px;
 }
-span {
-   background-color: rgb(222, 219, 219);
-   border-radius: 10px;
-   padding: 3px 10px 3px 10px;
-}
+
 .list-group-flush {
    border-left: 0 !important;
    border-right: 0 !important;

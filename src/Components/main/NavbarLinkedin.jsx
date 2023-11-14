@@ -5,7 +5,6 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import Form from "react-bootstrap/Form";
 import {
   BrowserSafari,
-  Check2All,
   FileBarGraphFill,
   Grid3x3GapFill,
   HouseDoorFill,
@@ -115,7 +114,10 @@ function NavbarLinkedin() {
               </h6>
 
               <NavDropdown.Item href="#action/3.1">
-                <div className="fs-2 mt-1 text-primary text-start ms-2 ">
+                <div
+                  className="fs-2 mt-1 text-primary text-start ms-2"
+                  id="icons"
+                >
                   <PlayBtnFill className="ms-2" />
                   <FileBarGraphFill className="ms-4" />
                   <MenuButtonWide className="ms-4 " />

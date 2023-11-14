@@ -1,6 +1,3 @@
-#backcolor:hover{
-    background-color: rgb(190, 182, 182) !important;
-}
 
 #backcolor {
     cursor: pointer;
@@ -10,17 +7,18 @@
     justify-content: center;
 }
 
-#menucolor:hover{
-    background-color: rgb(197, 195, 195) ;
-    
-}
-
 #menucolor {
+    background-color: rgb(255, 255, 255);
     cursor: pointer;
     display: flex;
-  
-    
     
 }
 
+.Mydrop:hover{
+    background-color: rgb(153, 153, 153);
+}
 
+
+.Mydrop2:hover{
+    background-color: rgb(153, 153, 153);
+}
