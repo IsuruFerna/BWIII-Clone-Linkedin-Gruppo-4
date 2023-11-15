@@ -1,96 +1,96 @@
 #advice {
-  background-color: #f8fafd !important;
-  padding: 15px;
-  border-radius: 10px;
-  border: 1px solid gainsboro;
+   background-color: #f8fafd !important;
+   padding: 15px;
+   border-radius: 10px;
+   border: 1px solid gainsboro;
 }
 #advice-button {
-  border: 1px solid gray !important;
-  border-radius: 999px;
-  color: gray;
+   border: 1px solid gray !important;
+   border-radius: 999px;
+   color: gray;
 }
 #advice-button:hover {
-  border: 2px solid gray !important;
-  background-color: #e5e6e9;
+   border: 2px solid gray !important;
+   background-color: #e5e6e9;
 }
 #close {
-  cursor: pointer;
-  min-width: 12px;
+   cursor: pointer;
+   min-width: 12px;
 }
 #no {
-  background-color: rgb(222, 219, 219);
-  border-radius: 10px;
-  padding: 3px 10px 3px 10px;
+   background-color: rgb(222, 219, 219);
+   border-radius: 10px;
+   padding: 3px 10px 3px 10px;
 }
 
 b {
-  color: gray !important;
+   color: gray !important;
 }
 .card-footer {
-  background-color: white;
-  text-align: center;
+   background-color: white;
+   text-align: center;
 }
 .card-footer:hover {
-  background-color: rgb(222, 219, 219) !important;
-  cursor: pointer;
+   background-color: rgb(222, 219, 219) !important;
+   cursor: pointer;
 }
 .pencil {
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  border-radius: 999px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+   width: 30px;
+   height: 30px;
+   cursor: pointer;
+   border-radius: 999px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 .pencil:hover {
-  background-color: rgb(222, 219, 219);
+   background-color: rgb(222, 219, 219);
 }
 
 #followers {
-  color: rgb(0, 132, 255);
+   color: rgb(0, 132, 255);
 }
 .post {
-  border: 1px solid rgb(0, 132, 255);
-  border-radius: 999px;
-  color: rgb(0, 132, 255);
+   border: 1px solid rgb(0, 132, 255);
+   border-radius: 999px;
+   color: rgb(0, 132, 255);
 }
 
 .post:hover {
-  border: 2px solid rgb(0, 132, 255);
-  background-color: #e2f0fe;
-  color: rgb(0, 132, 255);
-  margin: -2px;
+   border: 2px solid rgb(0, 132, 255);
+   background-color: #e2f0fe;
+   color: rgb(0, 132, 255);
+   margin: -2px;
 }
 
 .alert-body {
-  background-color: #edf3f8;
+   background-color: #edf3f8;
 }
 .personal-link {
-  color: rgb(0, 132, 255);
-  cursor: pointer;
+   color: rgb(0, 132, 255);
+   cursor: pointer;
 }
 .personal-link:hover {
-  text-decoration: underline;
+   text-decoration: underline;
 }
 
 .form-select:hover {
-  border-radius: 8px;
-  border: 2px solid gray;
-  margin: -1px;
+   border-radius: 8px;
+   border: 2px solid gray;
+   margin: -1px;
 }
 .form-control:hover {
-  border: 2px solid gray;
-  margin: -2px;
+   border: 2px solid gray;
+   margin: -2px;
 }
 .modal-body {
-  height: 80vh;
-  overflow-y: auto;
+   height: 80vh;
+   overflow-y: auto;
 }
 
 .fix-hover:hover {
-  margin: -1px;
+   margin: -1px;
 }
 .fix-hover-2:hover {
-  margin: -2px;
+   margin: -2px;
 }

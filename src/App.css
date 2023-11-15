@@ -1,36 +1,36 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
 
 #userImage {
-  position: absolute;
-  transform: translate(25%, -50%);
-  width: 15%;
+   position: absolute;
+   transform: translate(25%, -50%);
+   width: 15%;
 }
 body {
-  background-color: #f4f2ee;
+   background-color: #f4f2ee;
 }
 /* footer qui */
 
 .ancor {
-  text-decoration: none;
-  font-size: 13px;
-  color: gray !important;
-  font-weight: 500;
+   text-decoration: none;
+   font-size: 13px;
+   color: gray !important;
+   font-weight: 500;
 }
 
 #nav-dropdown-dark-example {
-  color: gray;
-  padding-left: 0;
+   color: gray;
+   padding-left: 0;
 }
 
 /* fine footer */
 
 /* formazione qui */
 .iconaFormazione {
-  width: 200px !important;
+   width: 200px !important;
 }
 
 .butt:hover {
-  background-color: rgb(191, 191, 191) !important;
+   background-color: rgb(191, 191, 191) !important;
 }
 
 /* fine formazione qui */
@@ -38,15 +38,15 @@ body {
 /* inizio competenze */
 
 .iconaCompetenze {
-  width: 50px !important;
-  margin-left: 0;
+   width: 50px !important;
+   margin-left: 0;
 }
 
 .smaller {
-  font-size: 0.8em;
+   font-size: 0.8em;
 }
 .extrasmall {
-  font-size: 0.7em;
+   font-size: 0.7em;
 }
 
 /* fine competenze */

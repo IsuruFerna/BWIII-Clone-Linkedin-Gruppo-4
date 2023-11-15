@@ -1,26 +1,20 @@
-#backcolor:hover{
-    background-color: rgb(190, 182, 182) !important;
+#backcolor:hover {
+   background-color: rgb(190, 182, 182) !important;
 }
 
 #backcolor {
-    cursor: pointer;
-    border-radius: 999px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+   cursor: pointer;
+   border-radius: 999px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 
-#menucolor:hover{
-    background-color: rgb(197, 195, 195) ;
-    
+#menucolor:hover {
+   background-color: rgb(197, 195, 195);
 }
 
 #menucolor {
-    cursor: pointer;
-    display: flex;
-  
-    
-    
+   cursor: pointer;
+   display: flex;
 }
-
-
