@@ -11,7 +11,7 @@ const HomePage = () => {
           laboriosam optio iusto voluptatum quasi porro, blanditiis dolorem amet
           eaque. Repellendus, quo!
         </Col>
-        <Col className="col-5 bg-warning">
+        <Col className="col-5 bg-transparent">
           <SezioneCentraleHomePage />
         </Col>
         <Col className="col-3 bg-danger">

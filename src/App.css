@@ -58,3 +58,32 @@ body {
 }
 
 /* fine competenze */
+
+/* HomePage */
+.usernameInPosts {
+  background-color: rgb(171, 171, 171);
+  border-radius: 20px;
+  color: white;
+  margin-left: 5px;
+}
+#cancelBtn {
+  background-color: rgb(152, 152, 152);
+  border: 1px solid rgb(211, 211, 211);
+  transition: all 0.6s;
+}
+#cancelBtn:hover {
+  background-color: rgb(171, 171, 171);
+  border: 1px solid black;
+  color: black;
+}
+#addBtn {
+  background-color: transparent;
+  border: 1px solid black;
+  color: black;
+  transition: all.6s;
+}
+#addBtn:hover {
+  background-color: rgb(83, 83, 83);
+  border: 1px solid rgb(171, 171, 171);
+  color: white;
+}
