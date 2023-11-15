@@ -18,7 +18,7 @@ const MePage = () => {
   return (
     <Container>
       <Row className="justify-content-center gx-2">
-        <Col className="col-6">
+        <Col className="col-6 mt-2">
           <Profile />
           <ConsigliatoPerTe />
           <Analisi />
@@ -31,7 +31,7 @@ const MePage = () => {
           <Formazione />
           <Interessi />
         </Col>
-        <Col className="col-2">
+        <Col className="col-2 mt-2">
           <PublicProfile />
           <PotrestiConoscere />
         </Col>

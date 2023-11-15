@@ -7,7 +7,7 @@ import MePage from "./pages/MePage";
 import Footer from "./Components/main/footer";
 import NavbarLinkedin from "./Components/main/NavbarLinkedin";
 import ProfilePage from "./pages/ProfilePage";
-import HomePage from "./Components/Home/HomePage";
+import HomePage from "./pages/HomePage";
 
 function App() {
   return (

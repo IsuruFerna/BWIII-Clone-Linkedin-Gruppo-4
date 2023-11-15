@@ -26,7 +26,7 @@ import { Link } from "react-router-dom";
 function NavbarLinkedin() {
   return (
     <Navbar expand="lg" className="bg-body-tertiary position-sticky top-0 z-3 ">
-      <Container>
+      <Container id="nav">
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/640px-LinkedIn_logo_initials.png"
           width="30px"
@@ -75,7 +75,10 @@ function NavbarLinkedin() {
               id="basic-nav-dropdown"
               className="mt-1 text-secondary"
             >
-              <h6 className="ms-3 mt-2">Account</h6>
+              <Link to="/">
+                <h6 className="ms-3 mt-2 text-black ">Account</h6>
+              </Link>
+
               <NavDropdown.Item href="#action/3.2">
                 Impostazioni e privacy
               </NavDropdown.Item>

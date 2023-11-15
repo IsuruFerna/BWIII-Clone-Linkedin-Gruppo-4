@@ -9,7 +9,7 @@ const User = ({ user, add }) => {
     setInnerText(!innerText);
   };
   return (
-    <Container>
+    <Container className=" my-2">
       <Row className="justify-content-center">
         <Col className="col-6">
           <Card className="shadow">
