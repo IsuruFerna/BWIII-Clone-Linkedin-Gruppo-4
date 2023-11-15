@@ -17,22 +17,23 @@ import {
   InfoSquareFill,
 } from "react-bootstrap-icons";
 import "./Profilestyle.css";
-import AggiungiEsperienza from "./AggiungiEsperienza";
+// import AggiungiEsperienza from "./AggiungiEsperienza";
 import { useDispatch, useSelector } from "react-redux";
 import {
   getUserAction,
   getUserExperience,
   postUserExperience,
 } from "../../redux/actions";
-import AggiungiSezioneForm from "./AggiungiSezioneLavorativa";
-import { CloseButton } from "react-bootstrap";
+// import AggiungiSezioneForm from "./AggiungiSezioneLavorativa";
+// import { CloseButton } from "react-bootstrap";
+import AggiungiSezioneDelProfilo from "./AggiungiSezioneDelProfilo";
 
 function Profile() {
   const [userData, setUserData] = useState(null);
   //  const [showInfomations, setShowInfomations] = useState(false);
-  const [modalShow, setModalShow] = useState(false);
+  // const [modalShow, setModalShow] = useState(false);
   const [showCard, setShowCard] = useState(false);
-
+  const [addProfileShow, setAddProfileShow] = useState(false);
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -40,6 +41,7 @@ function Profile() {
   //  const showMoreInfo = () => {
   //     setShowInfomations(!showInfomations);
   //  };
+
   const handleButtonClick = () => {
     setShowCard(true);
   };
@@ -156,14 +158,18 @@ function Profile() {
                   <Button
                     className="rounded-5 me-2"
                     variant="outline-primary"
-                    onClick={() => setModalShow(true)}
+                    onClick={() => setAddProfileShow(true)}
                   >
                     Aggiungi sezione del profilo
                   </Button>
-                  <AggiungiEsperienza
+                  {/* <AggiungiEsperienza
                     show={modalShow}
                     onHide={() => setModalShow(false)}
-                  ></AggiungiEsperienza>
+                  ></AggiungiEsperienza> */}
+                  <AggiungiSezioneDelProfilo
+                    show={addProfileShow}
+                    onHide={() => setAddProfileShow(false)}
+                  ></AggiungiSezioneDelProfilo>
                   <div id="backcolor">
                     <Dropdown className="d-flex justify-content-center">
                       <DropdownToggle
