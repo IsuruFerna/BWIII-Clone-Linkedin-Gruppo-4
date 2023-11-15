@@ -5,10 +5,13 @@ import { useState } from "react";
 
 const AddExperience = () => {
    const [formData, setFormData] = useState(null);
+   const [initialMonth, setInitialMonth] = useState(null);
+   const [initialYear, setInitialYear] = useState(null);
+   const [endMonth, setEndMonth] = useState(null);
+   const [endYear, setEndYear] = useState(null);
+
    const handleSubmit = (e) => {
       e.preventDefault();
-      const formData = new FormData(e.target);
-      console.log("form submited", formData);
    };
 
    const handleChange = (field, value) => {
@@ -16,6 +19,16 @@ const AddExperience = () => {
          ...prevData,
          [field]: value,
       }));
+   };
+
+   //  makes a array of 100 years based on current year
+   const getYears = () => {
+      const currentYear = new Date().getFullYear();
+      const years = [];
+      for (let i = currentYear; i > currentYear - 100; i--) {
+         years.push(i);
+      }
+      return years;
    };
 
    console.log("new form data: ", formData);
@@ -36,23 +49,26 @@ const AddExperience = () => {
       //   "__v": 0 // SERVER GENERATED
       //   "_id": "5d925e677360c41e0046d1f5" // SERVER GENERATED
       // }
-      <div
-         className="modal show"
-         style={{ display: "block", position: "initial" }}
-      >
-         <Modal.Dialog>
-            <Modal.Header closeButton className="py-2">
-               <Modal.Title>Aggiungi esperienza</Modal.Title>
-            </Modal.Header>
 
-            <div>
-               <Modal.Body>
-                  <Form onSubmit={handleSubmit}>
-                     <Form.Group
-                        className="mb-3"
-                        controlId="exampleForm.ControlInput1"
-                     >
-                        <Form.Label>Qualifica*</Form.Label>
+      <Form onSubmit={handleSubmit}>
+         <div
+            className="modal show"
+            style={{ display: "block", position: "initial" }}
+         >
+            <Modal.Dialog>
+               <Modal.Header closeButton className="py-2">
+                  <Modal.Title>Aggiungi esperienza</Modal.Title>
+               </Modal.Header>
+
+               <div>
+                  <Modal.Body>
+                     {/* role */}
+                     <Form.Group className="mb-3 text-dark text-opacity-75">
+                        <Form.Label className="m-0">
+                           <small className="text-dark text-opacity-50 ms-1">
+                              Qualifica*
+                           </small>
+                        </Form.Label>
                         <Form.Control
                            type="text"
                            placeholder="Esempio: Retail Sales Manager"
@@ -61,46 +77,196 @@ const AddExperience = () => {
                            onChange={(e) =>
                               handleChange("role", e.target.value)
                            }
-                           invalid // Set isInvalid to show validation state
                         />
-                        <Form.Control.Feedback type="invalid">
-                           Please provide a value.
-                        </Form.Control.Feedback>
                      </Form.Group>
-                     <Form.Group className="mb-3">
-                        <Form.Label>Tipo di impiego*</Form.Label>
-                        <Form.Select aria-label="Default select example">
-                           <option value="" disabled>
-                              Seleziona
-                           </option>
-                           <option>A tempo pieno</option>
-                           <option>Part-time</option>
-                           <option>Autonomo</option>
-                           <option>Freelance</option>
-                           <option>A contratto</option>
-                           <option>Stage</option>
-                           <option>Apprendistato</option>
-                           <option>Stagionale</option>
-                        </Form.Select>
-                        <Form.Control.Feedback type="invalid">
-                           Please select an option
-                        </Form.Control.Feedback>
-                     </Form.Group>
-                     <Button
-                        type="submit"
-                        variant="primary"
-                        size="sm"
-                        className="rounded-pill px-3"
-                     >
-                        Salva
-                     </Button>
-                  </Form>
-               </Modal.Body>
-            </div>
 
-            <Modal.Footer>footer</Modal.Footer>
-         </Modal.Dialog>
-      </div>
+                     {/* company */}
+                     <Form.Group className="mb-3">
+                        <Form.Label className="m-0">
+                           <small className="text-dark text-opacity-50 ms-1">
+                              Nome azienda*
+                           </small>
+                        </Form.Label>
+                        <Form.Control
+                           type="text"
+                           placeholder="Esempio: Retail Sales Manager"
+                           required
+                           value={formData?.company || ""}
+                           onChange={(e) =>
+                              handleChange("company", e.target.value)
+                           }
+                        />
+                     </Form.Group>
+
+                     {/* area */}
+                     <Form.Group className="mb-3">
+                        <Form.Label className="m-0">
+                           <small className="text-dark text-opacity-50 ms-1">
+                              Nome azienda*
+                           </small>
+                        </Form.Label>
+                        <Form.Control
+                           type="text"
+                           placeholder="Esempio: Milano, Italia"
+                           required
+                           value={formData?.area || ""}
+                           onChange={(e) =>
+                              handleChange("area", e.target.value)
+                           }
+                        />
+                     </Form.Group>
+
+                     {/* startDate */}
+                     <div className="d-flex align-items-end w-100 gap-1">
+                        <Form.Group className="mb-3 w-50">
+                           <Form.Label className="m-0">
+                              <small className="text-dark text-opacity-50 ms-1">
+                                 Data di inizio*
+                              </small>
+                           </Form.Label>
+                           {/* initial month */}
+                           <Form.Select
+                              aria-label="Default select example"
+                              value={initialMonth || ""}
+                              onChange={(e) => {
+                                 setInitialMonth(e.target.value);
+                              }}
+                           >
+                              <option value="" disabled selected>
+                                 Mese
+                              </option>
+                              <option value="01">Gennaio</option>
+                              <option value="02">Febbraio</option>
+                              <option value="03">Marzo</option>
+                              <option value="04">Aprile</option>
+                              <option value="05">Maggio</option>
+                              <option value="06">Giugno</option>
+                              <option value="07">Luglio</option>
+                              <option value="08">Agosto</option>
+                              <option value="09">Settembre</option>
+                              <option value="10">Ottobre</option>
+                              <option value="11">Novembre</option>
+                              <option value="12">Dicembre</option>
+                           </Form.Select>
+                           <Form.Control.Feedback type="invalid">
+                              Please select an option
+                           </Form.Control.Feedback>
+                        </Form.Group>
+                        {/* initial year */}
+                        <Form.Group className="mb-3 w-50">
+                           <Form.Label></Form.Label>
+                           <Form.Select
+                              aria-label="Default select example"
+                              value={initialYear || ""}
+                              onChange={(e) => {
+                                 setInitialYear(e.target.value);
+                              }}
+                           >
+                              <option value="" disabled selected>
+                                 Anno
+                              </option>
+                              {getYears().map((year) => {
+                                 return <option key={year}>{year}</option>;
+                              })}
+                           </Form.Select>
+                           <Form.Control.Feedback type="invalid">
+                              Please select an option
+                           </Form.Control.Feedback>
+                        </Form.Group>
+                     </div>
+
+                     {/* endDate */}
+                     <div className="d-flex align-items-end w-100 gap-1">
+                        <Form.Group className="mb-3 w-50">
+                           <Form.Label className="m-0">
+                              <small className="text-dark text-opacity-50 ms-1">
+                                 Data di fine*
+                              </small>
+                           </Form.Label>
+                           {/* end month */}
+                           <Form.Select
+                              aria-label="Default select example"
+                              value={endMonth || ""}
+                              onChange={(e) => {
+                                 setEndMonth(e.target.value);
+                              }}
+                           >
+                              <option value="" disabled selected>
+                                 Mese
+                              </option>
+                              <option value="01">Gennaio</option>
+                              <option value="02">Febbraio</option>
+                              <option value="03">Marzo</option>
+                              <option value="04">Aprile</option>
+                              <option value="05">Maggio</option>
+                              <option value="06">Giugno</option>
+                              <option value="07">Luglio</option>
+                              <option value="08">Agosto</option>
+                              <option value="09">Settembre</option>
+                              <option value="10">Ottobre</option>
+                              <option value="11">Novembre</option>
+                              <option value="12">Dicembre</option>
+                           </Form.Select>
+                           <Form.Control.Feedback type="invalid">
+                              Please select an option
+                           </Form.Control.Feedback>
+                        </Form.Group>
+                        {/* end year */}
+                        <Form.Group className="mb-3 w-50">
+                           <Form.Label></Form.Label>
+                           <Form.Select
+                              aria-label="Default select example"
+                              value={endYear || ""}
+                              onChange={(e) => {
+                                 setEndYear(e.target.value);
+                              }}
+                           >
+                              <option value="" disabled selected>
+                                 Anno
+                              </option>
+                              {getYears().map((year) => {
+                                 return <option key={year}>{year}</option>;
+                              })}
+                           </Form.Select>
+                           <Form.Control.Feedback type="invalid">
+                              Please select an option
+                           </Form.Control.Feedback>
+                        </Form.Group>
+                     </div>
+
+                     {/* description */}
+                     <Form.Group className="mb-3">
+                        <Form.Label className="m-0">
+                           <small className="text-dark text-opacity-50 ms-1">
+                              Descrizione*
+                           </small>
+                        </Form.Label>
+                        <Form.Control
+                           as="textarea"
+                           rows={3}
+                           value={formData?.description || ""}
+                           onChange={(e) =>
+                              handleChange("description", e.target.value)
+                           }
+                        />
+                     </Form.Group>
+                  </Modal.Body>
+               </div>
+
+               <Modal.Footer>
+                  {" "}
+                  <Button
+                     type="submit"
+                     variant="primary"
+                     size="sm"
+                     className="rounded-pill px-3"
+                  >
+                     Salva
+                  </Button>
+               </Modal.Footer>
+            </Modal.Dialog>
+         </div>
+      </Form>
    );
 };
 
