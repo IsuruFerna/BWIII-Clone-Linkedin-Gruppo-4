@@ -38,8 +38,9 @@ const Attività = () => {
                 </div>
                 <Container className="d-flex flex-row px-3 "></Container>
               </Card.Body>
-              <Card.Footer>
-                <b>Mostra tutte le risorse (5)</b> <ArrowRight />
+              <Card.Footer className="my-card-footer">
+                <b className="grigetto">Mostra tutte le risorse (5)</b>{" "}
+                <ArrowRight />
               </Card.Footer>
             </Card>
           </Col>
