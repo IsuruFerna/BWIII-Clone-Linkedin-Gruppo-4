@@ -1,10 +1,20 @@
+import { useState } from "react";
 import { Accordion, ListGroup, ListGroupItem, Modal } from "react-bootstrap";
+import AddExperience from "./AddExperience";
 
-const AggiungiSezioneDelProfilo = (props) => {
+const AggiungiSezioneDelProfilo = ({ show, onHide }) => {
+  //   const [show, setShow] = useState(false);
+  const [addExperienceShow, setAddExperienceShow] = useState(false);
+  const handleAddExperienceClick = () => {
+    setAddExperienceShow(true);
+    onHide();
+  };
   return (
     <>
       <Modal
-        {...props}
+        // {...props}
+        show={show}
+        onHide={onHide}
         size="lg"
         aria-labelledby="contained-modal-title-vcenter"
         centered
@@ -36,6 +46,7 @@ const AggiungiSezioneDelProfilo = (props) => {
                 <hr className="mt-0" />
                 <ListGroupItem className="border border-0 ps-0 ">
                   <p className="text-secondary mb-1 pointer">
+                    <button onClick={handleAddExperienceClick}>A</button>
                     Aggiungi posizione lavorativa
                   </p>
                 </ListGroupItem>
@@ -170,6 +181,10 @@ const AggiungiSezioneDelProfilo = (props) => {
             </Accordion.Body>
           </Accordion.Item>
         </Accordion>
+        <AddExperience
+          show={addExperienceShow}
+          onHide={() => setAddExperienceShow(false)}
+        ></AddExperience>
       </Modal>
     </>
   );

@@ -33,10 +33,14 @@ function Profile() {
   //  const [showInfomations, setShowInfomations] = useState(false);
   // const [modalShow, setModalShow] = useState(false);
   const [showCard, setShowCard] = useState(false);
-  const [addProfileShow, setAddProfileShow] = useState(false);
+  // const [addProfileShow, setAddProfileShow] = useState(false);
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  // const [showContactInfo, setShowContactInfo] = useState(false);
+  const [showAddProfileModal, setShowAddProfileModal] = useState(false);
+  const [showAddExperience, setShowAddExperience] = useState(false);
+  const [showAddSection, setShowAddSection] = useState(false);
 
   //  const showMoreInfo = () => {
   //     setShowInfomations(!showInfomations);
@@ -158,7 +162,7 @@ function Profile() {
                   <Button
                     className="rounded-5 me-2"
                     variant="outline-primary"
-                    onClick={() => setAddProfileShow(true)}
+                    onClick={() => setShowAddProfileModal(true)}
                   >
                     Aggiungi sezione del profilo
                   </Button>
@@ -167,8 +171,8 @@ function Profile() {
                     onHide={() => setModalShow(false)}
                   ></AggiungiEsperienza> */}
                   <AggiungiSezioneDelProfilo
-                    show={addProfileShow}
-                    onHide={() => setAddProfileShow(false)}
+                    show={showAddProfileModal}
+                    onHide={() => setShowAddProfileModal(false)}
                   ></AggiungiSezioneDelProfilo>
                   <div id="backcolor">
                     <Dropdown className="d-flex justify-content-center">
