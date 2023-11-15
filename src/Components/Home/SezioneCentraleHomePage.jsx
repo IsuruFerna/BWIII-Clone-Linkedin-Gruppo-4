@@ -20,7 +20,7 @@ const SezioneCentraleHomePage = () => {
         }
       })
       .then((datas) => {
-        setPost(datas);
+        setPost(datas.reverse());
       })
       .catch((err) => console.log("Errore: ", err));
   };

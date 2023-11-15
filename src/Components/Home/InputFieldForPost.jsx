@@ -16,7 +16,7 @@ const InputFieldForPost = () => {
         "Content-Type": "application/json",
       },
       method: "POST",
-      body: JSON.stringify(input),
+      body: JSON.stringify({ text: input }),
     })
       .then((res) => {
         if (res.ok) {
@@ -52,6 +52,7 @@ const InputFieldForPost = () => {
             className="rounded-1 py-0 px-3 ms-1 "
             onClick={() => {
               fetchPost();
+              clearInput();
             }}
           >
             Post
