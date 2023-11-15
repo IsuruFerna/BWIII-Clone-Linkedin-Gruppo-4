@@ -5,7 +5,10 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getUserAction, postUserExperience } from "../../redux/actions";
 
-const AddExperience = () => {
+const AddExperience = ({
+   showVisibleAddExperience,
+   setShowVisibleAddExperience,
+}) => {
    const [formData, setFormData] = useState(null);
    const [initialMonth, setInitialMonth] = useState(null);
    const [initialYear, setInitialYear] = useState(null);
@@ -38,10 +41,12 @@ const AddExperience = () => {
       // check wheather the data is loaded to the store
       // post user experience
       // retreve updated user experience
+      // disappera model form
       if (userFormReduxStore.user) {
          const userId = userFormReduxStore.user._id;
          dispatch(postUserExperience(userId, updatedFormData));
          dispatch(getUserAction());
+         setShowVisibleAddExperience(false);
       }
    };
 
@@ -85,10 +90,17 @@ const AddExperience = () => {
       <Form onSubmit={handleSubmit}>
          <div
             className="modal show"
-            style={{ display: "block", position: "initial" }}
+            style={{ display: "block", position: "fixed" }}
+            // centered
          >
             <Modal.Dialog>
-               <Modal.Header closeButton className="py-2">
+               <Modal.Header
+                  closeButton
+                  onClick={() => {
+                     setShowVisibleAddExperience(false);
+                  }}
+                  className="py-2"
+               >
                   <Modal.Title>Aggiungi esperienza</Modal.Title>
                </Modal.Header>
 
