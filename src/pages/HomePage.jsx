@@ -1,4 +1,5 @@
 import { Col, Container, Row } from "react-bootstrap";
+import SezioneCentraleHomePage from "../Components/Home/SezioneCentraleHomePage";
 
 const HomePage = () => {
   return (
@@ -11,10 +12,7 @@ const HomePage = () => {
           eaque. Repellendus, quo!
         </Col>
         <Col className="col-5 bg-warning">
-          Sezione centrale Lorem ipsum dolor sit amet, consectetur adipisicing
-          elit. Aperiam explicabo saepe qui, ratione voluptas pariatur
-          consequuntur necessitatibus ut consectetur in, veritatis aut nesciunt
-          placeat, corrupti quos ullam cupiditate. Cum, magni?
+          <SezioneCentraleHomePage />
         </Col>
         <Col className="col-3 bg-danger">
           Sezione a destra Lorem ipsum dolor sit amet consectetur, adipisicing
