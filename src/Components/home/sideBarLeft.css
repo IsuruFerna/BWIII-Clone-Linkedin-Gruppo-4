@@ -1,0 +1,80 @@
+
+
+.imgProfile{
+
+width: 50px;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+position: absolute;
+top: 25px;
+left: 85px;
+
+}
+
+@media screen and (min-width: 380px) {
+ 
+    .listSezioneLavorativa{
+ 
+       font-size: 12px;
+    }
+    .MakeAppearCard{
+       width: 200px;
+    }
+ 
+ }
+ 
+ @media screen and (min-width: 600px) {
+  
+    .butAggiungiSezione{
+ font-size: 15px;
+ 
+    }
+ 
+    .h5{
+       font-size: 17px;
+       margin-right: 5px;
+    }
+ 
+    .listSezioneLavorativa{
+ 
+       font-size: 12px;
+    }
+ 
+    .MakeAppearCard{
+       width: 300px;
+    }
+ 
+  }
+  @media screen and (min-width: 770px) {
+  
+    .listSezioneLavorativa{
+ 
+       font-size: 14px;
+    } 
+ 
+    .MakeAppearCard{
+       width: 400px;
+    }
+  }
+ 
+  @media screen and (min-width: 995px) {
+    .butAggiungiSezione{
+       font-size: 15px;
+       
+          }
+ 
+          .MakeAppearCard{
+             width: 500px;
+          }
+  }
+ 
+  @media screen and (min-width: 1200px) {
+  
+    .butAggiungiSezione{
+       font-size: 15px;
+       
+          }
+ 
+  }
+ 
