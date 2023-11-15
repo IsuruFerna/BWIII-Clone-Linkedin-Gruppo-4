@@ -1,7 +1,6 @@
 import { Col, Container, Row } from "react-bootstrap";
 import SezioneCentraleHomePage from "../Components/Home/SezioneCentraleHomePage";
 import SectionRight from "../Components/Home/SectionRight";
-import Footer from "../Components/main/Footer";
 
 const HomePage = () => {
   return (
