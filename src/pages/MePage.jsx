@@ -13,30 +13,34 @@ import Formazione from "../Components/Me/formazione";
 import Interessi from "../Components/Me/Interessi";
 import Experiences from "../Components/Me/Experience";
 import PublicProfile from "../Components/Me/PublicProfile";
+import Footer from "../Components/main/Footer";
 
 const MePage = () => {
   return (
-    <Container>
-      <Row className="justify-content-center gx-2">
-        <Col className="col-6 mt-2">
-          <Profile />
-          <ConsigliatoPerTe />
-          <Analisi />
+    <>
+      <Container>
+        <Row className="justify-content-center gx-2">
+          <Col className="col-6 mt-2">
+            <Profile />
+            <ConsigliatoPerTe />
+            <Analisi />
 
-          <Risorse />
-          <Attività />
-          <Informazioni />
-          <Experiences />
-          <Competenze />
-          <Formazione />
-          <Interessi />
-        </Col>
-        <Col className="col-2 mt-2">
-          <PublicProfile />
-          <PotrestiConoscere />
-        </Col>
-      </Row>
-    </Container>
+            <Risorse />
+            <Attività />
+            <Informazioni />
+            <Experiences />
+            <Competenze />
+            <Formazione />
+            <Interessi />
+          </Col>
+          <Col className="col-2 mt-2">
+            <PublicProfile />
+            <PotrestiConoscere />
+          </Col>
+        </Row>
+      </Container>
+      <Footer />
+    </>
   );
 };
 

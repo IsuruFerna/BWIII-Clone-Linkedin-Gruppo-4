@@ -15,43 +15,39 @@ const Footer = () => {
               lg={3}
               className=" d-flex flex-column mt-sm-4 mt-md-0"
             >
-              <a href="#" className="ancor">
-                Informazioni
-              </a>
-              <a href="#" className="ancor">
-                Linee guida della community
-              </a>
+              <span className="span">
+                {" "}
+                Informazioni Linee guida della community
+              </span>
+
               <Nav>
                 <NavDropdown
                   id="nav-dropdown-dark-example"
                   title="Privacy e condizioni"
                   menuVariant="white"
-                  className="ancor"
+                  className="span"
                 >
-                  <NavDropdown.Item href="#action/3.1" className="ancor">
+                  <NavDropdown.Item href="#action/3.1" className="span">
                     Informativa sulla privacy
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.2" className="ancor">
+                  <NavDropdown.Item href="#action/3.2" className="span">
                     Contratto di licenza
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3" className="ancor">
+                  <NavDropdown.Item href="#action/3.3" className="span">
                     Termini e condizioni delle pagine
                   </NavDropdown.Item>
 
-                  <NavDropdown.Item href="#action/3.4" className="ancor">
+                  <NavDropdown.Item href="#action/3.4" className="span">
                     Informativa sui cookie
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.5" className="ancor">
+                  <NavDropdown.Item href="#action/3.5" className="span">
                     Informativa sui copyright
                   </NavDropdown.Item>
                 </NavDropdown>
               </Nav>
-              <a href="#" className="ancor">
-                Sales Solutions
-              </a>
-              <a href="#" className="ancor">
-                centro sicurezza
-              </a>
+              <span className="span">Sales</span>
+              <span className="span">Solutions</span>
+              <span className="span">centro sicurezza</span>
             </Col>
             <Col
               sm={4}
@@ -59,18 +55,10 @@ const Footer = () => {
               lg={3}
               className=" d-flex flex-column mt-sm-4 mt-md-0"
             >
-              <a href="#" className="ancor">
-                Accessibilità
-              </a>
-              <a href="#" className="ancor mt-2">
-                Carriera
-              </a>
-              <a href="#" className="ancor mt-2">
-                Opzioni per gli annunci pubblicitari
-              </a>
-              <a href="#" className="ancor mt-2">
-                Mobile
-              </a>
+              <span className="span"> Accessibilità</span>
+              <span className="span">Carriera </span>
+              <span className="span">Opzioni per gli annunci pubblicitari</span>
+              <span className="span"> Mobile</span>
             </Col>
             <Col
               sm={4}
@@ -78,18 +66,11 @@ const Footer = () => {
               lg={3}
               className=" d-flex flex-column mt-sm-4 mt-md-0"
             >
-              <a href="#" className="ancor">
-                Talent Solutions
-              </a>
-              <a href="#" className="ancor mt-2">
-                Soluzioni di marketing
-              </a>
-              <a href="#" className="ancor mt-3">
-                Pubblicità
-              </a>
-              <a href="#" className="ancor mt-2">
-                Piccole imprese
-              </a>
+              <span className="span">Talent</span>
+              <span className="span">Solutions</span>
+              <span className="span"> Soluzioni di marketing </span>
+              <span className="span"> Pubblicità</span>
+              <span className="span"> Piccole imprese</span>
             </Col>
             <Col
               sm={12}
@@ -103,7 +84,7 @@ const Footer = () => {
                 </Col>
                 <Col>
                   <h6 className="text-secondary">Domande?</h6>
-                  <p className="ancor">Visita il nostro centro assistenza.</p>
+                  <p className="span">Visita il nostro centro assistenza.</p>
                 </Col>
               </Row>
 
@@ -115,7 +96,7 @@ const Footer = () => {
                   <h6 className="text-secondary">
                     Gestisci il tuo account e la tua privacy
                   </h6>
-                  <p className="ancor">Vai alle impostazioni</p>
+                  <p className="span">Vai alle impostazioni</p>
                 </Col>
               </Row>
               <Row>
@@ -126,7 +107,7 @@ const Footer = () => {
                   <h6 className="text-secondary">
                     Trasparenza sui contenuti consigliati
                   </h6>
-                  <p className="ancor">
+                  <p className="span">
                     Scopri di più sui contenuti consigliati.
                   </p>
                 </Col>
@@ -135,9 +116,9 @@ const Footer = () => {
           </Row>
         </Col>
         <Col className="col-md-2 col-sm-6">
-          <p className="ancor">Seleziona lingua</p>
+          <p className="span">Seleziona lingua</p>
           <Dropdown data-bs-theme="white">
-            <Dropdown.Toggle className="ancor bg-white text-secondary border border-black col-md-14 col-lg-13 d-flex justify-content-start align-items-center">
+            <Dropdown.Toggle className="span bg-white text-secondary border border-black col-md-14 col-lg-13 d-flex justify-content-start align-items-center">
               Italiano (Italiano)
             </Dropdown.Toggle>
 
@@ -155,7 +136,7 @@ const Footer = () => {
       <Row>
         <Col className="col-1"></Col>
         <Col className="col-9">
-          <p className="ancor">LinkedIn Corporation © 2023</p>
+          <p className="span">LinkedIn Corporation © 2023</p>
         </Col>
         <Col className="col-2"></Col>
       </Row>

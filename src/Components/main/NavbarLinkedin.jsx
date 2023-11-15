@@ -75,8 +75,8 @@ function NavbarLinkedin() {
               id="basic-nav-dropdown"
               className="mt-1 text-secondary"
             >
-              <Link to="/">
-                <h6 className="ms-3 mt-2 text-black ">Account</h6>
+              <Link to="/" className="nav-link p-0 m-0">
+                <h6 className="ms-3 mt-2 ">Account</h6>
               </Link>
 
               <NavDropdown.Item href="#action/3.2">
