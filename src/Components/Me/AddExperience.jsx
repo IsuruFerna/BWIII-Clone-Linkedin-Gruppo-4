@@ -11,9 +11,14 @@ const AddExperience = () => {
       console.log("form submited", formData);
    };
 
-   //  const handleChnage = (e, field) => {
-   //     field: e.target.value;
-   //  };
+   const handleChange = (field, value) => {
+      setFormData((prevData) => ({
+         ...prevData,
+         [field]: value,
+      }));
+   };
+
+   console.log("new form data: ", formData);
 
    return (
       //     Modello dell'EXPERIENCE:
@@ -52,10 +57,14 @@ const AddExperience = () => {
                            type="text"
                            placeholder="Esempio: Retail Sales Manager"
                            required
-                           isInvalid // Set isInvalid to show validation state
-                        />{" "}
+                           value={formData?.role || ""}
+                           onChange={(e) =>
+                              handleChange("role", e.target.value)
+                           }
+                           invalid // Set isInvalid to show validation state
+                        />
                         <Form.Control.Feedback type="invalid">
-                           Please select an option
+                           Please provide a value.
                         </Form.Control.Feedback>
                      </Form.Group>
                      <Form.Group className="mb-3">
