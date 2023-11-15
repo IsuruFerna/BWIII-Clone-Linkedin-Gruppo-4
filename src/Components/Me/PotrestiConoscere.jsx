@@ -29,7 +29,7 @@ const PotrestiConoscere = () => {
   }, []);
   return (
     <div className="d-none d-lg-flex flex-column">
-      <Container fluid className="border shadow rounded mb-3">
+      <Container fluid className="border bg-white shadow rounded mb-3">
         <div className="d-flex flex-column">
           <h5 className="fw-bold smaller my-2 fs-6">
             Altri profili consultati
@@ -47,7 +47,7 @@ const PotrestiConoscere = () => {
             })}
         </div>
       </Container>
-      <Container fluid className="border shadow rounded">
+      <Container fluid className="border bg-white shadow rounded">
         <div className="d-flex flex-column my-2">
           <h5 className="fw-bold smaller fs-6">
             Persone che potresti conoscere

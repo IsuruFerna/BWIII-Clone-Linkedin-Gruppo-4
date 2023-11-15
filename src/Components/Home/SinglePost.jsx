@@ -1,13 +1,14 @@
 import { Container } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const SinglePost = ({ data }) => {
   return (
     <Container
-      className="my-3 py-1 border-secondary bg-white rounded shadow p-3"
+      className="my-3 py-1 border-secondary bg-white rounded shadow"
       id="singlePost"
     >
       <div>
-        <section className="d-flex align-items-center">
+        <section className="d-flex align-items-center ">
           <div>
             <img
               src={data.user.image}
@@ -17,10 +18,12 @@ const SinglePost = ({ data }) => {
             />
           </div>
           <div className="fw-bold ms-3">
-            {data.user.name} {data.user.surname}
-            <span className="usernameInPosts extrasmall">
-              {data.user.username}
-            </span>
+            <Link to={`/profile/${data.user._id}`} className="nav-link">
+              {data.user.name} {data.user.surname}
+              <span className="usernameInPosts extrasmall">
+                {data.user.username}
+              </span>
+            </Link>
           </div>
         </section>
         <section>

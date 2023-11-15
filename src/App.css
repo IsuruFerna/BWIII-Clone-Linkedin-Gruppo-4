@@ -90,6 +90,12 @@ body {
 #singlePost {
   transition: all 0.6s;
 }
+#btnShowMore {
+  transition: all 0.6s;
+}
+#btnShowMore:hover {
+  background-color: rgb(130, 130, 130) !important;
+}
 #singlePost:hover {
   scale: 1.04;
 }
