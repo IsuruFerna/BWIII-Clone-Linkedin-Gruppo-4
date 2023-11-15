@@ -1,5 +1,6 @@
 import { Col, Container, Row } from "react-bootstrap";
 import SezioneCentraleHomePage from "../Components/Home/SezioneCentraleHomePage";
+import SectionRight from "../Components/Home/SectionRight";
 
 const HomePage = () => {
   return (
@@ -14,11 +15,8 @@ const HomePage = () => {
         <Col className="col-5 bg-transparent">
           <SezioneCentraleHomePage />
         </Col>
-        <Col className="col-3 bg-danger">
-          Sezione a destra Lorem ipsum dolor sit amet consectetur, adipisicing
-          elit. Accusamus autem soluta eius corrupti blanditiis facilis tempora
-          facere, reiciendis quo recusandae, perferendis accusantium est
-          distinctio quasi repellendus delectus quae, neque in!
+        <Col className="col-3">
+          <SectionRight />
         </Col>
       </Row>
     </Container>
