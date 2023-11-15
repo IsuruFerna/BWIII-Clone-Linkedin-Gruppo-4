@@ -20,7 +20,7 @@ const SinglePost = ({ data }) => {
           <div className="fw-bold ms-3">
             <Link to={`/profile/${data.user._id}`} className="nav-link">
               {data.user.name} {data.user.surname}
-              <span className="usernameInPosts extrasmall">
+              <span className="usernameInPosts extrasmall px-2">
                 {data.user.username}
               </span>
             </Link>

@@ -12,7 +12,7 @@ const SectionRight = () => {
   const [showMore, setShowMore] = useState(false);
   return (
     <>
-      <Card className="mb-4 rounded-3 ms-2">
+      <Card className="mb-5 rounded-3 shadow">
         <Card.Title className="d-flex justify-content-between align-items-center me-3 fw-semibold fs-6 mt-2 ms-2">
           <div> LindedIn Notizie </div>
           <InfoSquareFill className="" />
@@ -44,8 +44,6 @@ const SectionRight = () => {
           ancora domani'
         </Card.Text>
         <p className="ms-4 extrasmall fw-light text-secondary ">1 ore</p>
-
-        {/* seconda parte */}
         {showMore === true ? (
           <>
             <Card.Text className="mt-2 fw-semibold text-dark mb-1 smaller ms-1 ">
@@ -96,26 +94,26 @@ const SectionRight = () => {
         </Button>
       </Card>
       <div>
-        <div className="d-flex ms-5 text-secondary smaller  ">
-          <p className="ms-4">Informazioni</p>{" "}
-          <p className="ms-4">Accessibilità</p>
+        <div className="d-flex justify-content-center text-secondary smaller align-items-center ">
+          <p className="px-1">Informazioni</p>
+          <p className="px-1">Accessibilità</p>
         </div>
-        <div className="d-flex text-secondary ms-3 smaller ">
-          <p className="ms-4">Centro Assistenza</p>
-          <p className="ms-4">Privacy e condizioni</p>
+        <div className="d-flex justify-content-center text-secondary smaller align-items-center ">
+          <p className="px-1">Centro Assistenza</p>
+          <p className="px-1">Privacy e condizioni</p>
         </div>
-        <div className="d-flex ms-5 text-secondary smaller ">
-          <p className="ms-2">Opzioni per gli annunci pubblicitari</p>
+        <div className="d-flex justify-content-center text-secondary smaller align-items-center ">
+          <p className="px-1">Opzioni per gli annunci pubblicitari</p>
         </div>
-        <div className="d-flex ms-5 text-secondary smaller ">
-          <p className="ms-3">Pubblicità</p>
-          <p className="ms-4">Servizi alle aziende</p>
+        <div className="d-flex justify-content-center text-secondary smaller align-items-center ">
+          <p className="px-1">Pubblicità</p>
+          <p className="px-1">Servizi alle aziende</p>
         </div>
-        <div className="d-flex ms-5 text-secondary smaller ">
-          <p className="ms-4">Scarica l'app LinkedIn</p>
-          <p className="ms-3">Altro</p>
+        <div className="d-flex justify-content-center text-secondary smaller align-items-center ">
+          <p className="px-1">Scarica l'app LinkedIn</p>
+          <p className="px-1">Altro</p>
         </div>
-        <span className=" ms-3 bg-white smaller d-flex align-items-center justify-content-center">
+        <span className="bg-white smaller d-flex align-items-center justify-content-center">
           <img
             src="https://www.salvatorepumo.it/wp-content/uploads/2022/02/logo-linkedin-oggi.png"
             alt="logoLink"

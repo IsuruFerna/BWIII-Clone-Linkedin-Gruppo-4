@@ -5,11 +5,15 @@
   transform: translate(25%, -50%);
   width: 15%;
 }
+#userImage2 {
+  position: relative;
+  transform: translateY(-50%);
+}
 body {
   background-color: #f4f2ee;
 }
 #nav {
-  width: 75%;
+  /* width: 60%; */
   margin: 0 auto;
 }
 /* footer qui */
