@@ -3,7 +3,11 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getUserAction, postUserExperience } from "../../redux/actions";
+import {
+   editModel,
+   getUserAction,
+   postUserExperience,
+} from "../../redux/actions";
 
 const AddExperience = ({
    showVisibleAddExperience,
@@ -17,6 +21,7 @@ const AddExperience = ({
 
    // get user data from the redux store
    const userFormReduxStore = useSelector((state) => state.user);
+   const reduxExpModel = useSelector((state) => state.user.modelExperience);
    const dispatch = useDispatch();
 
    const handleSubmit = (e) => {
@@ -46,7 +51,8 @@ const AddExperience = ({
          const userId = userFormReduxStore.user._id;
          dispatch(postUserExperience(userId, updatedFormData));
          dispatch(getUserAction());
-         setShowVisibleAddExperience(false);
+         // setShowVisibleAddExperience(false);
+         dispatch(editModel(editModel()));
       }
    };
 
@@ -68,7 +74,7 @@ const AddExperience = ({
       return years;
    };
 
-   console.log("new form data: ", formData);
+   // console.log("new form data: ", formData);
 
    return (
       //     Modello dell'EXPERIENCE:
@@ -98,6 +104,7 @@ const AddExperience = ({
                   closeButton
                   onClick={() => {
                      setShowVisibleAddExperience(false);
+                     dispatch(editModel());
                   }}
                   className="py-2"
                >

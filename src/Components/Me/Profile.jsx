@@ -111,7 +111,7 @@ function Profile() {
       }
    };
 
-   console.log("profile: ", userFormReduxStore);
+   console.log("profile: ", userFormReduxStore.modelExperience);
 
    return (
       <Container>

@@ -3,7 +3,7 @@ import { Card } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { Pencil, PlusLg } from "react-bootstrap-icons";
+import { ChevronExpand, Pencil, PlusLg } from "react-bootstrap-icons";
 import "./Experience.css";
 import SingleExperience from "./SingleExperience";
 
@@ -21,7 +21,7 @@ const ExperienceModify = () => {
                               <PlusLg className="fs-4" />
                            </div>
                            <div className="btn-circle">
-                              <Pencil className="fs-3" />
+                              <ChevronExpand className="fs-3" />
                            </div>
                         </div>
                      </div>

@@ -1,4 +1,5 @@
 import {
+   EDIT_MODEL,
    GET_USER,
    GET_USER_EXPERIENCE,
    POST_USER_EXPERIENCE,
@@ -8,6 +9,7 @@ const initialState = {
    user: null,
    experience: [],
    postExperience: [],
+   modelExperience: false,
 };
 
 const userReducer = (state = initialState, action) => {
@@ -27,7 +29,13 @@ const userReducer = (state = initialState, action) => {
       case POST_USER_EXPERIENCE:
          return {
             ...state,
-            postExperience: action.payload,
+            postExperience: !state.modelExperience,
+         };
+
+      case EDIT_MODEL:
+         return {
+            ...state,
+            modelExperience: action.payload,
          };
 
       default:
