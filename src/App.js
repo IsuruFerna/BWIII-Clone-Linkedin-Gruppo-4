@@ -7,6 +7,7 @@ import MePage from "./pages/MePage";
 import Footer from "./Components/main/footer";
 import NavbarLinkedin from "./Components/main/NavbarLinkedin";
 import ProfilePage from "./pages/ProfilePage";
+import HomePage from "./Components/Home/HomePage";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route element={<MePage />} path="/" />
         <Route element={<ProfilePage />} path="/profile/:id" />
+        <Route element={<HomePage />} path="/home" />
       </Routes>
       <Footer />
     </BrowserRouter>

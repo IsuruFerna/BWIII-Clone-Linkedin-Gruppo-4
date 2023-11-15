@@ -5,7 +5,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import Form from "react-bootstrap/Form";
 import {
   BrowserSafari,
-  Check2All,
+  // Check2All,
   FileBarGraphFill,
   Grid3x3GapFill,
   HouseDoorFill,
@@ -21,6 +21,7 @@ import { BellFill } from "react-bootstrap-icons";
 import { BriefcaseFill } from "react-bootstrap-icons";
 import { ChatDotsFill } from "react-bootstrap-icons";
 import { PersonCircle } from "react-bootstrap-icons";
+import { Link } from "react-router-dom";
 
 function NavbarLinkedin() {
   return (
@@ -46,7 +47,9 @@ function NavbarLinkedin() {
         </Navbar.Collapse>
         <div className="text-secondary d-flex flex-column">
           <HouseDoorFill className="fs-5 ms-2" />
-          <h6 className="text-center me-3">Home</h6>
+          <Link to="/home" className="nav-link">
+            <h6 className="text-center me-3">Home</h6>
+          </Link>
         </div>
         <div className="text-secondary d-flex flex-column ms-3">
           <PeopleFill className="fs-5 ms-1" /> <h6 className="me-4">Rete</h6>

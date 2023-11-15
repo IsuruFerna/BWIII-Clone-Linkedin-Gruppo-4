@@ -7,11 +7,7 @@ const SinglePerson = ({ person }) => {
       <Container fluid className="d-flex mb-4">
         <Row>
           <Col className="col-3">
-            <img
-              src={person.image}
-              alt="profileImage"
-              className="w-100 rounded-circle"
-            />
+            <img src={person.image} alt="profileImage" className="img-class" />
           </Col>
           <Col>
             <div className="smaller fw-bold d-flex flex-column">

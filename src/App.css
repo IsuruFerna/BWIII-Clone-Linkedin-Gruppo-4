@@ -9,6 +9,10 @@ body {
   background-color: #f4f2ee;
 }
 /* footer qui */
+.img-class {
+  width: 29px;
+  border-radius: 50%;
+}
 
 .ancor {
   text-decoration: none;
