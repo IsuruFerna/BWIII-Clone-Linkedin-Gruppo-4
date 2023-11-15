@@ -2,6 +2,8 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getUserAction, postUserExperience } from "../../redux/actions";
 
 const AddExperience = () => {
    const [formData, setFormData] = useState(null);
@@ -10,10 +12,40 @@ const AddExperience = () => {
    const [endMonth, setEndMonth] = useState(null);
    const [endYear, setEndYear] = useState(null);
 
+   // get user data from the redux store
+   const userFormReduxStore = useSelector((state) => state.user);
+   const dispatch = useDispatch();
+
    const handleSubmit = (e) => {
       e.preventDefault();
+
+      let updatedFormData = { ...formData };
+      // set initial date
+      let initialDate = `${initialYear}-${initialMonth}-01`;
+      initialDate = new Date(initialDate);
+      updatedFormData.startDate = initialDate;
+
+      // set end date
+      if (endMonth && endYear) {
+         let endDate = `${endYear}-${endMonth}-01`;
+         endDate = new Date(endDate);
+         updatedFormData.endDate = endDate;
+      } else {
+         updatedFormData.endDate = null;
+      }
+
+      // post data
+      // check wheather the data is loaded to the store
+      // post user experience
+      // retreve updated user experience
+      if (userFormReduxStore.user) {
+         const userId = userFormReduxStore.user._id;
+         dispatch(postUserExperience(userId, updatedFormData));
+         dispatch(getUserAction());
+      }
    };
 
+   //  set formdata values
    const handleChange = (field, value) => {
       setFormData((prevData) => ({
          ...prevData,
