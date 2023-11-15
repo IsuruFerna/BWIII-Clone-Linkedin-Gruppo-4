@@ -1,4 +1,4 @@
-import { Row, ListGroup } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 import { ArrowRight, EyeFill, PeopleFill } from "react-bootstrap-icons";
 import { Card, Col, Container } from "react-bootstrap/esm";
 import Satellite from "../../assets/icons8-satellite-16.png";
@@ -31,7 +31,8 @@ const Risorse = () => {
                         </div>
                         <div>
                           <h6 className="mt-1">
-                            Modalità creazione di contenuti <span>No</span>
+                            Modalità creazione di contenuti{" "}
+                            <span id="no">No</span>
                           </h6>
                           <p>
                             Fatti scoprire, metti in risalto i contenuti sul tuo
@@ -54,14 +55,13 @@ const Risorse = () => {
                         </div>
                       </div>
                     </Col>
-                    <ListGroup variant="flush border pe-0">
-                      <ListGroup.Item>
-                        <b>Mostra tutte le risorse (5)</b> <ArrowRight />
-                      </ListGroup.Item>
-                    </ListGroup>
                   </Row>
                 </Container>
               </Card.Body>
+              <Card.Footer className="my-card-footer">
+                <b className="grigetto">Mostra tutte le risorse (5)</b>{" "}
+                <ArrowRight />
+              </Card.Footer>
             </Card>
           </Col>
         </Row>

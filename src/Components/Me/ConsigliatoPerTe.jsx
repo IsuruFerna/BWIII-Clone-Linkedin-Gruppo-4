@@ -30,7 +30,7 @@ const ConsigliatoPerTe = () => {
                     Tenere aggiornato il tuo profilo ti aiuta a farti notare per
                     le opportunità giuste.
                   </p>
-                  <Button variant="rounded-pill" id="advice-button">
+                  <Button variant="rounded-pill" id="advice-button" size="sm">
                     Conferma posizione lavorativa attuale
                   </Button>
                 </div>
