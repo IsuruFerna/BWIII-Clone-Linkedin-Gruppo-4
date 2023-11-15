@@ -24,6 +24,6 @@ const ProfilePage = () => {
       })
       .catch((err) => console.log("Error: ", err));
   }, [id]);
-  return <User user={user} />;
+  return <User user={user} add={false} />;
 };
 export default ProfilePage;

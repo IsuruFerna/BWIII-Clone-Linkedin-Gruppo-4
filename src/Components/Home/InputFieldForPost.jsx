@@ -33,7 +33,8 @@ const InputFieldForPost = () => {
         <Form.Control
           type="text"
           placeholder="Share what you're thinking with your friends"
-          className="bg-transparent rounded-0 border-0 p-3"
+          className="rounded-0 border-0 p-3"
+          id="inputFieldInForm"
           value={input}
           onChange={(e) => {
             setInput(e.target.value);

@@ -25,8 +25,8 @@ const AddPost = () => {
     myFetch();
   }, []);
   return (
-    <section className="shadow bg-transparent">
-      <div className="border-bottom bg-transparent p-1 d-flex align-items-center mt-1 ">
+    <section className="shadow bg-white">
+      <div className="border-bottom bg-white p-1 d-flex align-items-center mt-1 ">
         <div>
           <img
             src={me.image}

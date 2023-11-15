@@ -39,7 +39,11 @@ const PotrestiConoscere = () => {
           {persons
             .filter((allPersons, i) => i > 10 && i < 16)
             .map((singlePerson) => {
-              return <SinglePerson person={singlePerson} />;
+              return (
+                <div key={singlePerson._id}>
+                  <SinglePerson person={singlePerson} />
+                </div>
+              );
             })}
         </div>
       </Container>
@@ -56,7 +60,11 @@ const PotrestiConoscere = () => {
           {persons
             .filter((allPersons, i) => i < 10)
             .map((singlePerson) => {
-              return <SinglePerson person={singlePerson} />;
+              return (
+                <div key={singlePerson._id}>
+                  <SinglePerson person={singlePerson} />
+                </div>
+              );
             })}
         </div>
       </Container>

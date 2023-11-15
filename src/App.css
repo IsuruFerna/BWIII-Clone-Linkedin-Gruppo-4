@@ -87,3 +87,12 @@ body {
   border: 1px solid rgb(171, 171, 171);
   color: white;
 }
+#singlePost {
+  transition: all 0.6s;
+}
+#singlePost:hover {
+  scale: 1.04;
+}
+#inputFieldInForm:focus {
+  box-shadow: none;
+}
