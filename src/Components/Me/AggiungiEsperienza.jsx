@@ -126,7 +126,7 @@ function AggiungiEsperienza(props) {
             Aggiungi esperienza
           </Modal.Title>
         </Modal.Header>
-        <Modal.Body className="my-modal-body">
+        <Modal.Body>
           <div className="alert-body p-3">
             <h6>Informa la rete</h6>
             <div className="d-flex align-items-center ">
@@ -164,7 +164,7 @@ function AggiungiEsperienza(props) {
                 id="inputPassword5"
                 aria-describedby="passwordHelpBlock"
                 placeholder="Esempio: Pettinatore di bambole"
-                className="mb-3 personal-input my-form-control"
+                className="mb-3 personal-input"
                 value={formData.role}
                 onChange={(e) =>
                   setFormData({ ...formData, role: e.target.value })
@@ -173,7 +173,7 @@ function AggiungiEsperienza(props) {
             </div>
             <div className="mb-3">
               <Form.Label htmlFor="inputPassword5">Tipo di impiego*</Form.Label>
-              <Form.Select className="my-form-select">
+              <Form.Select>
                 <option>Seleziona</option>
                 <option value="1">A tempo pieno</option>
                 <option value="2">Part-time</option>
@@ -195,7 +195,7 @@ function AggiungiEsperienza(props) {
                 id="inputPassword5"
                 aria-describedby="passwordHelpBlock"
                 placeholder="Esempio: Epicode"
-                className="mb-3 my-form-control"
+                className="mb-3"
                 value={formData.company}
                 onChange={(e) =>
                   setFormData({ ...formData, company: e.target.value })
@@ -208,7 +208,7 @@ function AggiungiEsperienza(props) {
                 id="inputPassword5"
                 aria-describedby="passwordHelpBlock"
                 placeholder="Esempio: Salaparuta, Sicilia"
-                className="mb-3 my-form-control"
+                className="mb-3"
                 value={formData.area}
                 onChange={(e) =>
                   setFormData({ ...formData, area: e.target.value })
@@ -217,7 +217,7 @@ function AggiungiEsperienza(props) {
             </div>
             <div className="mb-3">
               <Form.Label htmlFor="inputPassword5">Tipo di località</Form.Label>
-              <Form.Select className="my-form-select">
+              <Form.Select>
                 <option>Seleziona</option>
                 <option value="1">In sede</option>
                 <option value="2">Ibrido</option>
@@ -241,7 +241,7 @@ function AggiungiEsperienza(props) {
             <Row>
               <Col className="col-12 col-md-6">
                 <Form.Select
-                  className="mb-1  my-form-select"
+                  className="mb-1"
                   onChange={handleSelectChange}
                   value={selectedOption}
                 >
@@ -262,7 +262,7 @@ function AggiungiEsperienza(props) {
               </Col>
               <Col className="col-12 col-md-6">
                 <Form.Select
-                  className="mb-3 fix-hover-2 my-form-select"
+                  className="mb-3 fix-hover-2"
                   onChange={(e) =>
                     setInitialDate({
                       ...initialDate,
@@ -297,7 +297,7 @@ function AggiungiEsperienza(props) {
             <Row>
               <Col className="col-12 col-md-6">
                 <Form.Select
-                  className="mb-1 my-form-select"
+                  className="mb-1"
                   onChange={(e) =>
                     setFinalDate({
                       ...finalDate,
@@ -323,7 +323,7 @@ function AggiungiEsperienza(props) {
               </Col>
               <Col className="col-12 col-md-6">
                 <Form.Select
-                  className="mb-3 fix-hover-2 my-form-select"
+                  className="mb-3 fix-hover-2"
                   onChange={(e) =>
                     setFinalDate({
                       ...finalDate,
@@ -360,7 +360,7 @@ function AggiungiEsperienza(props) {
                 id="inputPassword5"
                 aria-describedby="passwordHelpBlock"
                 placeholder="Esempio: Commercio reliquie trafugate"
-                className="mb-3 my-form-control"
+                className="mb-3"
               />
               Scopri di più sulle{" "}
               <span className="personal-link">opzioni relative al settore</span>
@@ -370,7 +370,7 @@ function AggiungiEsperienza(props) {
                 Descrizione
               </label>
               <textarea
-                className="form-control my-text-area"
+                className="form-control fix-hover"
                 id="exampleFormControlTextarea1"
                 rows="3"
                 value={formData.description}
@@ -389,7 +389,7 @@ function AggiungiEsperienza(props) {
               <Form.Control
                 id="inputPassword5"
                 aria-describedby="passwordHelpBlock"
-                className="fix-hover my-form-control"
+                className="fix-hover"
               />
               <Form.Text id="passwordHelpBlock" muted>
                 <p>
@@ -446,17 +446,17 @@ function AggiungiEsperienza(props) {
 export default AggiungiEsperienza;
 
 // function App() {
-//   const [modalShow, setModalShow] = React.useState(false);
+//   const [addProfileShow, setAddProfileShow] = useState(false);
 
 //   return (
 //     <>
-//       <Button variant="primary" onClick={() => setModalShow(true)}>
+//       <Button variant="primary" onClick={() => setAddProfileShow(true)}>
 //         Launch vertically centered modal
 //       </Button>
 
 //       <MyVerticallyCenteredModal
-//         show={modalShow}
-//         onHide={() => setModalShow(false)}
+//         show={addProfileShow}
+//         onHide={() => setAddProfileShow(false)}
 //       />
 //     </>
 //   );
