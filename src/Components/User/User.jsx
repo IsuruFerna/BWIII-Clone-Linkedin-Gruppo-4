@@ -3,7 +3,7 @@ import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import PotrestiConoscere from "../Me/PotrestiConoscere";
 import { useEffect, useState } from "react";
 import SinglePost from "../Home/SinglePost";
-import Footer from "../main/Footer";
+import Footer from "../main/footer";
 
 const User = ({ user, add }) => {
   const [usersPost, setUserPost] = useState([]);

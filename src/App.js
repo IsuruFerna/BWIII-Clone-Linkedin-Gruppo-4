@@ -9,7 +9,6 @@ import ProfilePage from "./pages/ProfilePage";
 import HomePage from "./pages/HomePage";
 import JobsPage from "./Components/jobs/JobsPage";
 import { useState } from "react";
-// import AddExperience from "./Components/Me/AddExperience";
 
 function App() {
   const [searchQuery, setSearchQuery] = useState("");
