@@ -3,11 +3,18 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getUserAction, postUserExperience } from "../../redux/actions";
+import {
+   addBtn,
+   editModel,
+   getUserAction,
+   postUserExperience,
+} from "../../redux/actions";
 
 const AddExperience = ({
    showVisibleAddExperience,
    setShowVisibleAddExperience,
+   showAddExperienceModal,
+   handleClose,
 }) => {
    const [formData, setFormData] = useState(null);
    const [initialMonth, setInitialMonth] = useState(null);
@@ -17,10 +24,11 @@ const AddExperience = ({
 
    // get user data from the redux store
    const userFormReduxStore = useSelector((state) => state.user);
+   const reduxExpModel = useSelector((state) => state.user.modelExperience);
    const dispatch = useDispatch();
 
-   const handleSubmit = (e) => {
-      e.preventDefault();
+   const handleSubmit = () => {
+      // e.preventDefault();
 
       let updatedFormData = { ...formData };
       // set initial date
@@ -46,8 +54,16 @@ const AddExperience = ({
          const userId = userFormReduxStore.user._id;
          dispatch(postUserExperience(userId, updatedFormData));
          dispatch(getUserAction());
-         setShowVisibleAddExperience(false);
+         // setShowVisibleAddExperience(false);
+         // dispatch(editModel());
+         dispatch(addBtn());
       }
+   };
+
+   const handleSave = (e) => {
+      e.preventDefault();
+      handleSubmit();
+      handleClose();
    };
 
    //  set formdata values
@@ -68,7 +84,7 @@ const AddExperience = ({
       return years;
    };
 
-   console.log("new form data: ", formData);
+   // console.log("new form data: ", formData);
 
    return (
       //     Modello dell'EXPERIENCE:
@@ -88,17 +104,21 @@ const AddExperience = ({
       // }
 
       <Form onSubmit={handleSubmit}>
-         <div
-            className="modal show"
-            style={{ display: "block", position: "fixed" }}
+         <Modal
+            show={showAddExperienceModal}
+            onHide={handleClose}
+            // className="modal"
+            // style={{ display: "block", position: "fixed" }}
             // centered
          >
-            <Modal.Dialog>
+            <Modal.Dialog className="m-0">
                <Modal.Header
                   closeButton
-                  onClick={() => {
-                     setShowVisibleAddExperience(false);
-                  }}
+                  // onClick={() => {
+                  //    setShowVisibleAddExperience(false);
+                  //    // dispatch(editModel());
+                  //    dispatch(addBtn());
+                  // }}
                   className="py-2"
                >
                   <Modal.Title>Aggiungi esperienza</Modal.Title>
@@ -304,12 +324,13 @@ const AddExperience = ({
                      variant="primary"
                      size="sm"
                      className="rounded-pill px-3"
+                     onClick={handleSave}
                   >
                      Salva
                   </Button>
                </Modal.Footer>
             </Modal.Dialog>
-         </div>
+         </Modal>
       </Form>
    );
 };

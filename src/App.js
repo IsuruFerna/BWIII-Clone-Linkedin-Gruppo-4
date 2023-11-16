@@ -9,25 +9,30 @@ import ProfilePage from "./pages/ProfilePage";
 import HomePage from "./pages/HomePage";
 import JobsPage from "./Components/jobs/JobsPage";
 import { useState } from "react";
+import ExperiencePage from "./pages/ExperiencePage";
 
 function App() {
-  const [searchQuery, setSearchQuery] = useState("");
+   const [searchQuery, setSearchQuery] = useState("");
 
-  const handleSearch = (query) => {
-    setSearchQuery(query);
-  };
-  return (
-    <BrowserRouter>
-      <NavbarLinkedin onSearch={handleSearch} />
-      {/* <AddExperience /> */}
-      <Routes>
-        <Route element={<MePage />} path="/" />
-        <Route element={<ProfilePage />} path="/profile/:id" />
-        <Route element={<HomePage />} path="/home" />
-        <Route element={<JobsPage searchQuery={searchQuery} />} path="/jobs" />
-      </Routes>
-    </BrowserRouter>
-  );
+   const handleSearch = (query) => {
+      setSearchQuery(query);
+   };
+   return (
+      <BrowserRouter>
+         <NavbarLinkedin onSearch={handleSearch} />
+         {/* <AddExperience /> */}
+         <Routes>
+            <Route element={<MePage />} path="/" />
+            <Route element={<ProfilePage />} path="/profile/:id" />
+            <Route element={<HomePage />} path="/home" />
+            <Route
+               element={<JobsPage searchQuery={searchQuery} />}
+               path="/jobs"
+            />
+            <Route element={<ExperiencePage />} path="/experience" />
+         </Routes>
+      </BrowserRouter>
+   );
 }
 
 export default App;
