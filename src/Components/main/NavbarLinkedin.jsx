@@ -4,16 +4,10 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Form from "react-bootstrap/Form";
 import {
-  BrowserSafari,
   // Check2All,
-  FileBarGraphFill,
   Grid3x3GapFill,
   HouseDoorFill,
-  Info,
-  MenuButtonWide,
-  PlayBtnFill,
   PlusLg,
-  SlashCircleFill,
   XLg,
 } from "react-bootstrap-icons";
 import { PeopleFill } from "react-bootstrap-icons";
