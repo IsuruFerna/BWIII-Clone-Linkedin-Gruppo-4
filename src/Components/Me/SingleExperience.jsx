@@ -54,50 +54,50 @@ const SingleExperience = () => {
 
    console.log("this is user global: ", userFormReduxStore);
 
-   const handleClick = (element) => {
-      // console.log("eeedit this", element);
+   // const handleClick = (element) => {
+   //    // console.log("eeedit this", element);
 
-      // fetch data to fill the modal
-      fetch(
-         `https://striveschool-api.herokuapp.com/api/profile/${element.user}/experiences/${element._id}`,
-         {
-            headers: {
-               Authorization: token,
-            },
-         }
-      )
-         .then((res) => {
-            if (!res.ok) {
-               throw new Error("Related experience did not retreaved!");
-            }
-            return res.json();
-         })
-         .then((data) => {
-            console.log("related post data retreaved!", data);
-            let endDate_ = new Date(data.endDate);
-            let startDate_ = new Date(data.startDate);
-            setEditFormData({
-               area: data.area,
-               company: data.company,
-               description: data.description,
-               endMonth: endDate_.getMonth() + 1,
-               endYear: endDate_.getFullYear(),
-               startMonth: startDate_.getMonth() + 1,
-               startYear: startDate_.getFullYear(),
-               role: data.role,
-               startDate: data.startDate,
-               user: data.user,
-               id: data._id,
-            });
-         })
-         .catch((err) => console.log("ERROR", err));
+   //    // fetch data to fill the modal
+   //    fetch(
+   //       `https://striveschool-api.herokuapp.com/api/profile/${element.user}/experiences/${element._id}`,
+   //       {
+   //          headers: {
+   //             Authorization: token,
+   //          },
+   //       }
+   //    )
+   //       .then((res) => {
+   //          if (!res.ok) {
+   //             throw new Error("Related experience did not retreaved!");
+   //          }
+   //          return res.json();
+   //       })
+   //       .then((data) => {
+   //          console.log("related post data retreaved!", data);
+   //          let endDate_ = new Date(data.endDate);
+   //          let startDate_ = new Date(data.startDate);
+   //          setEditFormData({
+   //             area: data.area,
+   //             company: data.company,
+   //             description: data.description,
+   //             endMonth: endDate_.getMonth() + 1,
+   //             endYear: endDate_.getFullYear(),
+   //             startMonth: startDate_.getMonth() + 1,
+   //             startYear: startDate_.getFullYear(),
+   //             role: data.role,
+   //             startDate: data.startDate,
+   //             user: data.user,
+   //             id: data._id,
+   //          });
+   //       })
+   //       .catch((err) => console.log("ERROR", err));
 
-      // set modal form's visibility
-      dispatch({
-         type: EDIT_MODEL,
-         payload: true,
-      });
-   };
+   //    // set modal form's visibility
+   //    // dispatch({
+   //    //    type: EDIT_MODEL,
+   //    //    payload: true,
+   //    // });
+   // };
 
    console.log("modified redux model", reduxExpModel);
 
@@ -114,9 +114,9 @@ const SingleExperience = () => {
                      />
                      <div>
                         <h4
-                           onClick={() => {
-                              handleClick(element);
-                           }}
+                           // onClick={() => {
+                           //    handleClick(element);
+                           // }}
                            className="fs-5 mt-2 mb-0"
                         >
                            {element.role}
@@ -139,7 +139,7 @@ const SingleExperience = () => {
                   </div>
                );
             })}
-         {reduxExpModel && <EditExperience formEditData={formEditData} />}
+         {/* {reduxExpModel && <EditExperience formEditData={formEditData} />} */}
       </>
    );
 };

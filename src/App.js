@@ -8,8 +8,7 @@ import Footer from "./Components/main/footer";
 import NavbarLinkedin from "./Components/main/NavbarLinkedin";
 import ProfilePage from "./pages/ProfilePage";
 import ExperiencePage from "./pages/ExperiencePage";
-import ModalTest from "./pages/ModalTest";
-import DualColumnModal from "./pages/DualColModal";
+
 // import AddExperience from "./Components/Me/AddExperience";
 
 function App() {
@@ -22,8 +21,7 @@ function App() {
             <Route element={<ProfilePage />} path="/profile/:id" />
             <Route element={<ExperiencePage />} path="/experience" />
          </Routes>
-         <DualColumnModal />
-         <ModalTest />
+
          <Footer />
       </BrowserRouter>
    );

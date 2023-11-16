@@ -1,12 +1,8 @@
 import { useEffect, useState } from "react";
 import Image from "react-bootstrap/Image";
 import { useDispatch, useSelector } from "react-redux";
-import {
-   EDIT_MODEL,
-   getUserAction,
-   getUserExperience,
-} from "../../redux/actions";
-import AddExperience from "./AddExperience";
+import { getUserAction } from "../../redux/actions";
+
 import EditExperience from "./EditExperience";
 import { token } from "../../redux/actions";
 import { Pencil } from "react-bootstrap-icons";
@@ -18,20 +14,15 @@ const SingleExperienceModify = ({
 }) => {
    const dispatch = useDispatch();
    const userFormReduxStore = useSelector((state) => state.user);
-   const reduxExpModel = useSelector((state) => state.user.modelExperience);
+
    const [formEditData, setEditFormData] = useState(null);
 
    useEffect((element) => {
-      // console.log("this is to edit", element);
       dispatch(getUserAction());
       // eslint-disable-next-line react-hooks/exhaustive-deps
    }, []);
 
-   console.log("this is user global: ", userFormReduxStore);
-
    const handleClick = (element) => {
-      // console.log("eeedit this", element);
-
       // fetch data to fill the modal
       fetch(
          `https://striveschool-api.herokuapp.com/api/profile/${element.user}/experiences/${element._id}`,
@@ -66,12 +57,6 @@ const SingleExperienceModify = ({
             });
          })
          .catch((err) => console.log("ERROR", err));
-
-      // set modal form's visibility
-      // dispatch({
-      //    type: EDIT_MODEL,
-      //    payload: true,
-      // });
    };
 
    return (
@@ -87,14 +72,7 @@ const SingleExperienceModify = ({
                            alt="logo-agenzi"
                         />
                         <div>
-                           <h4
-                              // onClick={() => {
-                              //    handleClick(element);
-                              // }}
-                              className="fs-5 mt-2 mb-0"
-                           >
-                              {element.role}
-                           </h4>
+                           <h4 className="fs-5 mt-2 mb-0">{element.role}</h4>
                            <p className="mb-0">{element.company}</p>
                            <p className="mb-0 text-dark text-opacity-50 lh-sm">
                               {element.startDate} &#8226; {element.endDate}
@@ -103,12 +81,10 @@ const SingleExperienceModify = ({
                      </div>
                      <div className="btn-circle">
                         <Pencil
-                           className="fs-3"
-                           // onClick={handleEditExpClick}
+                           className="fs-3 text-secondary"
                            onClick={() => {
                               handleClick(element);
                               handleEditExpClick();
-                              // console.log("this is somethig: ", element);
                            }}
                         />
                      </div>
