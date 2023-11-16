@@ -5,6 +5,9 @@ const InputFieldForPost = () => {
   const clearInput = () => {
     setInput("");
   };
+  const clearImage = () => {
+    setImage("");
+  };
 
   const [input, setInput] = useState("");
   const [image, setImage] = useState("");
@@ -55,7 +58,10 @@ const InputFieldForPost = () => {
           <Button
             id="cancelBtn"
             className="rounded-1 py-0 px-3"
-            onClick={() => clearInput()}
+            onClick={() => {
+              clearInput();
+              clearImage();
+            }}
           >
             Cancel
           </Button>
@@ -65,6 +71,7 @@ const InputFieldForPost = () => {
             onClick={() => {
               fetchPost();
               clearInput();
+              clearImage();
             }}
           >
             Post
