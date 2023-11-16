@@ -5,7 +5,7 @@ import { Container, Card, Col } from "react-bootstrap/esm";
 const Analisi = () => {
   return (
     <>
-      <Container className="my-3">
+      <Container fluid className="my-3">
         <Row>
           <Col className="col-12">
             <Card className="shadow">

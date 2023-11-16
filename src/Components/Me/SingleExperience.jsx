@@ -93,8 +93,7 @@ const SingleExperience = () => {
                 <h4 className="fs-5 mt-2 mb-0">{element.role}</h4>
                 <p className="mb-0">{element.company}</p>
                 <p className="mb-0 text-dark text-opacity-50 lh-sm">
-                  {element.startDate.slice(0, 10)} &#8226;{" "}
-                  {element.endDate.slice(0, 10)}
+                  {element.startDate} &#8226; {element.endDate}
                 </p>
                 {/* <p className="mt-0 text-dark text-opacity-50 lh-sm">
                            Da Remoto
