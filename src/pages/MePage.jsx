@@ -18,13 +18,12 @@ import Footer from "../Components/main/Footer";
 const MePage = () => {
   return (
     <>
-      <Container>
+      <Container fluid>
         <Row className="justify-content-center gx-2">
-          <Col className="col-6 mt-2">
+          <Col className="col-11 col-lg-8 col-xl-6 mt-2">
             <Profile />
             <ConsigliatoPerTe />
             <Analisi />
-
             <Risorse />
             <Attività />
             <Informazioni />
@@ -33,7 +32,7 @@ const MePage = () => {
             <Formazione />
             <Interessi />
           </Col>
-          <Col className="col-2 mt-2">
+          <Col className="col-11 col-lg-8 col-xl-2 mt-2">
             <PublicProfile />
             <PotrestiConoscere />
           </Col>

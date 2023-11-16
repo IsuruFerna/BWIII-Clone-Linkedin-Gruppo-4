@@ -7,7 +7,7 @@ import "./ConsigliatoPerTe.css";
 const ConsigliatoPerTe = () => {
   return (
     <>
-      <Container className="my-3">
+      <Container fluid className="my-3">
         <Row>
           <Col className="col-12">
             <Card className="shadow">
@@ -24,7 +24,7 @@ const ConsigliatoPerTe = () => {
                     <h5>
                       Lavori ancora presso La Trattoria di Unto & Bisunto?
                     </h5>
-                    <XLg id="close" />{" "}
+                    <XLg id="close" />
                   </div>
                   <p>
                     Tenere aggiornato il tuo profilo ti aiuta a farti notare per

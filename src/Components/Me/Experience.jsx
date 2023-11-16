@@ -9,7 +9,7 @@ import SingleExperience from "./SingleExperience";
 
 const Experiences = () => {
   return (
-    <Container>
+    <Container fluid className="mb-3">
       <Row>
         <Col className="col-12">
           <Card className="shadow">

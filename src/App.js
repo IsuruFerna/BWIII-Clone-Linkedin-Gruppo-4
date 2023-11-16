@@ -4,7 +4,6 @@ import "./Components/main/Navbar.css";
 import "./pages/MePage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MePage from "./pages/MePage";
-import Footer from "./Components/main/Footer";
 import NavbarLinkedin from "./Components/main/NavbarLinkedin";
 import ProfilePage from "./pages/ProfilePage";
 import HomePage from "./pages/HomePage";
@@ -28,7 +27,6 @@ function App() {
         <Route element={<HomePage />} path="/home" />
         <Route element={<JobsPage searchQuery={searchQuery} />} path="/jobs" />
       </Routes>
-      <Footer />
     </BrowserRouter>
   );
 }
