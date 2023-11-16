@@ -21,9 +21,11 @@ const EditExperience = ({
    const [endMonth, setEndMonth] = useState(null);
    const [endYear, setEndYear] = useState(null);
 
+   console.log("values taken via parent", formEditData);
+
    // get user data from the redux store
    const userFormReduxStore = useSelector((state) => state.user);
-   const reduxExpModel = useSelector((state) => state.user.modelExperience);
+   const reduxExpModel = useSelector((state) => state.user.modelModifyExp);
    const dispatch = useDispatch();
 
    // save edits
@@ -151,7 +153,7 @@ const EditExperience = ({
                   }}
                   className="py-2"
                >
-                  <Modal.Title>Aggiungi esperienza</Modal.Title>
+                  <Modal.Title>Modifica esperienza</Modal.Title>
                </Modal.Header>
 
                {formEditData && (

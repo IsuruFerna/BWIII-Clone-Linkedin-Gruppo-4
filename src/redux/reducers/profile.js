@@ -3,6 +3,7 @@ import {
    GET_USER,
    GET_USER_EXPERIENCE,
    POST_USER_EXPERIENCE,
+   MODIFY_EXPERIENCE_MODEL,
 } from "../actions";
 
 const initialState = {
@@ -10,6 +11,7 @@ const initialState = {
    experience: [],
    postExperience: [],
    modelExperience: false,
+   modelModifyExp: false,
 };
 
 const userReducer = (state = initialState, action) => {
@@ -29,13 +31,19 @@ const userReducer = (state = initialState, action) => {
       case POST_USER_EXPERIENCE:
          return {
             ...state,
-            postExperience: !state.modelExperience,
+            postExperience: action.payload,
          };
 
       case EDIT_MODEL:
          return {
             ...state,
-            modelExperience: action.payload,
+            modelExperience: !state.modelExperience,
+         };
+
+      case MODIFY_EXPERIENCE_MODEL:
+         return {
+            ...state,
+            modelModifyExp: !state.modelExperience,
          };
 
       default:

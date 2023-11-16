@@ -103,7 +103,7 @@ const AddExperience = ({
                <Modal.Header
                   closeButton
                   onClick={() => {
-                     setShowVisibleAddExperience(false);
+                     // setShowVisibleAddExperience(false);
                      dispatch(editModel());
                   }}
                   className="py-2"

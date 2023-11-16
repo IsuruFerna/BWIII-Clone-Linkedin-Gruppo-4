@@ -5,10 +5,11 @@ import PotrestiConoscere from "../Components/Me/PotrestiConoscere";
 import PublicProfile from "../Components/Me/PublicProfile";
 import ExperienceModify from "../Components/Me/ExperienceModify";
 import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import EditExperience from "../Components/Me/EditExperience";
+import AddExperience from "../Components/Me/AddExperience";
 
 const ExperiencePage = () => {
-   //  const dispatch = useDispatch();
-
    return (
       <Container>
          <Row className="justify-content-center gx-2">
@@ -18,6 +19,8 @@ const ExperiencePage = () => {
             <Col className="col-2">
                <PublicProfile />
                <PotrestiConoscere />
+               <EditExperience />
+               {/* <AddExperience /> */}
             </Col>
          </Row>
       </Container>
