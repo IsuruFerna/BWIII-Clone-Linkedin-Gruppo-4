@@ -10,7 +10,7 @@ import ProfilePage from "./pages/ProfilePage";
 import HomePage from "./pages/HomePage";
 import JobsPage from "./Components/jobs/JobsPage";
 import { useState } from "react";
-import Footer from "./Components/main/Footer";
+import Footer from "./Components/main/footer";
 // import AddExperience from "./Components/Me/AddExperience";
 
 function App() {
@@ -29,7 +29,7 @@ function App() {
         <Route element={<HomePage />} path="/home" />
         <Route element={<JobsPage searchQuery={searchQuery} />} path="/jobs" />
       </Routes>
-      <Footer />
+    < Footer/> 
     </BrowserRouter>
   );
 }

@@ -1,0 +1,49 @@
+
+
+.imgUtente{
+
+width: 50px;
+
+}
+
+.buttForCom{
+
+    border: 0;
+    background-color: transparent;
+    color: gray;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.NameTitleComment{
+font-size: 15px;
+
+}
+
+.TimeComment{
+    font-size: 10px;
+}
+
+.TextOfComment{
+
+    font-size: 14px;
+
+}
+
+.formblablabla{
+    border: solid 1px gray;
+  
+}
+
+.FormControl{
+    border: 0;
+    
+    
+}
+
+.bottoneDentroForm{
+    
+    border: 0;
+    background-color: trasparent;
+}
+

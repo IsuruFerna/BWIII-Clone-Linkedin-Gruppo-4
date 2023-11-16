@@ -1,5 +1,7 @@
 import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import CommentTwo from "./commentTwo";
+
 
 const SinglePost = ({ data }) => {
   return (
@@ -29,6 +31,10 @@ const SinglePost = ({ data }) => {
         <section>
           <div className="px-2 py-4 shadow-sm mt-2 rounded">{data.text}</div>
         </section>
+        <section>
+          <CommentTwo/>
+        </section>
+       
       </div>
     </Container>
   );
