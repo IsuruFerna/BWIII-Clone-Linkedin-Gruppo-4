@@ -1,4 +1,5 @@
 import {
+   ADD_EXP_BTN,
    EDIT_MODEL,
    GET_USER,
    GET_USER_EXPERIENCE,
@@ -10,6 +11,7 @@ const initialState = {
    experience: [],
    postExperience: [],
    modelExperience: false,
+   addBtnStatus: false,
 };
 
 const userReducer = (state = initialState, action) => {
@@ -29,13 +31,19 @@ const userReducer = (state = initialState, action) => {
       case POST_USER_EXPERIENCE:
          return {
             ...state,
-            postExperience: !state.modelExperience,
+            postExperience: action.payload,
          };
 
       case EDIT_MODEL:
          return {
             ...state,
-            modelExperience: action.payload,
+            modelExperience: !state.modelExperience,
+         };
+
+      case ADD_EXP_BTN:
+         return {
+            ...state,
+            modelExperience: !state.modelExperience,
          };
 
       default:

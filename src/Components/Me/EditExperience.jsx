@@ -151,7 +151,7 @@ const EditExperience = ({
                   }}
                   className="py-2"
                >
-                  <Modal.Title>Aggiungi esperienza</Modal.Title>
+                  <Modal.Title>Modifica esperienza</Modal.Title>
                </Modal.Header>
 
                {formEditData && (
