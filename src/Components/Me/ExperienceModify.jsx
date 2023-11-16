@@ -1,21 +1,14 @@
-// import { Col, Row } from "react-bootstrap";
 import { Card } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { ChevronExpand, Pencil, PlusLg } from "react-bootstrap-icons";
-import "./Experience.css";
-import SingleExperience from "./SingleExperience";
+import { ChevronExpand, PlusLg } from "react-bootstrap-icons";
 import SingleExperienceModify from "./SingleExperienceModify";
-import { useDispatch, useSelector } from "react-redux";
 import AddExperience from "./AddExperience";
-import { addBtn } from "../../redux/actions";
 import { useState } from "react";
+import "./Experience.css";
 
 const ExperienceModify = () => {
-   const reduxBtnAdd = useSelector((state) => state.user.addBtnStatus);
-   const dispatch = useDispatch();
-
    // resetting modals
    const [showEditExperienceModal, setEditExperienceModal] = useState(false);
    const [showAddExperienceModal, setAddExperienceModal] = useState(false);
@@ -44,9 +37,6 @@ const ExperienceModify = () => {
                               <PlusLg
                                  className="fs-4"
                                  onClick={handleAddExpClick}
-                                 // onClick={() => {
-                                 //    dispatch(addBtn());
-                                 // }}
                               />
                            </div>
                            <div className="btn-circle">
@@ -55,7 +45,6 @@ const ExperienceModify = () => {
                         </div>
                      </div>
 
-                     {/* <SingleExperience /> */}
                      <SingleExperienceModify
                         handleEditExpClick={handleEditExpClick}
                         handleClose={handleClose}
@@ -69,7 +58,6 @@ const ExperienceModify = () => {
             handleClose={handleClose}
             showAddExperienceModal={showAddExperienceModal}
          />
-         {/* {reduxBtnAdd && <AddExperience />} */}
       </Container>
    );
 };

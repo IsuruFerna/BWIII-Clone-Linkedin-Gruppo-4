@@ -1,4 +1,3 @@
-// import { Col, Row } from "react-bootstrap";
 import { Card } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -21,11 +20,9 @@ const Experiences = () => {
                            <div className="btn-circle p-0 me-1">
                               <PlusLg className="fs-4" />
                            </div>
-                           {/* <div className="btn-circle"> */}
                            <Link to="experience" className="btn-circle">
                               <Pencil className="fs-3 text-secondary" />
                            </Link>
-                           {/* </div> */}
                         </div>
                      </div>
 

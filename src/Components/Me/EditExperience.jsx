@@ -3,17 +3,9 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {
-   editBtn,
-   editModel,
-   getUserAction,
-   postUserExperience,
-   token,
-} from "../../redux/actions";
+import { getUserAction, token } from "../../redux/actions";
 
 const EditExperience = ({
-   showVisibleAddExperience,
-   setShowVisibleAddExperience,
    formEditData,
    showEditExperienceModal,
    handleClose,
@@ -24,9 +16,6 @@ const EditExperience = ({
    const [endMonth, setEndMonth] = useState(null);
    const [endYear, setEndYear] = useState(null);
 
-   // get user data from the redux store
-   const userFormReduxStore = useSelector((state) => state.user);
-   const reduxExpModel = useSelector((state) => state.user.modelExperience);
    const dispatch = useDispatch();
 
    // save edits
