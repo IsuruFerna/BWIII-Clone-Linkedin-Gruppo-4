@@ -1,4 +1,4 @@
-.colors:hover {
+/* .colors:hover {
     background-color: transparent;
 }
 
@@ -13,14 +13,12 @@
     border: 1;
   border-color: rgb(216, 210, 210);
     
-}
+} */
 .bottoneDentroForm:hover {
-    background-color: white;
+  background-color: white;
 }
 
-.bottoneDentroForm{
-    
-    border: 0;
-    cursor: pointer;
+.bottoneDentroForm {
+  border: 0;
+  cursor: pointer;
 }
-
