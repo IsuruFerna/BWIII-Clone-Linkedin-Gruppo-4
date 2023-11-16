@@ -5,9 +5,8 @@ import { Nav, NavDropdown, Dropdown } from "react-bootstrap";
 const Footer = () => {
   return (
     <Container className="container-fluid">
-      <Row>
-        <Col className="col-2"></Col>
-        <Col className="col-8">
+      <Row className="justify-content-center">
+        <Col className="col-9">
           <Row>
             <Col
               sm={5}

@@ -28,16 +28,19 @@ const PotrestiConoscere = () => {
     getPersons();
   }, []);
   return (
-    <div className="d-none d-lg-flex flex-column">
-      <Container fluid className="border bg-white shadow rounded mb-3">
-        <div className="d-flex flex-column">
-          <h5 className="fw-bold smaller my-2 fs-6">
+    <div className="d-flex flex-row flex-xl-column mb-5">
+      <Container
+        fluid
+        className="border bg-white shadow rounded mb-3 mx-1 h-100 d-flex flex-column"
+      >
+        <div>
+          <h5 className="fw-bold smaller mt-2 mb-4 fs-6">
             Altri profili consultati
           </h5>
         </div>
-        <div>
+        <div className="flex-grow-1">
           {persons
-            .filter((allPersons, i) => i > 10 && i < 16)
+            .filter((allPersons, i) => i > 16 && i < 27)
             .map((singlePerson) => {
               return (
                 <div key={singlePerson._id}>
@@ -47,7 +50,7 @@ const PotrestiConoscere = () => {
             })}
         </div>
       </Container>
-      <Container fluid className="border bg-white shadow rounded">
+      <Container fluid className="border bg-white mx-1 shadow rounded">
         <div className="d-flex flex-column my-2">
           <h5 className="fw-bold smaller fs-6">
             Persone che potresti conoscere
