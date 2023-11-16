@@ -4,6 +4,7 @@ import Modal from "react-bootstrap/Modal";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
+   addBtn,
    editModel,
    getUserAction,
    postUserExperience,
@@ -52,7 +53,8 @@ const AddExperience = ({
          dispatch(postUserExperience(userId, updatedFormData));
          dispatch(getUserAction());
          // setShowVisibleAddExperience(false);
-         dispatch(editModel(editModel()));
+         // dispatch(editModel());
+         dispatch(addBtn());
       }
    };
 
@@ -104,7 +106,8 @@ const AddExperience = ({
                   closeButton
                   onClick={() => {
                      setShowVisibleAddExperience(false);
-                     dispatch(editModel());
+                     // dispatch(editModel());
+                     dispatch(addBtn());
                   }}
                   className="py-2"
                >

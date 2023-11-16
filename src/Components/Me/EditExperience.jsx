@@ -4,6 +4,7 @@ import Modal from "react-bootstrap/Modal";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
+   editBtn,
    editModel,
    getUserAction,
    postUserExperience,
@@ -69,7 +70,7 @@ const EditExperience = ({
       // retreve updated user experience
       dispatch(getUserAction());
       // disappera model form
-      dispatch(editModel(editModel()));
+      dispatch(editModel());
    };
 
    const handleDelete = () => {
@@ -147,7 +148,8 @@ const EditExperience = ({
                   closeButton
                   onClick={() => {
                      // setShowVisibleAddExperience(false);
-                     dispatch(editModel());
+                     // dispatch(editModel());
+                     dispatch(editBtn());
                   }}
                   className="py-2"
                >

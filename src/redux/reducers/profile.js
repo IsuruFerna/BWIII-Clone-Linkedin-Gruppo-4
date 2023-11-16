@@ -1,5 +1,6 @@
 import {
    ADD_EXP_BTN,
+   EDIT_EXP_BTN,
    EDIT_MODEL,
    GET_USER,
    GET_USER_EXPERIENCE,
@@ -12,6 +13,7 @@ const initialState = {
    postExperience: [],
    modelExperience: false,
    addBtnStatus: false,
+   editBtnStatus: false,
 };
 
 const userReducer = (state = initialState, action) => {
@@ -41,6 +43,12 @@ const userReducer = (state = initialState, action) => {
          };
 
       case ADD_EXP_BTN:
+         return {
+            ...state,
+            modelExperience: !state.modelExperience,
+         };
+
+      case EDIT_EXP_BTN:
          return {
             ...state,
             modelExperience: !state.modelExperience,
