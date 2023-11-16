@@ -4,8 +4,22 @@ import { Card, Col, Container, ListGroup, Row } from "react-bootstrap";
 
 const JobsPage = ({ searchQuery }) => {
   const [jobsData, setJobsData] = useState([]);
-  const geolocalization = navigator.geolocation.getCurrentPosition;
-  console.log(geolocalization);
+  const [latitude, setLatitude] = useState("");
+  const [longitude, setLongitude] = useState("");
+  const [location, setLocation] = useState([]);
+  const [isLocationReady, setIsLocationReady] = useState(false);
+
+  useEffect(() => {
+    navigator.geolocation.getCurrentPosition((position) => {
+      setLatitude(position.coords.latitude);
+      setLongitude(position.coords.longitude);
+      setIsLocationReady(true);
+    });
+  }, []);
+  // console.log(latitude);
+  // console.log(longitude);
+  // console.log(location.address.country);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -20,6 +34,7 @@ const JobsPage = ({ searchQuery }) => {
 
         const data = await response.json();
         setJobsData(data);
+        console.log(data);
       } catch (err) {
         console.log("ERROR: ", err);
       }
@@ -27,7 +42,30 @@ const JobsPage = ({ searchQuery }) => {
 
     fetchData();
   }, [searchQuery]);
-  console.log(jobsData.data);
+
+  useEffect(() => {
+    if (isLocationReady) {
+      const fetchGeolocalization = async () => {
+        try {
+          const response = await fetch(
+            `https://geocode.maps.co/reverse?lat=${latitude}&lon=${longitude}`,
+            {}
+          );
+
+          if (!response.ok) {
+            throw new Error("Data retrieving error!");
+          }
+
+          const data = await response.json();
+          setLocation(data);
+        } catch (err) {
+          console.log("ERROR: ", err);
+        }
+      };
+
+      fetchGeolocalization();
+    }
+  }, [isLocationReady, latitude, longitude]);
   //   const div = document.getElementById("myDiv");
   return (
     <>
