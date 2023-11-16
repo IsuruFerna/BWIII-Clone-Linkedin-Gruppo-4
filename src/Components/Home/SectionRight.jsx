@@ -88,7 +88,7 @@ const SectionRight = () => {
             </div>
           ) : (
             <div>
-              Show More <ArrowUp />
+              Show Less <ArrowUp />
             </div>
           )}
         </Button>
