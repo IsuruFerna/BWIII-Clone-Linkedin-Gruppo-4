@@ -30,9 +30,7 @@ const EditExperience = ({
    const dispatch = useDispatch();
 
    // save edits
-   const handleSubmit = (e) => {
-      e.preventDefault();
-
+   const handleSubmit = () => {
       let updatedFormData = { ...formData };
       // set initial date
       let initialDate = `${initialYear}-${initialMonth}-01`;
@@ -72,7 +70,13 @@ const EditExperience = ({
       // retreve updated user experience
       dispatch(getUserAction());
       // disappera model form
-      dispatch(editModel());
+      // dispatch(editModel());
+   };
+
+   const handleSave = (e) => {
+      e.preventDefault();
+      handleSubmit();
+      handleClose();
    };
 
    const handleDelete = () => {
@@ -94,10 +98,11 @@ const EditExperience = ({
          })
          .catch((err) => console.log("ERROR: ", err));
 
+      handleClose();
       // retreve updated user experience
       dispatch(getUserAction());
       // disappera model form
-      dispatch(editModel(editModel()));
+      // dispatch(editModel(editModel()));
    };
 
    console.log("date pareant to chield", formEditData);
@@ -119,17 +124,6 @@ const EditExperience = ({
       }
       return years;
    };
-
-   // const [showEditExperienceModal, setEditExperienceModal] = useState(false);
-   // const handleEditExpClick = () => {
-   //    setEditExperienceModal(true);
-   // };
-
-   // const handleClose = () => {
-   //    setEditExperienceModal(false);
-   // };
-
-   // console.log("new form data: ", formData);
 
    return (
       //     Modello dell'EXPERIENCE:
@@ -157,16 +151,7 @@ const EditExperience = ({
             // centered
          >
             <Modal.Dialog className="m-0">
-               <Modal.Header
-                  closeButton
-                  onClick={handleClose}
-                  // onClick={() => {
-                  //    // setShowVisibleAddExperience(false);
-                  //    // dispatch(editModel());
-                  //    // dispatch(editBtn());
-                  // }}
-                  className="py-2"
-               >
+               <Modal.Header closeButton onClick={handleClose} className="py-2">
                   <Modal.Title>Modifica esperienza</Modal.Title>
                </Modal.Header>
 
@@ -391,6 +376,7 @@ const EditExperience = ({
                         variant="primary"
                         size="sm"
                         className="rounded-pill px-3"
+                        onClick={handleSave}
                      >
                         Salva
                      </Button>

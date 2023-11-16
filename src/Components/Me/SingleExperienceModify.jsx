@@ -20,36 +20,6 @@ const SingleExperienceModify = ({
    const userFormReduxStore = useSelector((state) => state.user);
    const reduxExpModel = useSelector((state) => state.user.modelExperience);
    const [formEditData, setEditFormData] = useState(null);
-   console.log("getting stored data in experience page", reduxExpModel);
-   //    fetch(
-   //       `https://striveschool-api.herokuapp.com/api/profile/6551edf8c55e7e0018f83c0e/experiences`,
-   //       {
-   //          method: "POST",
-   //          body: JSON.stringify({
-   //             role: "Full Stack Web Developer",
-   //             company: "FizzBuzz",
-   //             startDate: "2022-06-16",
-   //             endDate: "",
-   //             description: "Implementing new features",
-   //             area: "Milan",
-   //          }),
-   //          headers: {
-   //             "Content-Type": "application/json",
-   //             Authorization: token,
-   //          },
-   //       }
-   //    )
-   //       .then((response) => {
-   //          if (!response.ok) {
-   //             throw new Error("user experience did not GET");
-   //          }
-   //          return response.json();
-   //       })
-   //       .then((data) => {
-   //          console.log("User experience retreaved!", data);
-   //       })
-   //       .catch((err) => console.log("ERROR", err));
-   // };
 
    useEffect((element) => {
       // console.log("this is to edit", element);
@@ -98,13 +68,11 @@ const SingleExperienceModify = ({
          .catch((err) => console.log("ERROR", err));
 
       // set modal form's visibility
-      dispatch({
-         type: EDIT_MODEL,
-         payload: true,
-      });
+      // dispatch({
+      //    type: EDIT_MODEL,
+      //    payload: true,
+      // });
    };
-
-   console.log("modified redux model", reduxExpModel);
 
    return (
       <>
@@ -131,16 +99,6 @@ const SingleExperienceModify = ({
                            <p className="mb-0 text-dark text-opacity-50 lh-sm">
                               {element.startDate} &#8226; {element.endDate}
                            </p>
-                           {/* <p className="mt-0 text-dark text-opacity-50 lh-sm">
-                           Da Remoto
-                        </p> */}
-                           <p>{element.description}</p>
-                           {/* <p className="fw-semibold">
-                           Compatenze:{" "}
-                           <small className="experience-tools fw-normal text-dark text-opacity-75">
-                              Django &#8226; HTML &#8226; CSS
-                           </small>
-                        </p> */}
                         </div>
                      </div>
                      <div className="btn-circle">
@@ -162,7 +120,6 @@ const SingleExperienceModify = ({
             showEditExperienceModal={showEditExperienceModal}
             formEditData={formEditData}
          />
-         {/* {reduxExpModel && <EditExperience formEditData={formEditData} />} */}
       </>
    );
 };

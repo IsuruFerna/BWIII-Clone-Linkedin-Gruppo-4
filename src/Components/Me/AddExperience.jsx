@@ -27,8 +27,8 @@ const AddExperience = ({
    const reduxExpModel = useSelector((state) => state.user.modelExperience);
    const dispatch = useDispatch();
 
-   const handleSubmit = (e) => {
-      e.preventDefault();
+   const handleSubmit = () => {
+      // e.preventDefault();
 
       let updatedFormData = { ...formData };
       // set initial date
@@ -58,6 +58,12 @@ const AddExperience = ({
          // dispatch(editModel());
          dispatch(addBtn());
       }
+   };
+
+   const handleSave = (e) => {
+      e.preventDefault();
+      handleSubmit();
+      handleClose();
    };
 
    //  set formdata values
@@ -318,6 +324,7 @@ const AddExperience = ({
                      variant="primary"
                      size="sm"
                      className="rounded-pill px-3"
+                     onClick={handleSave}
                   >
                      Salva
                   </Button>
