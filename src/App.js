@@ -10,6 +10,7 @@ import HomePage from "./pages/HomePage";
 import JobsPage from "./Components/jobs/JobsPage";
 import { useState } from "react";
 import ExperiencePage from "./pages/ExperiencePage";
+import MenuOffCanvas from "./Components/main/OffCanvas";
 
 function App() {
    const [searchQuery, setSearchQuery] = useState("");
@@ -31,6 +32,8 @@ function App() {
             />
             <Route element={<ExperiencePage />} path="/experience" />
          </Routes>
+
+         <MenuOffCanvas />
       </BrowserRouter>
    );
 }
