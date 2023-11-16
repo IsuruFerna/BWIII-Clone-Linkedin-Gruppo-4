@@ -9,11 +9,11 @@ const SinglePost = ({ data }) => {
     >
       <div>
         <section className="d-flex align-items-center ">
-          <div>
+          <div className="d-flex align-items-center">
             <img
               src={data.user.image}
               alt="userimg"
-              style={{ width: "50px" }}
+              style={{ width: "50px", height: "50px" }}
               className="rounded-circle"
             />
           </div>
