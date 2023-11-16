@@ -13,6 +13,8 @@ import {
 const AddExperience = ({
    showVisibleAddExperience,
    setShowVisibleAddExperience,
+   showAddExperienceModal,
+   handleClose,
 }) => {
    const [formData, setFormData] = useState(null);
    const [initialMonth, setInitialMonth] = useState(null);
@@ -96,19 +98,21 @@ const AddExperience = ({
       // }
 
       <Form onSubmit={handleSubmit}>
-         <div
-            className="modal show"
-            style={{ display: "block", position: "fixed" }}
+         <Modal
+            show={showAddExperienceModal}
+            onHide={handleClose}
+            // className="modal"
+            // style={{ display: "block", position: "fixed" }}
             // centered
          >
-            <Modal.Dialog>
+            <Modal.Dialog className="m-0">
                <Modal.Header
                   closeButton
-                  onClick={() => {
-                     setShowVisibleAddExperience(false);
-                     // dispatch(editModel());
-                     dispatch(addBtn());
-                  }}
+                  // onClick={() => {
+                  //    setShowVisibleAddExperience(false);
+                  //    // dispatch(editModel());
+                  //    dispatch(addBtn());
+                  // }}
                   className="py-2"
                >
                   <Modal.Title>Aggiungi esperienza</Modal.Title>
@@ -319,7 +323,7 @@ const AddExperience = ({
                   </Button>
                </Modal.Footer>
             </Modal.Dialog>
-         </div>
+         </Modal>
       </Form>
    );
 };

@@ -15,6 +15,8 @@ const EditExperience = ({
    showVisibleAddExperience,
    setShowVisibleAddExperience,
    formEditData,
+   showEditExperienceModal,
+   handleClose,
 }) => {
    const [formData, setFormData] = useState(null);
    const [initialMonth, setInitialMonth] = useState(null);
@@ -118,6 +120,15 @@ const EditExperience = ({
       return years;
    };
 
+   // const [showEditExperienceModal, setEditExperienceModal] = useState(false);
+   // const handleEditExpClick = () => {
+   //    setEditExperienceModal(true);
+   // };
+
+   // const handleClose = () => {
+   //    setEditExperienceModal(false);
+   // };
+
    // console.log("new form data: ", formData);
 
    return (
@@ -138,19 +149,22 @@ const EditExperience = ({
       // }
 
       <Form onSubmit={handleSubmit}>
-         <div
-            className="modal show"
-            style={{ display: "block", position: "fixed" }}
+         <Modal
+            show={showEditExperienceModal}
+            onHide={handleClose}
+            // className="modal show"
+            // style={{ display: "block", position: "fixed" }}
             // centered
          >
-            <Modal.Dialog>
+            <Modal.Dialog className="m-0">
                <Modal.Header
                   closeButton
-                  onClick={() => {
-                     // setShowVisibleAddExperience(false);
-                     // dispatch(editModel());
-                     dispatch(editBtn());
-                  }}
+                  onClick={handleClose}
+                  // onClick={() => {
+                  //    // setShowVisibleAddExperience(false);
+                  //    // dispatch(editModel());
+                  //    // dispatch(editBtn());
+                  // }}
                   className="py-2"
                >
                   <Modal.Title>Modifica esperienza</Modal.Title>
@@ -383,7 +397,7 @@ const EditExperience = ({
                   </div>
                </Modal.Footer>
             </Modal.Dialog>
-         </div>
+         </Modal>
       </Form>
    );
 };

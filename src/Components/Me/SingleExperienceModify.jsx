@@ -11,7 +11,11 @@ import EditExperience from "./EditExperience";
 import { token } from "../../redux/actions";
 import { Pencil } from "react-bootstrap-icons";
 
-const SingleExperienceModify = () => {
+const SingleExperienceModify = ({
+   showEditExperienceModal,
+   handleClose,
+   handleEditExpClick,
+}) => {
    const dispatch = useDispatch();
    const userFormReduxStore = useSelector((state) => state.user);
    const reduxExpModel = useSelector((state) => state.user.modelExperience);
@@ -142,15 +146,23 @@ const SingleExperienceModify = () => {
                      <div className="btn-circle">
                         <Pencil
                            className="fs-3"
+                           // onClick={handleEditExpClick}
                            onClick={() => {
                               handleClick(element);
+                              handleEditExpClick();
+                              // console.log("this is somethig: ", element);
                            }}
                         />
                      </div>
                   </div>
                );
             })}
-         {reduxExpModel && <EditExperience formEditData={formEditData} />}
+         <EditExperience
+            handleClose={handleClose}
+            showEditExperienceModal={showEditExperienceModal}
+            formEditData={formEditData}
+         />
+         {/* {reduxExpModel && <EditExperience formEditData={formEditData} />} */}
       </>
    );
 };

@@ -15,33 +15,37 @@ const ModalTest = () => {
    const [showAddModal, setShowAddModal] = useState(false);
    const [showEditModal, setShowEditModal] = useState(false);
 
+   const [showEditExperienceModal, setEditExperienceModal] = useState(false);
+   const [showAddExperienceModal, setAddExperienceModal] = useState(false);
+   const handleEditExpClick = () => {
+      setEditExperienceModal(true);
+   };
+   const handleAddExpClick = () => {
+      setAddExperienceModal(true);
+   };
+
+   const handleClose = () => {
+      setEditExperienceModal(false);
+      setAddExperienceModal(false);
+   };
+
    console.log("btn status: ", reduxEdiBtn);
    return (
       <Container>
          <Row>
             <Col>
-               {reduxAddBtn && <AddExperience />}
-               <div className="w-100 h-50 bg-primary">
-                  <button
-                     onClick={() => {
-                        dispatch(addBtn());
-                     }}
-                  >
-                     aaa
-                  </button>
-               </div>
+               <button onClick={handleAddExpClick}>A</button>
+               <AddExperience
+                  handleClose={handleClose}
+                  showAddExperienceModal={showAddExperienceModal}
+               />
             </Col>
             <Col>
-               {reduxEdiBtn && <EditExperience />}
-               <div className="w-100 h-50 bg-secondary">
-                  <button
-                     onClick={() => {
-                        dispatch(editBtn());
-                     }}
-                  >
-                     ppp
-                  </button>
-               </div>
+               <button onClick={handleEditExpClick}>B</button>
+               <EditExperience
+                  handleClose={handleClose}
+                  showEditExperienceModal={showEditExperienceModal}
+               />
             </Col>
          </Row>
          <Row>

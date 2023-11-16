@@ -10,10 +10,26 @@ import SingleExperienceModify from "./SingleExperienceModify";
 import { useDispatch, useSelector } from "react-redux";
 import AddExperience from "./AddExperience";
 import { addBtn } from "../../redux/actions";
+import { useState } from "react";
 
 const ExperienceModify = () => {
    const reduxBtnAdd = useSelector((state) => state.user.addBtnStatus);
    const dispatch = useDispatch();
+
+   // resetting modals
+   const [showEditExperienceModal, setEditExperienceModal] = useState(false);
+   const [showAddExperienceModal, setAddExperienceModal] = useState(false);
+   const handleEditExpClick = () => {
+      setEditExperienceModal(true);
+   };
+   const handleAddExpClick = () => {
+      setAddExperienceModal(true);
+   };
+
+   const handleClose = () => {
+      setEditExperienceModal(false);
+      setAddExperienceModal(false);
+   };
 
    return (
       <Container>
@@ -27,9 +43,10 @@ const ExperienceModify = () => {
                            <div className="btn-circle p-0 me-1">
                               <PlusLg
                                  className="fs-4"
-                                 onClick={() => {
-                                    dispatch(addBtn());
-                                 }}
+                                 onClick={handleAddExpClick}
+                                 // onClick={() => {
+                                 //    dispatch(addBtn());
+                                 // }}
                               />
                            </div>
                            <div className="btn-circle">
@@ -39,12 +56,20 @@ const ExperienceModify = () => {
                      </div>
 
                      {/* <SingleExperience /> */}
-                     <SingleExperienceModify />
+                     <SingleExperienceModify
+                        handleEditExpClick={handleEditExpClick}
+                        handleClose={handleClose}
+                        showEditExperienceModal={showEditExperienceModal}
+                     />
                   </Card.Body>
                </Card>
             </Col>
          </Row>
-         {reduxBtnAdd && <AddExperience />}
+         <AddExperience
+            handleClose={handleClose}
+            showAddExperienceModal={showAddExperienceModal}
+         />
+         {/* {reduxBtnAdd && <AddExperience />} */}
       </Container>
    );
 };
