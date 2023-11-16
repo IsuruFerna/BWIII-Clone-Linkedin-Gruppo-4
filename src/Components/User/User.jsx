@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import SinglePost from "../Home/SinglePost";
 import Footer from "../main/Footer";
 
+
 const User = ({ user, add }) => {
   const [usersPost, setUserPost] = useState([]);
   const [innerText, setInnerText] = useState(add);
