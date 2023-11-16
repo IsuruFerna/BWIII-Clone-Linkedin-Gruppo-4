@@ -7,7 +7,6 @@ import {
   ArrowDownUp,
 } from "react-bootstrap-icons";
 
-import "./Comment1.css";
 import { useEffect, useState } from "react";
 
 const Comment1 = () => {
