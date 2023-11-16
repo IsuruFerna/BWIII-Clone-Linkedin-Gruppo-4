@@ -22,8 +22,17 @@ import { BriefcaseFill } from "react-bootstrap-icons";
 import { ChatDotsFill } from "react-bootstrap-icons";
 import { PersonCircle } from "react-bootstrap-icons";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
-function NavbarLinkedin() {
+function NavbarLinkedin({ onSearch }) {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
+  // const history = useHistory();
+  const handleSearch = (e) => {
+    e.preventDefault();
+    onSearch(searchTerm);
+  };
+
   return (
     <Navbar expand="lg" className="bg-body-tertiary position-sticky top-0 z-3 ">
       <Container id="nav">
@@ -35,34 +44,41 @@ function NavbarLinkedin() {
         ></img>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Form>
+          <Form onSubmit={handleSearch}>
             <Form.Group
               className="mb-1 ms-3 col-12"
               controlId="exampleForm.ControlInput1"
             >
-              <Form.Control type="search" placeholder="Cerca"></Form.Control>
+              <Form.Control
+                type="search"
+                placeholder="Cerca"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+              ></Form.Control>
             </Form.Group>
           </Form>
           <Nav className="me-auto"></Nav>
         </Navbar.Collapse>
-        <div className="text-secondary d-flex flex-column">
+        <div className="text-secondary d-flex flex-column pointer">
           <HouseDoorFill className="fs-5 ms-2" />
           <Link to="/home" className="nav-link">
             <h6 className="text-center me-3">Home</h6>
           </Link>
         </div>
-        <div className="text-secondary d-flex flex-column ms-3">
+        <div className="text-secondary d-flex flex-column ms-3 pointer">
           <PeopleFill className="fs-5 ms-1" /> <h6 className="me-4">Rete</h6>
         </div>
-        <div className="text-secondary d-flex flex-column">
-          <BriefcaseFill className="fs-5 ms-3" />
-          <h6 className="me-3">Lavoro</h6>
-        </div>
-        <div className="text-secondary d-flex flex-column">
+        <Link to="/jobs" className="nav-link">
+          <div className="text-secondary d-flex flex-column pointer">
+            <BriefcaseFill className="fs-5 ms-3" />
+            <h6 className="me-3">Lavoro</h6>
+          </div>
+        </Link>
+        <div className="text-secondary d-flex flex-column pointer">
           <ChatDotsFill className="fs-5 ms-5" />
           <h6 className="me-4 ms-1">Messaggistica</h6>
         </div>
-        <div className="text-secondary d-flex flex-column">
+        <div className="text-secondary d-flex flex-column pointer">
           <BellFill className="fs-5 ms-4" /> <h6 className="me-3">Notifiche</h6>
         </div>
 
