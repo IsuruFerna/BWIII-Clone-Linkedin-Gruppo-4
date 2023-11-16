@@ -13,7 +13,7 @@ import Formazione from "../Components/Me/formazione";
 import Interessi from "../Components/Me/Interessi";
 import Experiences from "../Components/Me/Experience";
 import PublicProfile from "../Components/Me/PublicProfile";
-import Footer from "../Components/main/footer";
+import Footer from "../Components/main/Footer";
 
 const MePage = () => {
   return (
