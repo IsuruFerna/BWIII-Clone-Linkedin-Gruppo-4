@@ -15,7 +15,6 @@ const Footer = () => {
               className=" d-flex flex-column mt-sm-4 mt-md-0"
             >
               <span className="span">
-                {" "}
                 Informazioni Linee guida della community
               </span>
 
