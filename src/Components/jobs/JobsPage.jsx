@@ -56,7 +56,6 @@ const JobsPage = ({ searchQuery }) => {
               )
               .map((singleJob) => (
                 <Col key={singleJob._id} className="col col-12 mb-3">
-                  {" "}
                   <Card>
                     {/* <Card.Img variant="top" src="holder.js/100px180?text=Image cap" /> */}
                     <Card.Body>
