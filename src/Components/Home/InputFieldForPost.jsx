@@ -7,16 +7,17 @@ const InputFieldForPost = () => {
   };
 
   const [input, setInput] = useState("");
+  const [image, setImage] = useState("");
   const fetchPost = () => {
     fetch(`https://striveschool-api.herokuapp.com/api/posts/`, {
       headers: {
         Authorization:
-          "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTUxZWQ0ZmM1NWU3ZTAwMThmODNjMGEiLCJpYXQiOjE2OTk4Njc5ODMsImV4cCI6MTcwMTA3NzU4M30.VgwY5-_3HqrYK9L5mB8w_n1YsAqrCrIk6q-aQXvo0wU",
+          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTUxZWQ3NWM1NWU3ZTAwMThmODNjMGMiLCJpYXQiOjE2OTk4NjgwMjEsImV4cCI6MTcwMTA3NzYyMX0.MaefAedXN33dNfhoWKrtbaRpMDXC487KQz_7broOWxU",
         Accept: "application/json",
         "Content-Type": "application/json",
       },
       method: "POST",
-      body: JSON.stringify({ text: input }),
+      body: JSON.stringify({ text: input, image: image }),
     })
       .then((res) => {
         if (res.ok) {
@@ -38,6 +39,16 @@ const InputFieldForPost = () => {
           value={input}
           onChange={(e) => {
             setInput(e.target.value);
+          }}
+        />
+        <Form.Control
+          type="text"
+          placeholder="Copy your Image Url here"
+          className="rounded-0 border-0 p-3"
+          id="inputFileInForm"
+          value={image}
+          onChange={(e) => {
+            setImage(e.target.value);
           }}
         />
         <div className="d-flex justify-content-end px-2 align-items-center my-1">
