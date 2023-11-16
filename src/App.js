@@ -4,12 +4,13 @@ import "./Components/main/Navbar.css";
 import "./pages/MePage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MePage from "./pages/MePage";
-import Footer from "./Components/main/Footer";
+
 import NavbarLinkedin from "./Components/main/NavbarLinkedin";
 import ProfilePage from "./pages/ProfilePage";
 import HomePage from "./pages/HomePage";
 import JobsPage from "./Components/jobs/JobsPage";
 import { useState } from "react";
+import Footer from "./Components/main/footer";
 // import AddExperience from "./Components/Me/AddExperience";
 
 function App() {
