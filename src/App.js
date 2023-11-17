@@ -12,6 +12,7 @@ import { useState } from "react";
 import ExperiencePage from "./pages/ExperiencePage";
 import MenuOffCanvas from "./Components/main/MenuOffCanvas";
 import NotFoundPage from "./pages/NotFound";
+import Login from "./Components/login/loginPage";
 
 function App() {
    const [searchQuery, setSearchQuery] = useState("");
@@ -38,6 +39,7 @@ function App() {
             />
             <Route element={<ExperiencePage />} path="/experience" />
             <Route element={<NotFoundPage />} path="/NotFound" />
+            <Route element={<Login />} path="/loginPage" />
          </Routes>
 
          <MenuOffCanvas
