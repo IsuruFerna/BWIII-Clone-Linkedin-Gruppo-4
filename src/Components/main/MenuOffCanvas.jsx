@@ -24,7 +24,7 @@ function MenuOffCanvas({ handleClose, handleShow, show }) {
             Per le aziende
           </Offcanvas.Title>
         </Offcanvas.Header>
-        <Offcanvas.Body className="px-4">
+        <Offcanvas.Body className="px-4 rounded-4 ">
           <Card className=" border border-white-subtle">
             <Card.Header className="bg-white fw-semibold py-3 px-4 border border-white-subtle fs-6 ">
               Scopri altri prodotti LinkedIn
