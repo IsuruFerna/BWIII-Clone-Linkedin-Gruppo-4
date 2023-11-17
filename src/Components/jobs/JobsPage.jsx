@@ -1,6 +1,22 @@
 import { useEffect, useState } from "react";
-import { Card, Col, Container, ListGroup, Row } from "react-bootstrap";
-// import ReactHtmlParser from "react-html-parser";
+import {
+  Card,
+  CardBody,
+  Col,
+  Container,
+  ListGroup,
+  Row,
+} from "react-bootstrap";
+import {
+  ArrowRight,
+  Bookmark,
+  BookmarkFill,
+  Clipboard2Check,
+  FilePlayFill,
+  GearFill,
+  List,
+  ListTask,
+} from "react-bootstrap-icons";
 
 const JobsPage = ({ searchQuery }) => {
   const [jobsData, setJobsData] = useState([]);
@@ -35,28 +51,72 @@ const JobsPage = ({ searchQuery }) => {
         <h4 className="my-3">Risultati della ricerca:</h4>
         {jobsData.data && (
           <Row>
-            {jobsData.data
-              .filter(
-                (allTheJobs) =>
-                  allTheJobs.title
-                    .toLowerCase()
-                    .includes(searchQuery.toLowerCase()) ||
-                  allTheJobs.company_name
-                    .toLowerCase()
-                    .includes(searchQuery.toLowerCase()) ||
-                  allTheJobs.category
-                    .toLowerCase()
-                    .includes(searchQuery.toLowerCase()) ||
-                  allTheJobs.candidate_required_location
-                    .toLowerCase()
-                    .includes(searchQuery.toLowerCase()) ||
-                  allTheJobs.job_type
-                    .toLowerCase()
-                    .includes(searchQuery.toLowerCase())
-              )
-              .map((singleJob) => (
-                <Col key={singleJob._id} className="col col-12 mb-3">
-                  <Card>
+            <Col className="col col-3">
+              <Card className="shadow">
+                <CardBody>
+                  <div className="d-flex align-items-center mb-3 pointer">
+                    <div className="me-2">
+                      <BookmarkFill className="fs-4"></BookmarkFill>
+                    </div>
+                    <p className="mb-0 fw-semibold ">
+                      Le mie offerte di lavoro
+                    </p>
+                  </div>
+                  <div className="d-flex align-items-center mb-3 pointer">
+                    <div className="me-2">
+                      <ListTask className="fs-4"></ListTask>
+                    </div>
+                    <p className="mb-0 fw-semibold ">Preferenze</p>
+                  </div>
+                  <div className="d-flex align-items-center mb-3 pointer">
+                    <div className="me-2">
+                      <Clipboard2Check className="fs-4"></Clipboard2Check>
+                    </div>
+                    <p className="mb-0 fw-semibold ">
+                      Valutazioni delle competenze
+                    </p>
+                  </div>
+                  <div className="d-flex align-items-center mb-3 pointer">
+                    <div className="me-2">
+                      <FilePlayFill className="fs-4"></FilePlayFill>
+                    </div>
+                    <p className="mb-0 fw-semibold ">
+                      Indicazioni per chi cerca lavoro
+                    </p>
+                  </div>
+                  <div className="d-flex align-items-center pointer">
+                    <div className="me-2">
+                      <GearFill className="fs-4"></GearFill>
+                    </div>
+                    <p className="mb-0 fw-semibold ">
+                      Impostazioni di candidatura
+                    </p>
+                  </div>
+                </CardBody>
+              </Card>
+            </Col>
+            <Col>
+              {jobsData.data
+                .filter(
+                  (allTheJobs) =>
+                    allTheJobs.title
+                      .toLowerCase()
+                      .includes(searchQuery.toLowerCase()) ||
+                    allTheJobs.company_name
+                      .toLowerCase()
+                      .includes(searchQuery.toLowerCase()) ||
+                    allTheJobs.category
+                      .toLowerCase()
+                      .includes(searchQuery.toLowerCase()) ||
+                    allTheJobs.candidate_required_location
+                      .toLowerCase()
+                      .includes(searchQuery.toLowerCase()) ||
+                    allTheJobs.job_type
+                      .toLowerCase()
+                      .includes(searchQuery.toLowerCase())
+                )
+                .map((singleJob) => (
+                  <Card key={singleJob._id} className="col col-12 mb-3 shadow">
                     {/* <Card.Img variant="top" src="holder.js/100px180?text=Image cap" /> */}
                     <Card.Body>
                       <Card.Title>
@@ -87,8 +147,40 @@ const JobsPage = ({ searchQuery }) => {
                       </ListGroup.Item>
                     </ListGroup>
                   </Card>
-                </Col>
-              ))}
+                ))}
+            </Col>
+            <Col className="col col-3 md-block">
+              <Card className="shadow">
+                <CardBody>
+                  <div className="d-flex flex-column  justify-content-center mb-3">
+                    <h6 className="mb-0">Disponibile a lavorare</h6>
+                    <p className="mb-0">
+                      Consigliato in base alle tue attività
+                    </p>
+                  </div>
+                  <div className="d-flex flex-column  justify-content-center mb-3 pointer">
+                    <h6 className="mb-0 pointer text-decoration-underline ">
+                      Mostra ai recruiter che sei disponibile per nuove
+                      opportunità di lavoro
+                    </h6>
+                  </div>
+                  <div className="d-flex flex-column  justify-content-center">
+                    <p>
+                      Aumenta le probabilità di trovare presto un lavoro con la
+                      cornice #OpenToWork: controlli tu chi la vede.
+                    </p>
+                  </div>
+                  <div className="d-flex  pointer fw-semibold grigetto underline-hover">
+                    <div>
+                      <p>Inizia</p>
+                    </div>
+                    <div>
+                      <ArrowRight className="ms-2"></ArrowRight>
+                    </div>
+                  </div>
+                </CardBody>
+              </Card>
+            </Col>
           </Row>
         )}
       </Container>
