@@ -1,60 +1,84 @@
 import { Row, Col, Card, Button, Container } from "react-bootstrap";
+import { ArrowRight, Pencil, PlusLg } from "react-bootstrap-icons";
+import { Link } from "react-router-dom";
 
 const Competenze = () => {
   return (
-    <Container fluid>
-      <Card className="mb-3 shadow">
-        <Card.Header className="container-fluid bg-white mt-1">
-          <Row className="d-flex justify-content-between ">
-            <Col sm={7} md={5} lg={4} xl={4} xxl={5}>
-              {" "}
-              <h5> Competenze</h5>
-            </Col>
-            <Col sm={12} md={10} lg={7} xl={8} xxl={7}>
-              <Button className="" variant="outline-primary">
-                Quiz valutazione competenze
-              </Button>
-              <Button
-                variant="outline-secondary"
-                className="butt border-0 rounded-circle"
-              >
-                <i className="bi bi-plus-lg"></i>
-              </Button>
-              <Button
-                variant="outline-secondary"
-                className="butt border-0 rounded-circle"
-              >
-                <i className="bi bi-pencil"></i>
-              </Button>
-            </Col>
-          </Row>
-        </Card.Header>
-        <Card.Body>
-          <Row className="d-flex flex-column">
-            <Col>
-              <Card.Title className="">JavaScript</Card.Title>{" "}
-            </Col>
-            <Col className="d-flex flex-row">
-              <Col sm={3} md={2}>
-                <Card.Img
-                  src="https://tse4.mm.bing.net/th?id=OIP.Jh62oHE_WaBtTkyWxdSkbwHaHa&pid=Api&P=0&h=180"
-                  className="iconaCompetenze mt-2   rounded-circle"
-                />
-              </Col>
-              <Col>
-                <Card.Text className="text-black ms-3  mt-2">
-                  Advanced
-                </Card.Text>
-              </Col>
-            </Col>
-          </Row>
-        </Card.Body>
-        <Card.Footer className="text-black bg-white d-flex justify-content-center">
-          Mostra tutte le competenze (1){" "}
-          <i className="bi bi-arrow-right ms-3 d-flex align-items-center"></i>
-        </Card.Footer>
-      </Card>
-    </Container>
+    <>
+      <Container fluid className="mb-3">
+        <Row>
+          <Col className="col-12">
+            <Card className="shadow">
+              <Card.Body>
+                <div className="d-flex justify-content-between  align-items-center ">
+                  <div>
+                    <Card.Title className="m-0">Competenze</Card.Title>
+                  </div>
+                  <div className="d-flex align-items-center ">
+                    <div>
+                      <Button
+                        size="sm"
+                        className="post button"
+                        variant="rounded-pill me-3 fix-hover"
+                      >
+                        Quiz valutazione competenze
+                      </Button>
+                    </div>
+                    <Link to="#" className="btn-circle">
+                      <Pencil className="fs-3 text-secondary" />
+                    </Link>
+                    <div className="btn-circle p-0 mx-1">
+                      <PlusLg className="fs-4" />
+                    </div>
+                  </div>
+                </div>
+                <Col className="col col-12 d-flex align-items-center mt-1">
+                  <div>
+                    <Card.Img
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/100px-JavaScript-logo.png?20120221235433"
+                      className="iconaCompetenze mt-2 me-3"
+                    />
+                  </div>
+                  <div>
+                    {" "}
+                    <p className="m-0">
+                      <b className="javascript">Javascript</b>
+                    </p>
+                    <p className="m-0">
+                      Full-Stack Developer presso Epicode Italia
+                    </p>
+                  </div>
+                </Col>
+                <hr />
+                <Col className="col col-12 d-flex align-items-center my-3">
+                  <div>
+                    <Card.Img
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/100px-React-icon.svg.png"
+                      className="iconaCompetenze mt-2 me-3"
+                    />
+                  </div>
+                  <div>
+                    {" "}
+                    <p className="m-0">
+                      <b className="javascript">React</b>
+                    </p>
+                    <p className="m-0">
+                      Full-Stack Developer presso Epicode Italia
+                    </p>
+                  </div>
+                </Col>
+              </Card.Body>
+              <Card.Footer className="my-card-footer">
+                <b className="grigetto fw-semibold">
+                  Mostra tutte le competenze (19)
+                </b>{" "}
+                <ArrowRight />
+              </Card.Footer>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
+    </>
   );
 };
 
