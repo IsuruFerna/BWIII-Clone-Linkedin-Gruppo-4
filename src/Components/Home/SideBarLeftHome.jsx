@@ -47,7 +47,6 @@ const SideBarLeftHome = () => {
             Ti diamo il benvenuto {userData.name} !
           </Card.Title>
           <span className="ancora text-primary">Aggiungi una foto</span>
-
           <div className="d-none d-md-block">
             <Card.Text className="d-flex justify-content-md-between mt-3 ">
               <div className="mt-2">
