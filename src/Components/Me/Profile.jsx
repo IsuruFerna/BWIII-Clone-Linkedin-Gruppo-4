@@ -225,12 +225,6 @@ function Profile() {
                     Aggiungi sezione del profilo
                   </Button> */}
 
-                           <Button
-                              className="rounded-5"
-                              variant="outline-secondary"
-                           >
-                              Altro
-                           </Button>
                         </div>
                         <div className="py-3 px-3">
                            {/* substitute carosel with models */}
