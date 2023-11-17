@@ -34,7 +34,7 @@ function App() {
         <Route element={<ProfilePage />} path="/profile/:id" />
         <Route element={<HomePage />} path="/home" />
         <Route element={<JobsPage searchQuery={searchQuery} />} path="/jobs" />
-        <Route element={<ExperiencePage />} path="/experience" />
+        <Route element={<ExperiencePage />} path="/me/experience" />
         <Route element={<NotFoundPage />} path="/*" />
         <Route element={<Login />} path="/" />
       </Routes>
