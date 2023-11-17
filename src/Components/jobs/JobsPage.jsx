@@ -149,7 +149,7 @@ const JobsPage = ({ searchQuery }) => {
                   </Card>
                 ))}
             </Col>
-            <Col className="col col-3">
+            <Col className="col col-3 md-block">
               <Card>
                 <CardBody>
                   <div className="d-flex flex-column  justify-content-center mb-3">
