@@ -52,7 +52,7 @@ const JobsPage = ({ searchQuery }) => {
         {jobsData.data && (
           <Row>
             <Col className="col col-3">
-              <Card>
+              <Card className="shadow">
                 <CardBody>
                   <div className="d-flex align-items-center mb-3 pointer">
                     <div className="me-2">
@@ -116,7 +116,7 @@ const JobsPage = ({ searchQuery }) => {
                       .includes(searchQuery.toLowerCase())
                 )
                 .map((singleJob) => (
-                  <Card key={singleJob._id} className="col col-12 mb-3">
+                  <Card key={singleJob._id} className="col col-12 mb-3 shadow">
                     {/* <Card.Img variant="top" src="holder.js/100px180?text=Image cap" /> */}
                     <Card.Body>
                       <Card.Title>
@@ -150,7 +150,7 @@ const JobsPage = ({ searchQuery }) => {
                 ))}
             </Col>
             <Col className="col col-3 md-block">
-              <Card>
+              <Card className="shadow">
                 <CardBody>
                   <div className="d-flex flex-column  justify-content-center mb-3">
                     <h6 className="mb-0">Disponibile a lavorare</h6>
