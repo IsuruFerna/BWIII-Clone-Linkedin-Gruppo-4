@@ -1,0 +1,65 @@
+.containerLogin {
+    min-height: 100vh;
+    width: 100%;
+    background-color: white;
+
+}
+
+.btn-primary {
+    --bs-btn-active-bg: none;
+    --bs-btn-hover-bg: none;
+    --bs-btn-bg:transparent;
+}
+
+
+.logoLogin{
+width: 100px;
+margin-left: 3em;
+
+}
+
+.buttLogo{
+    background-color: transparent;
+    border: 0;
+}
+
+.titoloLogin{
+color: red;
+font-weight: 100;
+margin-bottom: 1.5em;
+
+}
+
+.formInput{
+
+    border: solid 1px black ;
+    height: 50px;
+    
+}
+
+.buttInput{
+
+    font-weight: 500;
+    border-left: 0;
+    
+
+}
+
+.ancoraLogin{
+
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.paragLogin{
+    font-size: 13px;
+}
+
+.logoGoogle{
+
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    margin-right: 2px;
+}
