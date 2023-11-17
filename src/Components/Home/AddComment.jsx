@@ -1,4 +1,4 @@
-import { Form } from "react-bootstrap";
+import { Form, InputGroup } from "react-bootstrap";
 import {
   ChatText,
   EmojiSmile,
@@ -6,6 +6,7 @@ import {
   SendFill,
   ArrowDownUp,
   HandThumbsUpFill,
+  Image,
 } from "react-bootstrap-icons";
 
 import { useRef, useState } from "react";
@@ -62,7 +63,7 @@ const AddComment = ({ dataId }) => {
   };
 
   return (
-    <section className="mt-3">
+    <section className="pt-3 border-top">
       <div className="d-flex justify-content-around">
         <div
           onClick={() => {
@@ -75,28 +76,31 @@ const AddComment = ({ dataId }) => {
           }
         >
           {liked ? (
-            <HandThumbsUpFill className="text-primary me-1 fs-6" />
+            <HandThumbsUpFill className="text-primary fs-5" />
           ) : (
-            <HandThumbsUp className="me-1" />
-          )}{" "}
-          Consiglia
+            <HandThumbsUp className="fs-6" />
+          )}
+          <span className="mx-1">Consiglia</span>
         </div>
         <div
           onClick={handleClick}
           className="d-flex align-items-center col smaller iconPost text-secondary ms-2"
         >
-          <ChatText className="me-1" /> Commenta
+          <ChatText className="fs-6" />
+          <span className="mx-1">Commenta</span>
         </div>
         <div className="d-flex align-items-center col smaller iconPost text-secondary ms-2">
-          <ArrowDownUp className="me-1" /> Diffondi il post
+          <ArrowDownUp className="fs-6" />
+          <span className="mx-1">Diffondi il post</span>
         </div>
         <div className="d-flex align-items-center col smaller iconPost text-secondary ms-3">
-          <SendFill className="me-1" /> Invia
+          <SendFill className="fs-6" />
+          <span className="mx-1">Invia</span>
         </div>
       </div>
       <div>
         <Form className="colors bg-white mx-2 d-flex justify-content-between rounded-pill mt-1">
-          <Form.Control
+          {/* <Form.Control
             ref={inputRef}
             id="inputFieldInForm"
             placeholder="Aggiungi un commento..."
@@ -107,14 +111,29 @@ const AddComment = ({ dataId }) => {
           ></Form.Control>
           <button className="bottoneDentroForm rounded-pill border-0">
             <EmojiSmile />
-          </button>
-
-          <img
-            src="https://play-lh.googleusercontent.com/GkhngtFrSb3G9WXkWxJ9IRppbGVbNy7b_xyqa12Xa-Y3My_SXtsLamI5kR6or5zWGA=w240-h480-rw"
-            alt=""
-            width={"38px"}
-            className="d-flex"
-          />
+          </button> */}
+          <InputGroup className="mb-1">
+            <Form.Control
+              ref={inputRef}
+              placeholder="Aggiungi un commento..."
+              aria-label="text"
+              id="inputFieldInForm"
+              aria-describedby="basic-addon2"
+              // className="FormControl rounded-5  border-secondary w-100 smaller  "
+              className="border-secondary rounded-start-5"
+              value={commentOne}
+              onChange={handleCommentChange}
+            />
+            <InputGroup.Text
+              id="basic-addon2"
+              className="border-secondary rounded-end-5"
+            >
+              <div className="d-flex">
+                <EmojiSmile className="mx-1 pointer" />
+                <Image className="mx-1 pointer" />
+              </div>
+            </InputGroup.Text>
+          </InputGroup>
         </Form>
         <button
           variant="primary"
@@ -122,7 +141,7 @@ const AddComment = ({ dataId }) => {
             addThisComment();
             clearInput();
           }}
-          className="bg-primary border border-0 rounded-4 mx-1 text-white fs-7 fw-bold ms-1 ps-3 pb-1 pe-3"
+          className="bg-primary border border-0 rounded-4 mx-2 my-1 px-3 py-1 text-white fs-7 fw-bold"
         >
           Pubblica
         </button>

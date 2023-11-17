@@ -6,7 +6,7 @@ import SingleComment from "./SingleComment";
 const SinglePost = ({ data, comment }) => {
   return (
     <section
-      className=" my-3 border-secondary bg-white rounded shadow"
+      className=" my-3 border-secondary bg-white rounded shadow p-2"
       id="singlePost"
     >
       <section className=" p-1 d-flex align-items-center">
@@ -32,7 +32,9 @@ const SinglePost = ({ data, comment }) => {
           <div className="post-photo mb-2">
             {data.image && <img src={data.image} alt="immagine caricata" />}
           </div>
-          <div className="d-flex align-self-lg-start ">{data.text}</div>
+          <div className="d-flex align-self-lg-start fs-4 w-100 ps-1">
+            {data.text}
+          </div>
         </div>
       </section>
       <section>
