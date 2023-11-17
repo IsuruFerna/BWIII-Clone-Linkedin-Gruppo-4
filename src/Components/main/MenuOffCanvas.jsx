@@ -375,10 +375,7 @@ function MenuOffCanvas({ handleClose, handleShow, show }) {
             </Card.Header>
             <Card.Body>
               <Card.Text className="px-1">
-                <Link
-                  to="#"
-                  className="link-dark link-underline link-underline-opacity-0 link-underline-opacity-50-hover"
-                >
+                <Link className="link-dark link-underline link-underline-opacity-0 link-underline-opacity-50-hover">
                   <div
                     className=" fs-7 text-black mt-0 mb-0 lh-1 fw-semibold"
                     id="testing"
@@ -389,10 +386,7 @@ function MenuOffCanvas({ handleClose, handleShow, show }) {
                     Trova, attrai e assumi
                   </p>
                 </Link>
-                <Link
-                  to="#"
-                  className="link-dark link-underline link-underline-opacity-0 link-underline-opacity-50-hover"
-                >
+                <Link className="link-dark link-underline link-underline-opacity-0 link-underline-opacity-50-hover">
                   <p className="fs-7 text-black mt-2 mb-0 lh-1 fw-semibold">
                     Vendi con LindedIn
                   </p>
@@ -400,10 +394,7 @@ function MenuOffCanvas({ handleClose, handleShow, show }) {
                     Costruisci relazioni con i buyer
                   </p>
                 </Link>
-                <Link
-                  to="#"
-                  className="link-dark link-underline link-underline-opacity-0 link-underline-opacity-50-hover"
-                >
+                <Link className="link-dark link-underline link-underline-opacity-0 link-underline-opacity-50-hover">
                   <p className="fs-7 text-black mt-2 mb-0 lh-1 fw-semibold">
                     Offerta di lavoro gratuita
                   </p>
@@ -411,10 +402,7 @@ function MenuOffCanvas({ handleClose, handleShow, show }) {
                     Trova candidati di qualità
                   </p>
                 </Link>
-                <Link
-                  to="#"
-                  className="link-dark link-underline link-underline-opacity-0 link-underline-opacity-50-hover"
-                >
+                <Link className="link-dark link-underline link-underline-opacity-0 link-underline-opacity-50-hover">
                   <p className="fs-7 text-black mt-2 mb-0 lh-1 fw-semibold">
                     Fai pubblicità su LinkedIn
                   </p>
@@ -422,10 +410,7 @@ function MenuOffCanvas({ handleClose, handleShow, show }) {
                     Acquisisci clienti e fai crescere la tua azienda
                   </p>
                 </Link>
-                <Link
-                  to="#"
-                  className="link-dark link-underline link-underline-opacity-0 link-underline-opacity-50-hover"
-                >
+                <Link className="link-dark link-underline link-underline-opacity-0 link-underline-opacity-50-hover">
                   <p className="fs-7 text-black mt-2 mb-0 lh-1 fw-semibold">
                     Impara con LinkedIn
                   </p>
@@ -433,10 +418,7 @@ function MenuOffCanvas({ handleClose, handleShow, show }) {
                     Corsi per formare i tuoi dipendenti
                   </p>
                 </Link>
-                <Link
-                  to="#"
-                  className="link-dark link-underline link-underline-opacity-0 link-underline-opacity-50-hover"
-                >
+                <Link className="link-dark link-underline link-underline-opacity-0 link-underline-opacity-50-hover">
                   <p className="fs-7 text-black mt-2 mb-0 lh-1 fw-semibold">
                     Centro amministrazione
                   </p>
@@ -447,10 +429,7 @@ function MenuOffCanvas({ handleClose, handleShow, show }) {
               </Card.Text>
             </Card.Body>
             <Card.Footer className="bg-white px-3 text-dark ps-3 border border-white-subtle ">
-              <Link
-                to="#"
-                className="link-dark link-underline link-underline-opacity-0 link-underline-opacity-50-hover ps-1 fs-7 fw-semibold"
-              >
+              <Link className="link-dark link-underline link-underline-opacity-0 link-underline-opacity-50-hover ps-1 fs-7 fw-semibold">
                 Crea una pagina aziendale <PlusLg className="mb-1 ms-2 fs-5" />
               </Link>
             </Card.Footer>

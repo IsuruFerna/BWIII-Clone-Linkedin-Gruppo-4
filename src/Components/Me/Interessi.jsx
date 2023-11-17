@@ -1,29 +1,24 @@
 import { Col, Container, Row } from "react-bootstrap";
-import { Button, Card } from "react-bootstrap";
+import { Card } from "react-bootstrap";
+import { ArrowRight } from "react-bootstrap-icons";
 
 const Interessi = () => {
   return (
-    <Container>
-      <Card className="my-5 shadow">
-        <Card.Header className="container-fluid bg-white mt-1">
-          <Row className="d-flex justify-content-between">
-            <Col sm={7} md={6} lg={9}>
-              <h5>Interessi</h5>
-            </Col>
-            <Col sm={6} md={6} lg={3}>
-              <Button
-                variant="outline-secondary"
-                className="butt border-0 rounded-circle"
+    <Container fluid>
+      <Card className="my-3 mb-3 mb-xl-5 shadow">
+        <Card.Header className="container-fluid bg-white mt-1 pb-0">
+          <Row className="d-flex">
+            <div className="px-3 pt-3 ">
+              <Card.Title>Interessi</Card.Title>
+            </div>
+            <div className="px-3">
+              <p
+                id="aziende"
+                className="text-success mb-0 pb-2 border border-2 border-success border-top-0 border-end-0 border-start-0  "
               >
-                <i class="bi bi-plus-lg"></i>
-              </Button>
-              <Button
-                variant="outline-secondary"
-                className="butt border-0 rounded-circle"
-              >
-                <i class="bi bi-pencil"></i>
-              </Button>
-            </Col>
+                Aziende
+              </p>
+            </div>
           </Row>
         </Card.Header>
         <Card.Body>
@@ -87,6 +82,10 @@ const Interessi = () => {
             </Col>
           </Row>
         </Card.Body>
+        <Card.Footer className="my-card-footer">
+          <b className="grigetto fw-semibold">Mostra tutte le aziende</b>{" "}
+          <ArrowRight />
+        </Card.Footer>
       </Card>
     </Container>
   );

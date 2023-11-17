@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 
 const HomeNav = () => {
   return (
-    <div className="text-secondary justify-content-center align-items-center d-flex flex-column pointer mx-1">
-      <HouseDoorFill className="fs-5" />
-      <Link to="/home" className="nav-link">
+    <Link to="/home" className="nav-link">
+      <div className="text-secondary d-flex align-items-center flex-column mx-2 pointer">
+        <HouseDoorFill className="fs-5" />
         <h6>Home</h6>
-      </Link>
-    </div>
+      </div>
+    </Link>
   );
 };
 export default HomeNav;

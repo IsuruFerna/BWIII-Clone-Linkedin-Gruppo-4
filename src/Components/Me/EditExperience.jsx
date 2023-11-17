@@ -4,11 +4,17 @@ import Modal from "react-bootstrap/Modal";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getUserAction, token } from "../../redux/actions";
+import { Link } from "react-router-dom";
+import { PlusLg } from "react-bootstrap-icons";
+import AddMedia from "./AddMedia";
 
 const EditExperience = ({
    formEditData,
    showEditExperienceModal,
    handleClose,
+   handleAddLinkClick,
+   mediaForm,
+   setMediaForm,
 }) => {
    const [formData, setFormData] = useState(null);
    const [initialMonth, setInitialMonth] = useState(null);
@@ -21,6 +27,11 @@ const EditExperience = ({
    // save edits
    const handleSubmit = () => {
       let updatedFormData = { ...formData };
+
+      if (mediaForm) {
+         updatedFormData = { ...formData, mediaForm };
+      }
+
       // set initial date
       let initialDate = `${initialYear}-${initialMonth}-01`;
       initialDate = new Date(initialDate);
@@ -35,6 +46,7 @@ const EditExperience = ({
          updatedFormData.endDate = null;
       }
 
+      console.log("this is updated values form", updatedFormData);
       // modify data via put data
       fetch(
          `https://striveschool-api.herokuapp.com/api/profile/${formEditData.user}/experiences/${formEditData.id}`,
@@ -346,6 +358,29 @@ const EditExperience = ({
                               }
                            />
                         </Form.Group>
+                        <div className="w-100 px-1">
+                           <h5>Media</h5>
+                           <p className="lh-sm fs-7 text-dark">
+                              Aggiungi contenuti multimediali come immagini,
+                              documenti, siti o presentazioni. Scopri di più sui
+                              <Link to="#" className="ms-1">
+                                 tipi di file multimediali supportati
+                              </Link>
+                           </p>
+                           {/* <Button
+                              variant="outline-primary"
+                              className="rounded-pill d-flex align-items-center pe-3"
+                              size="sm"
+                           >
+                              {" "}
+                              <PlusLg className="fs-6 me-1" />
+                              Aggiungi media
+                           </Button> */}
+                           <AddMedia
+                              handleAddLinkClick={handleAddLinkClick}
+                              handleClose={handleClose}
+                           />
+                        </div>
                      </Modal.Body>
                   </div>
                )}

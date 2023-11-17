@@ -1,74 +1,74 @@
 .color-1 {
-   background-color: blue;
+  background-color: blue;
 }
 .color-2 {
-   background-color: rgb(219, 219, 219);
+  background-color: rgb(219, 219, 219);
 }
 
 .profile-cover {
-   height: 9em;
-   background-color: rgb(179, 179, 179);
+  height: 9em;
+  /* background-color: rgb(179, 179, 179); */
 }
 
 .profile-pic {
-   width: 130px;
-   height: 130px;
+  width: 130px;
+  height: 130px;
 }
 .profile-details {
-   min-height: 15em;
+  min-height: 15em;
 }
 
 .profile-loader {
-   height: 24em;
+  height: 24em;
 }
 
 .fs-7 {
-   font-size: 0.8em;
-   color: #888888;
+  font-size: 0.8em;
+  color: #888888;
 }
 
 .link-small {
-   color: #0a5ad1;
-   cursor: pointer;
+  color: #0a5ad1;
+  cursor: pointer;
 }
 
 .link-small:hover {
-   text-decoration: underline;
+  text-decoration: underline;
 }
 
 #advice-button {
-   border: 1px solid gray !important;
-   border-radius: 999px;
-   color: gray;
+  border: 1px solid gray !important;
+  border-radius: 999px;
+  color: gray;
 }
 #advice-button:hover {
-   border: 2px solid gray !important;
-   background-color: #e5e6e9;
-   padding-bottom: 4px;
+  border: 2px solid gray !important;
+  background-color: #e5e6e9;
+  padding-bottom: 4px;
 }
 
 .details-card {
-   background-color: #0d6dfd34;
+  background-color: #0d6dfd34;
 }
 
 .details-card p {
-   font-size: 0.8em;
+  font-size: 0.8em;
 }
 
 .details-card p:nth-of-type(1) {
-   font-size: 0.9em;
+  font-size: 0.9em;
 }
 
 .details-card p:nth-of-type(1),
 .details-card p:nth-of-type(3) {
-   font-weight: 600;
+  font-weight: 600;
 }
 
 .btn-circle {
-   width: 2em;
-   height: 2em;
+  width: 2em;
+  height: 2em;
 }
 
 .btn-circle:hover {
-   background-color: #88888863;
+  background-color: #88888863;
 }

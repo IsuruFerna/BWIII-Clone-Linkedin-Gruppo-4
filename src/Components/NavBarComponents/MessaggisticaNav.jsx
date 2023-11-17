@@ -2,7 +2,7 @@ import { ChatDotsFill } from "react-bootstrap-icons";
 
 const MessaggisticaNav = () => {
   return (
-    <div className="text-secondary justify-content-center align-items-center d-flex flex-column pointer mx-1">
+    <div className="text-secondary d-flex align-items-center flex-column mx-2 pointer">
       <ChatDotsFill className="fs-5 " />
       <h6>Messaggistica</h6>
     </div>

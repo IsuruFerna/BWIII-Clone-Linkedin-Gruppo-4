@@ -14,6 +14,7 @@
 #advice-button:hover {
   border: 2px solid gray !important;
   background-color: #e5e6e9;
+  margin: -1px;
 }
 #close {
   cursor: pointer;
@@ -28,7 +29,7 @@
 }
 /* RISORSE E ATTIVITà */
 .grigetto {
-  color: gray !important;
+  color: gray;
 }
 
 .my-card-footer {
@@ -38,20 +39,6 @@
 .my-card-footer:hover {
   background-color: rgb(222, 219, 219) !important;
   cursor: pointer;
-}
-
-/* ATTIVITà E INFORMAZIONI */
-.pencil {
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  border-radius: 999px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.pencil:hover {
-  background-color: rgb(222, 219, 219);
 }
 
 /* ATTIVIRà */
@@ -111,4 +98,39 @@
 }
 .pointer {
   cursor: pointer;
+}
+/* Competenze */
+.javascript {
+  color: rgba(0, 0, 0, 0.65);
+}
+
+/* Interessi */
+#aziende {
+  width: 57px !important;
+}
+.personal-button:focus {
+  border-color: gray;
+}
+.personal-button {
+  background-color: white !important;
+  border-color: gray;
+}
+.border-2px:hover {
+  border: 2px solid;
+  margin: -1px;
+  background-color: #ebebeb !important;
+}
+.my-hover {
+  background-color: #005bb6;
+}
+.my-hover:hover {
+  color: white;
+  background-color: #004182;
+}
+.underline-hover:hover {
+  text-decoration: underline;
+  color: #004182;
+}
+.job-logo {
+  width: 50px;
 }

@@ -2,6 +2,7 @@ import { Row } from "react-bootstrap";
 import { Pencil } from "react-bootstrap-icons";
 import { Card, Col, Container } from "react-bootstrap/esm";
 import "./ConsigliatoPerTe.css";
+import { Link } from "react-router-dom";
 
 const Informazioni = () => {
   return (
@@ -11,11 +12,11 @@ const Informazioni = () => {
           <Col className="col-12">
             <Card className="shadow">
               <Card.Body>
-                <div className="d-flex justify-content-between ">
+                <div className="d-flex justify-content-between align-items-center">
                   <Card.Title>Informazioni</Card.Title>
-                  <div className="pencil">
-                    <Pencil></Pencil>
-                  </div>
+                  <Link to="#" className="btn-circle">
+                    <Pencil className="fs-3 text-secondary" />
+                  </Link>
                 </div>
 
                 <div>

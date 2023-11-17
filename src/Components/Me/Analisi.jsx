@@ -5,12 +5,12 @@ import { Container, Card, Col } from "react-bootstrap/esm";
 const Analisi = () => {
   return (
     <>
-      <Container className="my-3">
+      <Container fluid className="my-3">
         <Row>
           <Col className="col-12">
             <Card className="shadow">
               <Card.Body>
-                <div>
+                <div className="pt-2">
                   <Card.Title>Analisi</Card.Title>
                 </div>
                 <Card.Subtitle className="mb-2 text-muted">

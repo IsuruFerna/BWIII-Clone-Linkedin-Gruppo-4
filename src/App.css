@@ -222,3 +222,17 @@ body {
 
   cursor: pointer;
 }
+.singleComment {
+  transition: all 0.4s;
+}
+.singleComment:hover {
+  background-color: #f4f2ee;
+  scale: 1.03;
+  cursor: pointer;
+  box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.1);
+}
+.liked {
+  color: black !important;
+
+  scale: 1.08;
+}
