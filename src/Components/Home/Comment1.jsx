@@ -5,6 +5,7 @@ import {
   HandThumbsUp,
   SendFill,
   ArrowDownUp,
+  Image,
 } from "react-bootstrap-icons";
 
 import { useEffect, useState } from "react";
@@ -69,30 +70,31 @@ const Comment1 = () => {
         </div>
       </div>
       <div>
-        <Form className="colors bg-white d-flex justify-content-between rounded-pill mt-1">
+        <Form className="colors bg-white d-flex justify-content-between rounded-pill mt-3">
+          <img
+            src="https://i.pinimg.com/736x/07/af/b5/07afb5b8737e59ba4719eeae78580931.jpg"
+            alt=""
+            className="ms-2 mt-1 rounded-5"
+            width={"38px"}
+            height={"36px"}
+          ></img>
           <Form.Control
             id="inputFieldInForm"
             placeholder="Aggiungi un commento..."
             aria-label="text"
-            className="FormControl rounded-5  border-secondary w-100 smaller  "
+            className="FormControl rounded-5 border-secondary w-100 smaller ms-1 "
             value={commentOne}
             onChange={handleCommentChange}
           ></Form.Control>
-          <button className="bottoneDentroForm rounded-pill border-0">
-            <EmojiSmile />
+          <button className=" bottoneDentroForm rounded-pill border-0 d-flex text-secondary">
+            <EmojiSmile className="mt-2" />
+            <Image className="ms-2 mt-2 me-3" />
           </button>
-
-          <img
-            src="https://play-lh.googleusercontent.com/GkhngtFrSb3G9WXkWxJ9IRppbGVbNy7b_xyqa12Xa-Y3My_SXtsLamI5kR6or5zWGA=w240-h480-rw"
-            alt=""
-            width={"38px"}
-            className="d-flex"
-          />
         </Form>
         <button
           variant="primary"
           // onClick={theComment}
-          className="bg-primary border border-0 rounded-4 mt-2 text-white fs-7 fw-bold ms-1 ps-3 pb-1 pe-3"
+          className="bg-primary border border-0 rounded-4 mt-2 mb-2 text-white fs-7 fw-bold ms-1 ps-3 pb-1 pe-3"
         >
           Pubblica
         </button>
