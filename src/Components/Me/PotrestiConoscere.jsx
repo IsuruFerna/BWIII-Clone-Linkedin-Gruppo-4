@@ -28,7 +28,7 @@ const PotrestiConoscere = () => {
     getPersons();
   }, []);
   return (
-    <div className="d-flex flex-xl-column mb-5">
+    <div className="d-flex flex-column mb-5">
       <Container
         fluid
         className="border bg-white shadow rounded mb-3 mx-1 h-100 d-flex flex-column"

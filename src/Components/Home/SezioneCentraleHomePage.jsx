@@ -5,7 +5,8 @@ import AddPost from "./AddPost";
 const SezioneCentraleHomePage = () => {
   //   const [datas, setDatas] = useState({});
   const [post, setPost] = useState([]);
-  const myFetch = () => {
+
+  const myPostsFetch = () => {
     fetch("https://striveschool-api.herokuapp.com/api/posts/", {
       headers: {
         Authorization:
@@ -25,7 +26,7 @@ const SezioneCentraleHomePage = () => {
       .catch((err) => console.log("Errore: ", err));
   };
   useEffect(() => {
-    myFetch();
+    myPostsFetch();
   }, []);
   return (
     <div>

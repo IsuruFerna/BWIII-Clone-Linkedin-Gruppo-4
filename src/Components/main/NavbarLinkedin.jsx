@@ -37,7 +37,7 @@ function NavbarLinkedin({ onSearch, handleShow }) {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse
           id="basic-navbar-nav"
-          className="d-flex justify-content-between"
+          className="d-lg-flex justify-content-lg-around"
         >
           <Form onSubmit={handleSearch}>
             <Form.Group className="me-3">
@@ -50,14 +50,9 @@ function NavbarLinkedin({ onSearch, handleShow }) {
             </Form.Group>
           </Form>
           <div className="d-flex align-items-center">
-            <Link to="/" className="text-decoration-none">
-              <HomeNav />
-            </Link>
-
+            <HomeNav />
             <ReteNav />
-            <Link to="/jobs" className="nav-link">
-              <Jobs />
-            </Link>
+            <Jobs />
             <MessaggisticaNav />
             <NotificheNav />
             <TuNav />
