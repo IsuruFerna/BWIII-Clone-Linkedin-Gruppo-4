@@ -38,7 +38,7 @@ function App() {
                path="/jobs"
             />
             <Route element={<ExperiencePage />} path="/experience" />
-            <Route element={<NotFoundPage />} path="/NotFound" />
+            <Route element={<NotFoundPage />} path="/*" />
             <Route element={<Login />} path="/loginPage" />
          </Routes>
 

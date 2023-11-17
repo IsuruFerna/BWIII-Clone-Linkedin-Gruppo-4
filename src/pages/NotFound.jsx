@@ -9,7 +9,7 @@ return(
     <Container className="containerNotFound ">
 
 <Row className="">
-    
+ 
 <Col sm={6} className="w-50">
 <img className="logo" src="https://tse3.mm.bing.net/th?id=OIP.7y88DqLREW8ApbxWuMBmzgHaEo&pid=Api&P=0&h=180" alt="logo" />
 </Col>
@@ -33,19 +33,20 @@ return(
 </Row>
 
 <Row>
-<Col sm={2}></Col>
-<Col sm={8}>
+<Col sm={3}></Col>
+<Col sm={6} >
 <h1 className="firstWrite me-5 mt-5 d-flex justify-content-center">Page not found</h1>
 
 <h3 className="secondWrite mt-4  d-flex justify-content-center">
-Uh oh, we can’t seem to find the page you’re looking for. Try going back to the previous page or see our Help Center for more information
+Uh oh, we can't seem to find the page you're looking for. Try going back to the previous page or see our Help Center  for more information
 </h3>
 
 
 
 </Col>
-<Col sm={2}></Col>
+<Col sm={3}></Col>
 </Row>
+
 <Row>
 <Col sm={5}  xl={5}></Col>
 <Col sm={3} xl={2}><Button className="buttTwoNotFound rounded-0" variant="outline-primary">Go to your feed</Button></Col>
@@ -55,7 +56,8 @@ Uh oh, we can’t seem to find the page you’re looking for. Try going back to 
 
 
 
-<Row className=" mt-5 d-flex align-items-end">
+
+<Row className="footerNotFound">
 
    <Col sm={2} ><img className="logoFooter" src="https://tse3.mm.bing.net/th?id=OIP.7y88DqLREW8ApbxWuMBmzgHaEo&pid=Api&P=0&h=180" alt="logo"/> <a href="#" className="ancorNotFound">© 2023</a></Col> 
    <Col sm={2} ><a href="#" className="ancorNotFound">User Agreement</a></Col> 
@@ -64,9 +66,8 @@ Uh oh, we can’t seem to find the page you’re looking for. Try going back to 
    <Col sm={2}><a href="#" className="ancorNotFound">Cookie Policy</a></Col> 
    <Col sm={2}><a href="#" className="ancorNotFound">Copyright Policy</a></Col> 
   
+  
 </Row>
-
-
 
 
     </Container>

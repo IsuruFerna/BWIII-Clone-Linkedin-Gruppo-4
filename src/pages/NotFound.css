@@ -65,6 +65,19 @@ margin-top: 2em;
         justify-content: center !important;
     }
 
+.firstWrite{
+    font-weight: 400;
+}
+
     .secondWrite{
 
+font-size: 19px;
+color: grey;
+font-weight: 400;
+    }
+
+    .footerNotFound{
+        display: flex;
+        align-items: end;
+        margin-top: 23em;
     }
