@@ -11,6 +11,8 @@ import JobsPage from "./Components/jobs/JobsPage";
 import { useState } from "react";
 import ExperiencePage from "./pages/ExperiencePage";
 import MenuOffCanvas from "./Components/main/MenuOffCanvas";
+import NotFoundPage from "./pages/NotFound";
+import Login from "./Components/login/loginPage";
 
 function App() {
    const [searchQuery, setSearchQuery] = useState("");
@@ -36,6 +38,8 @@ function App() {
                path="/jobs"
             />
             <Route element={<ExperiencePage />} path="/experience" />
+            <Route element={<NotFoundPage />} path="/*" />
+            <Route element={<Login />} path="/loginPage" />
          </Routes>
 
          <MenuOffCanvas
