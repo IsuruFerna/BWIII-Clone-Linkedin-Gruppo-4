@@ -7,21 +7,29 @@ import SingleExperienceModify from "./SingleExperienceModify";
 import AddExperience from "./AddExperience";
 import { useState } from "react";
 import "./Experience.css";
+import AddMediaLink from "./AddMediaLink";
 
 const ExperienceModify = () => {
    // resetting modals
    const [showEditExperienceModal, setEditExperienceModal] = useState(false);
    const [showAddExperienceModal, setAddExperienceModal] = useState(false);
+   const [showAddMediaLinkModal, setAddMediaLinkModal] = useState(false);
+   const [mediaForm, setMediaForm] = useState("");
+
    const handleEditExpClick = () => {
       setEditExperienceModal(true);
    };
    const handleAddExpClick = () => {
       setAddExperienceModal(true);
    };
+   const handleAddLinkClick = () => {
+      setAddMediaLinkModal(true);
+   };
 
    const handleClose = () => {
       setEditExperienceModal(false);
       setAddExperienceModal(false);
+      setAddMediaLinkModal(false);
    };
 
    return (
@@ -46,6 +54,10 @@ const ExperienceModify = () => {
                      </div>
 
                      <SingleExperienceModify
+                        setAddMediaLinkModal={setAddMediaLinkModal}
+                        setMediaForm={setMediaForm}
+                        mediaForm={mediaForm}
+                        handleAddLinkClick={handleAddLinkClick}
                         handleEditExpClick={handleEditExpClick}
                         handleClose={handleClose}
                         showEditExperienceModal={showEditExperienceModal}
@@ -57,6 +69,15 @@ const ExperienceModify = () => {
          <AddExperience
             handleClose={handleClose}
             showAddExperienceModal={showAddExperienceModal}
+         />
+         <AddMediaLink
+            mediaForm={mediaForm}
+            setAddMediaLinkModal={setAddMediaLinkModal}
+            setMediaForm={setMediaForm}
+            handleEditExpClick={handleEditExpClick}
+            handleClose={handleClose}
+            handleAddLinkClick={handleAddLinkClick}
+            showAddMediaLinkModal={showAddMediaLinkModal}
          />
       </Container>
    );

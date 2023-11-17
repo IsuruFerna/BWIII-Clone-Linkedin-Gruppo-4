@@ -1,27 +1,34 @@
-import { Button, Col, Container, Form, InputGroup, Modal, Navbar, Row } from 'react-bootstrap'
-import './loginPage.css'
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import {
+  Button,
+  Col,
+  Container,
+  Form,
+  InputGroup,
+  Modal,
+  Navbar,
+  Row,
+} from "react-bootstrap";
+import "./loginPage.css";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const Navigate = useNavigate();
 
 
-
-const Login=()=>{
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
     const [passwordVisible, setPasswordVisible] = useState(false);
 
-    const Navigate= useNavigate()
-  
-    const handleLogin = (event) => {
-      event.preventDefault();
-  
-      localStorage.setItem('email', email);
-      localStorage.setItem('password', password);
+    const handleLogin = (event) => { event.preventDefault();
+    localStorage.setItem("email", email);
+    localStorage.setItem("password", password);
 
       if(email=== 'marco@outlook.it' && password=== 'isuruilrapinatore'){Navigate('/')}
       if(email!== 'marco@outlook.it' && password!== 'isuruilrapinatore'){ alert("Credenziali errate. Si prega di riprovare.")}
   
-    };
+    }
     const togglePasswordVisibility = () => {
         setPasswordVisible(!passwordVisible);
       };
@@ -33,20 +40,35 @@ return(
     <Row>
         <Col sm={2}></Col>
         <Col sm={8}></Col>
-    <Navbar className="">
-    <Container>
-      <Navbar.Brand href="#home"><Button className='buttLogo'><img className="logoLogin" src="https://tse3.mm.bing.net/th?id=OIP.7y88DqLREW8ApbxWuMBmzgHaEo&pid=Api&P=0&h=180" alt="logo" /></Button></Navbar.Brand>
-      <Navbar.Toggle />
-      <Navbar.Collapse className="justify-content-end">
-        <Navbar.Text>
-        <Button className='rounded-pill me-2' variant="light">Iscriviti ora</Button>
-        </Navbar.Text>
-        <Navbar.Text>
-          <Button className='rounded-pill me-5 pt-2 pb-2' variant="outline-primary" >accedi</Button>
-        </Navbar.Text>  
-      </Navbar.Collapse>
-    </Container>
-  </Navbar>
+        <Navbar className="">
+          <Container>
+            <Navbar.Brand href="#home">
+              <Button className="buttLogo">
+                <img
+                  className="logoLogin"
+                  src="https://tse3.mm.bing.net/th?id=OIP.7y88DqLREW8ApbxWuMBmzgHaEo&pid=Api&P=0&h=180"
+                  alt="logo"
+                />
+              </Button>
+            </Navbar.Brand>
+            <Navbar.Toggle />
+            <Navbar.Collapse className="justify-content-end">
+              <Navbar.Text>
+                <Button className="rounded-pill me-2" variant="light">
+                  Iscriviti ora
+                </Button>
+              </Navbar.Text>
+              <Navbar.Text>
+                <Button
+                  className="rounded-pill me-5 pt-2 pb-2"
+                  variant="outline-primary"
+                >
+                  accedi
+                </Button>
+              </Navbar.Text>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
 
 <Row className='my-5'>
     <Col sm={2}></Col>
@@ -89,12 +111,21 @@ return(
 
 
   <Col sm={6}></Col>
+
   </Row>
 </Container>
 
-)
 
 
-}
+
+
+
+  );
+ }
+;
+
+
+
+
 
 export default Login

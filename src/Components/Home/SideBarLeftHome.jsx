@@ -46,7 +46,7 @@ const SideBarLeftHome = () => {
           <Card.Title className="title">
             Ti diamo il benvenuto {userData.name} !
           </Card.Title>
-          <span className="ancora text-primary">Aggiungi una foto</span>
+          <span className="ancora text-primary pointer">Aggiungi una foto</span>
 
           <div className="d-none d-md-block">
             <Card.Text className="d-flex justify-content-md-between mt-3 ">
@@ -55,21 +55,21 @@ const SideBarLeftHome = () => {
                 <p className="fw-bold">Espandi la tua rete</p>
               </div>
               <div className="mt-2">
-                <i className="bi bi-person-plus-fill "></i>
+                <i className="bi bi-person-plus-fill pointer"></i>
               </div>
             </Card.Text>
             <Card.Text>
               <p className="text-secondary mt-2">
                 Accedi a strumenti e informazioni in esclusiva
               </p>
-              <span className="ancorDue text-black">
+              <span className="ancorDue text-black pointer">
                 <i className="bi bi-square-fill me-1"></i>
                 Prova Premium gratis
               </span>
             </Card.Text>
             <Card.Text>
-              <p>
-                <i className="bi bi-bookmark-fill"></i> I miei elementi{" "}
+              <p className=" pointer">
+                <i className="bi bi-bookmark-fill "></i> I miei elementi{" "}
               </p>
             </Card.Text>
           </div>
@@ -79,10 +79,10 @@ const SideBarLeftHome = () => {
       <div className="d-none d-md-block shadow">
         <ListGroup className="my-3">
           <ListGroup.Item className="border-0">
-            <span className="ancoraTre">Gruppi</span>
+            <span className="ancoraTre pointer">Gruppi</span>
           </ListGroup.Item>
           <ListGroup.Item className="d-flex justify-content-between border-0">
-            <span className="ancoraTre mt-2">Eventi</span>
+            <span className="ancoraTre mt-2 pointer">Eventi</span>
             <Button
               variant="outline-secondary"
               className=" border-0 rounded-circle"
@@ -91,7 +91,7 @@ const SideBarLeftHome = () => {
             </Button>
           </ListGroup.Item>
           <ListGroup.Item>
-            <span className="ancoraTre">Hashtag seguiti</span>
+            <span className="ancoraTre pointer">Hashtag seguiti</span>
           </ListGroup.Item>
           <ListGroup.Item className=" d-flex justify-content-center">
             <Button variant="outline-secondary" className="border-0 ">

@@ -12,7 +12,7 @@ const ConsigliatoPerTe = () => {
           <Col className="col-12">
             <Card className="shadow">
               <Card.Body>
-                <div>
+                <div className="pt-2">
                   <Card.Title>Consigliato per te</Card.Title>
                 </div>
                 <Card.Subtitle className="mb-2 text-muted">

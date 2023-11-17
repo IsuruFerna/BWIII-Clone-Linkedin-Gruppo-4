@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const TuNav = () => {
   return (
-    <div className="me-2 d-flex flex-column justify-content-center align-items-center position-relative">
+    <div className="text-secondary d-flex align-items-center flex-column mx-2 pointer position-relative">
       <PersonCircle className=" fs-5 text-secondary position-absolute top-0 start-50 translate-middle-x" />
       <Nav className="ms-2 mt-2">
         <NavDropdown
@@ -13,7 +13,7 @@ const TuNav = () => {
           id="basic-nav-dropdown"
           className="mt-1 text-secondary"
         >
-          <Link to="/" className="nav-link p-0 m-0">
+          <Link to="/me" className="nav-link p-0 m-0">
             <h6 className="ms-3 mt-2 ">Account</h6>
           </Link>
 
