@@ -8,9 +8,16 @@ import {
   HandThumbsUpFill,
 } from "react-bootstrap-icons";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 const AddComment = ({ dataId }) => {
+  const handleClick = () => {
+    if (inputRef.current) {
+      inputRef.current.focus();
+    }
+  };
+  const inputRef = useRef(null);
+
   const [liked, setLike] = useState(false);
   const [commentOne, setCommentOne] = useState("");
   const setThelike = () => {
@@ -74,7 +81,10 @@ const AddComment = ({ dataId }) => {
           )}{" "}
           Consiglia
         </div>
-        <div className="d-flex align-items-center col smaller iconPost text-secondary ms-2">
+        <div
+          onClick={handleClick}
+          className="d-flex align-items-center col smaller iconPost text-secondary ms-2"
+        >
           <ChatText className="me-1" /> Commenta
         </div>
         <div className="d-flex align-items-center col smaller iconPost text-secondary ms-2">
@@ -87,6 +97,7 @@ const AddComment = ({ dataId }) => {
       <div>
         <Form className="colors bg-white mx-2 d-flex justify-content-between rounded-pill mt-1">
           <Form.Control
+            ref={inputRef}
             id="inputFieldInForm"
             placeholder="Aggiungi un commento..."
             aria-label="text"
