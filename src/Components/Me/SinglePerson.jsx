@@ -9,8 +9,8 @@ const SinglePerson = ({ person }) => {
           <Col className="col-3">
             <img src={person.image} alt="profileImage" className="img-class" />
           </Col>
-          <Col>
-            <div className="smaller fw-bold d-flex flex-column">
+          <Col className="d-flex flex-column">
+            <div className="smaller fw-bold d-flex flex-column text-start">
               <div>
                 {person.name} {person.surname}
               </div>
@@ -22,7 +22,7 @@ const SinglePerson = ({ person }) => {
             </div>
 
             <div className="extrasmall my-1">
-              <div>{person.title}</div>
+              {/* <div>{person.title}</div> */}
               <Link to={`/profile/${person._id}`} className="nav-link">
                 <div className="btn btn-white border border-secondary rounded-4 smaller py-1 px-2">
                   Visita profilo
