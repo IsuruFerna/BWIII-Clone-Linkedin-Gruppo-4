@@ -10,17 +10,22 @@ import HomePage from "./pages/HomePage";
 import JobsPage from "./Components/jobs/JobsPage";
 import { useState } from "react";
 import ExperiencePage from "./pages/ExperiencePage";
-import MenuOffCanvas from "./Components/main/OffCanvas";
+import MenuOffCanvas from "./Components/main/MenuOffCanvas";
 
 function App() {
    const [searchQuery, setSearchQuery] = useState("");
+   const [show, setShow] = useState(false);
 
    const handleSearch = (query) => {
       setSearchQuery(query);
    };
+
+   const handleClose = () => setShow(false);
+   const handleShow = () => setShow(true);
+
    return (
       <BrowserRouter>
-         <NavbarLinkedin onSearch={handleSearch} />
+         <NavbarLinkedin onSearch={handleSearch} handleShow={handleShow} />
          {/* <AddExperience /> */}
          <Routes>
             <Route element={<MePage />} path="/" />
@@ -33,7 +38,11 @@ function App() {
             <Route element={<ExperiencePage />} path="/experience" />
          </Routes>
 
-         <MenuOffCanvas />
+         <MenuOffCanvas
+            handleClose={handleClose}
+            handleShow={handleShow}
+            show={show}
+         />
       </BrowserRouter>
    );
 }

@@ -11,7 +11,7 @@ import NotificheNav from "../NavBarComponents/NotificheNav";
 import TuNav from "../NavBarComponents/TuNav";
 import PerLeAziendeNav from "../NavBarComponents/PerLeAziendeNav";
 
-function NavbarLinkedin({ onSearch }) {
+function NavbarLinkedin({ onSearch, handleShow }) {
    // const [searchQuery, setSearchQuery] = useState("");
    const [searchTerm, setSearchTerm] = useState("");
    // const history = useHistory();
@@ -60,7 +60,7 @@ function NavbarLinkedin({ onSearch }) {
                   <MessaggisticaNav />
                   <NotificheNav />
                   <TuNav />
-                  <PerLeAziendeNav />
+                  <PerLeAziendeNav handleShow={handleShow} />
                </div>
             </Navbar.Collapse>
          </Container>
