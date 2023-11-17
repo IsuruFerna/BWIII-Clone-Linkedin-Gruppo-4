@@ -14,7 +14,6 @@
 #advice-button:hover {
   border: 2px solid gray !important;
   background-color: #e5e6e9;
-  margin: -1px;
 }
 #close {
   cursor: pointer;
@@ -107,23 +106,4 @@
 /* Interessi */
 #aziende {
   width: 57px !important;
-}
-.personal-button:focus {
-  border-color: gray;
-}
-.personal-button {
-  background-color: white !important;
-  border-color: gray;
-}
-.border-2px:hover {
-  border: 2px solid;
-  margin: -1px;
-  background-color: #ebebeb !important;
-}
-.my-hover {
-  background-color: #005bb6;
-}
-.my-hover:hover {
-  color: white;
-  background-color: #004182;
 }

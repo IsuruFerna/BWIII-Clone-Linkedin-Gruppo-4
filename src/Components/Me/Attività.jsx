@@ -20,7 +20,7 @@ const Attività = () => {
                       <Button
                         size="sm"
                         className="post"
-                        variant="rounded-pill me-3"
+                        variant="rounded-pill me-3 fix-hover"
                       >
                         Crea un post
                       </Button>
@@ -30,10 +30,7 @@ const Attività = () => {
                     </Link>
                   </div>
                 </div>
-                <Card.Subtitle
-                  className="mb-2 personal-link d-inline-block "
-                  id="followers"
-                >
+                <Card.Subtitle className="mb-2" id="followers">
                   1 follower
                 </Card.Subtitle>
                 <div>

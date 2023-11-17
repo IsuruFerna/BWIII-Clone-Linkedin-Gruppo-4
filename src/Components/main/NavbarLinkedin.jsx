@@ -50,7 +50,7 @@ function NavbarLinkedin({ onSearch, handleShow }) {
             </Form.Group>
           </Form>
           <div className="d-flex align-items-center">
-            <Link to="/home" className="text-decoration-none">
+            <Link to="/" className="text-decoration-none">
               <HomeNav />
             </Link>
 
