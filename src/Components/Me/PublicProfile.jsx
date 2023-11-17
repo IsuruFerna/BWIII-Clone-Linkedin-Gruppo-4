@@ -4,7 +4,7 @@ import "./PublicProfile.css";
 
 const PublicProfile = () => {
   return (
-    <Container className="mb-3 d-flex flex-column border shadow rounded bg-white">
+    <Container className="mb-3 d-flex mx-1 flex-column border shadow rounded bg-white">
       <div>
         <div className="fw-bold d-flex justify-content-between mt-2">
           <div>Lingua del profilo</div>
