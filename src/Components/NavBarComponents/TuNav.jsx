@@ -13,7 +13,7 @@ const TuNav = () => {
           id="basic-nav-dropdown"
           className="mt-1 text-secondary"
         >
-          <Link to="/" className="nav-link p-0 m-0">
+          <Link to="/me" className="nav-link p-0 m-0">
             <h6 className="ms-3 mt-2 ">Account</h6>
           </Link>
 
