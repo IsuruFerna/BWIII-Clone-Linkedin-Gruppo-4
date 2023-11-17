@@ -14,7 +14,7 @@ const ExperienceModify = () => {
    const [showEditExperienceModal, setEditExperienceModal] = useState(false);
    const [showAddExperienceModal, setAddExperienceModal] = useState(false);
    const [showAddMediaLinkModal, setAddMediaLinkModal] = useState(false);
-   const [mediaForm, setMediaForm] = useState(null);
+   const [mediaForm, setMediaForm] = useState("");
 
    const handleEditExpClick = () => {
       setEditExperienceModal(true);
@@ -54,6 +54,7 @@ const ExperienceModify = () => {
                      </div>
 
                      <SingleExperienceModify
+                        setAddMediaLinkModal={setAddMediaLinkModal}
                         setMediaForm={setMediaForm}
                         mediaForm={mediaForm}
                         handleAddLinkClick={handleAddLinkClick}
@@ -70,6 +71,8 @@ const ExperienceModify = () => {
             showAddExperienceModal={showAddExperienceModal}
          />
          <AddMediaLink
+            mediaForm={mediaForm}
+            setAddMediaLinkModal={setAddMediaLinkModal}
             setMediaForm={setMediaForm}
             handleEditExpClick={handleEditExpClick}
             handleClose={handleClose}

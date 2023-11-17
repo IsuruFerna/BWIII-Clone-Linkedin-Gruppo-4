@@ -78,7 +78,13 @@ const SingleExperienceModify = ({
                            <h4 className="fs-5 mt-2 mb-0">{element.role}</h4>
                            <p className="mb-0">{element.company}</p>
                            <p className="mb-0 text-dark text-opacity-50 lh-sm">
-                              {element.startDate} &#8226; {element.endDate}
+                              {new Date(element.startDate).toLocaleString(
+                                 "it-IT"
+                              )}{" "}
+                              &#8226;{" "}
+                              {new Date(element.endDate).toLocaleString(
+                                 "it-IT"
+                              )}
                            </p>
                         </div>
                      </div>

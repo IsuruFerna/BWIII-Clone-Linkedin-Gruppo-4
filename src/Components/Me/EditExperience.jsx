@@ -27,6 +27,11 @@ const EditExperience = ({
    // save edits
    const handleSubmit = () => {
       let updatedFormData = { ...formData };
+
+      if (mediaForm) {
+         updatedFormData = { ...formData, mediaForm };
+      }
+
       // set initial date
       let initialDate = `${initialYear}-${initialMonth}-01`;
       initialDate = new Date(initialDate);
@@ -41,6 +46,7 @@ const EditExperience = ({
          updatedFormData.endDate = null;
       }
 
+      console.log("this is updated values form", updatedFormData);
       // modify data via put data
       fetch(
          `https://striveschool-api.herokuapp.com/api/profile/${formEditData.user}/experiences/${formEditData.id}`,
