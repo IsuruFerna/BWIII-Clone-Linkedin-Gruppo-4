@@ -29,7 +29,7 @@
 }
 /* RISORSE E ATTIVITà */
 .grigetto {
-  color: gray !important;
+  color: gray;
 }
 
 .my-card-footer {
@@ -126,4 +126,8 @@
 .my-hover:hover {
   color: white;
   background-color: #004182;
+}
+.underline-hover:hover {
+  text-decoration: underline;
+  color: #004182;
 }
