@@ -55,17 +55,17 @@ const Comment1 = () => {
 
   return (
     <section>
-      <div className="d-flex justify-content-around">
+      <div className="d-flex justify-content-around mt-1">
         <div className="d-flex align-items-center col smaller iconPost text-secondary ms-2">
           <HandThumbsUp className="me-1" /> Consiglia
         </div>
-        <div className="d-flex align-items-center col smaller iconPost text-secondary ms-2">
+        <div className="d-flex align-items-center col smaller iconPost text-secondary ms-1">
           <ChatText className="me-1" /> Commenta
         </div>
-        <div className="d-flex align-items-center col smaller iconPost text-secondary ms-2">
+        <div className="d-flex align-items-center col smaller iconPost text-secondary ms-1">
           <ArrowDownUp className="me-1" /> Diffondi il post
         </div>
-        <div className="d-flex align-items-center col smaller iconPost text-secondary ms-2">
+        <div className="d-flex align-items-center col smaller iconPost text-secondary ms-1">
           <SendFill className="me-1" /> Invia
         </div>
       </div>
@@ -94,7 +94,7 @@ const Comment1 = () => {
         <button
           variant="primary"
           // onClick={theComment}
-          className="bg-primary border border-0 rounded-4 mt-2 mb-2 text-white fs-7 fw-bold ms-1 ps-3 pb-1 pe-3"
+          className="bg-primary border border-0 rounded-4 mt-2 mb-2 text-white fs-7 fw-bold ms-5 ps-2 pb-1 pe-2"
         >
           Pubblica
         </button>
