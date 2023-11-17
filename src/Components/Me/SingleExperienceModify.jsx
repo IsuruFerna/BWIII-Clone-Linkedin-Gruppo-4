@@ -11,6 +11,9 @@ const SingleExperienceModify = ({
    showEditExperienceModal,
    handleClose,
    handleEditExpClick,
+   handleAddLinkClick,
+   mediaForm,
+   setMediaForm,
 }) => {
    const dispatch = useDispatch();
    const userFormReduxStore = useSelector((state) => state.user);
@@ -92,6 +95,9 @@ const SingleExperienceModify = ({
                );
             })}
          <EditExperience
+            setMediaForm={setMediaForm}
+            mediaForm={mediaForm}
+            handleAddLinkClick={handleAddLinkClick}
             handleClose={handleClose}
             showEditExperienceModal={showEditExperienceModal}
             formEditData={formEditData}
