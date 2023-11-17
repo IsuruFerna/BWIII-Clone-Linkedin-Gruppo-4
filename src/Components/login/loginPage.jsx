@@ -1,4 +1,4 @@
-import { Button, Col, Container, Form, InputGroup, Navbar, Row } from 'react-bootstrap'
+import { Button, Col, Container, Form, InputGroup, Modal, Navbar, Row } from 'react-bootstrap'
 import './loginPage.css'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -18,8 +18,12 @@ const Login=()=>{
       localStorage.setItem('password', password);
 
       if(email=== 'marco@outlook.it' && password=== 'isuruilrapinatore'){Navigate('/')}
+      if(email!== 'marco@outlook.it' && password!== 'isuruilrapinatore'){ alert("Credenziali errate. Si prega di riprovare.")}
   
     };
+
+
+
 
 return(
 <Container className="containerLogin ">
@@ -60,7 +64,7 @@ return(
           value={password} onChange={(e) => setPassword(e.target.value)}
           type='password'
         />
-        <Button className='buttInput text-primary' variant="outline-secondary" id="button-addon2">
+        <Button  className='buttInput text-primary' variant="outline-secondary" id="button-addon2">
           Mostra
         </Button>
       </InputGroup>
@@ -72,7 +76,7 @@ return(
     </Form>
    <Row><p className='d-flex justify-content-center mt-3'>oppure</p></Row> 
    <Row><p className='paragLogin'>Cliccando su “Continua”, accetti  <a className='ancoraLogin' href=" #">il Contratto di licenza</a> , <a className='ancoraLogin'  href="#">l’Informativa sulla privacy</a>  e <a className='ancoraLogin' href="#">l’Informativa sui cookie</a>  di LinkedIn.</p></Row> 
-   <Row><Button className='col-lg-6 col-md-9 col-sm-7 my-3 rounded-pill border-secondary text-secondary'><img className='logoGoogle' src='https://tse4.mm.bing.net/th?id=OIP.CgKRXkxzJnLtDG-qapK4owHaHa&pid=Api&P=0&h=180'></img>Continue with Google</Button></Row>
+   <Row><Button className='col-lg-6 col-md-9 col-sm-11 my-3 rounded-pill border-secondary text-secondary'><img className='logoGoogle' src='https://tse4.mm.bing.net/th?id=OIP.CgKRXkxzJnLtDG-qapK4owHaHa&pid=Api&P=0&h=180'></img>Continue with Google</Button></Row>
    <Row><Button  className='rounded-pill pt-2 pb-2  border-black bg-white text-black'>Non hai un account LinkedIn? Iscriviti ora</Button></Row>
 
 </Col>
