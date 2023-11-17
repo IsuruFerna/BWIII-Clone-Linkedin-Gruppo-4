@@ -22,7 +22,7 @@ const AllThePosts = ({ datas }) => {
   };
   useEffect(() => {
     myCommentsFetch();
-  }, []);
+  }, [comment.length]);
   return (
     <div>
       {datas.map((singleData) => {

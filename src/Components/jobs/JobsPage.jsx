@@ -9,14 +9,13 @@ import {
 } from "react-bootstrap";
 import {
   ArrowRight,
-  Bookmark,
   BookmarkFill,
   Clipboard2Check,
   FilePlayFill,
   GearFill,
-  List,
   ListTask,
 } from "react-bootstrap-icons";
+import FooterRight from "../Home/FooterRight";
 
 const JobsPage = ({ searchQuery }) => {
   const [jobsData, setJobsData] = useState([]);
@@ -180,6 +179,8 @@ const JobsPage = ({ searchQuery }) => {
                   </div>
                 </CardBody>
               </Card>
+              <div className="mt-4"></div>
+              <FooterRight />
             </Col>
           </Row>
         )}
