@@ -3,21 +3,28 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
+import { useRef } from "react";
 
 function AddMediaLink({
    handleEditExpClick,
    handleClose,
    handleAddLinkClick,
    showAddMediaLinkModal,
+   setMediaForm,
+   mediaForm,
 }) {
    //  const [show, setShow] = useState(false);
 
    //  const handleClose = () => setShow(false);
    //  const handleShow = () => setShow(true);
 
+   const formRef = useRef(null);
+
    const handleSubmit = (e) => {
       e.preventDefault();
-      console.log("this is form for media", e.target);
+      const formData = new FormData(formRef.current); // Using the ref to access the form
+      setMediaForm(formData);
+      console.log("Form data:", formData);
    };
 
    const handleAddLinkApply = (e) => {
@@ -26,12 +33,16 @@ function AddMediaLink({
       handleSubmit(e);
    };
 
+   const handleChange = (e) => {
+      setMediaForm(e.target.value);
+   };
+
    return (
       <>
-         <Button variant="primary" onClick={handleAddLinkClick}>
+         {/* <Button variant="primary" onClick={handleAddLinkClick}>
             Aggiungi un link
-         </Button>
-         <Form onSubmit={handleSubmit}>
+         </Button> */}
+         <Form onSubmit={handleSubmit} ref={formRef}>
             <Modal show={showAddMediaLinkModal} onHide={handleClose}>
                <Modal.Header closeButton>
                   <Modal.Title>Aggiungi un link</Modal.Title>
@@ -48,6 +59,8 @@ function AddMediaLink({
                         type="url"
                         required
                         name="image"
+                        value={mediaForm}
+                        onChange={handleChange}
                      />
                      <Button variant="outline-secondary" id="button-addon2">
                         Aggiungi
