@@ -6,12 +6,12 @@ import Satellite from "../../assets/icons8-satellite-16.png";
 const Risorse = () => {
   return (
     <>
-      <Container className="my-3">
+      <Container fluid className="my-3">
         <Row>
           <Col className="col-12">
             <Card className="shadow">
               <Card.Body className="p-0">
-                <div className="px-3 pt-3 ">
+                <div className="px-3 pt-4 ">
                   <Card.Title>Risorse</Card.Title>
                 </div>
                 <Card.Subtitle className="mb-2 text-muted px-3">
@@ -30,9 +30,11 @@ const Risorse = () => {
                           />
                         </div>
                         <div>
-                          <h6 className="mt-1">
+                          <h6 className="my-1">
                             Modalità creazione di contenuti{" "}
-                            <span id="no">No</span>
+                            <span id="no" className="py-0">
+                              No
+                            </span>
                           </h6>
                           <p>
                             Fatti scoprire, metti in risalto i contenuti sul tuo
@@ -59,7 +61,9 @@ const Risorse = () => {
                 </Container>
               </Card.Body>
               <Card.Footer className="my-card-footer">
-                <b className="grigetto">Mostra tutte le risorse (5)</b>{" "}
+                <b className="grigetto fw-semibold ">
+                  Mostra tutte le risorse (5)
+                </b>{" "}
                 <ArrowRight />
               </Card.Footer>
             </Card>

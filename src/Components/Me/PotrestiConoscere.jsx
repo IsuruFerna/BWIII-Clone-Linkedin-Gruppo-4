@@ -28,13 +28,13 @@ const PotrestiConoscere = () => {
     getPersons();
   }, []);
   return (
-    <div className="d-flex flex-row flex-xl-column mb-5">
+    <div className="d-flex flex-xl-column mb-5">
       <Container
         fluid
         className="border bg-white shadow rounded mb-3 mx-1 h-100 d-flex flex-column"
       >
-        <div>
-          <h5 className="fw-bold smaller mt-2 mb-4 fs-6">
+        <div className="mt-4">
+          <h5 className="fw-bold smaller mb-4 fs-6">
             Altri profili consultati
           </h5>
         </div>
@@ -51,11 +51,11 @@ const PotrestiConoscere = () => {
         </div>
       </Container>
       <Container fluid className="border bg-white mx-1 shadow rounded">
-        <div className="d-flex flex-column my-2">
-          <h5 className="fw-bold smaller fs-6">
+        <div className="d-flex flex-column mt-4">
+          <h5 className="fw-bold smaller fs-6 mb-1">
             Persone che potresti conoscere
           </h5>
-          <span className="color-secondary extrasmall">
+          <span className="color-secondary extrasmall mb-1">
             Dalla tua scuola o università
           </span>
         </div>

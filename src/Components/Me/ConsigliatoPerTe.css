@@ -40,20 +40,6 @@
   cursor: pointer;
 }
 
-/* ATTIVITà E INFORMAZIONI */
-.pencil {
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  border-radius: 999px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.pencil:hover {
-  background-color: rgb(222, 219, 219);
-}
-
 /* ATTIVIRà */
 #followers {
   color: rgb(0, 132, 255);
@@ -111,4 +97,13 @@
 }
 .pointer {
   cursor: pointer;
+}
+/* Competenze */
+.javascript {
+  color: rgba(0, 0, 0, 0.65);
+}
+
+/* Interessi */
+#aziende {
+  width: 57px !important;
 }
