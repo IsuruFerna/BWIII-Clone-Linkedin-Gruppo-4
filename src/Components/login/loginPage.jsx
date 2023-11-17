@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom';
 const Login=()=>{
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [passwordVisible, setPasswordVisible] = useState(false);
 
     const Navigate= useNavigate()
   
@@ -21,7 +22,9 @@ const Login=()=>{
       if(email!== 'marco@outlook.it' && password!== 'isuruilrapinatore'){ alert("Credenziali errate. Si prega di riprovare.")}
   
     };
-
+    const togglePasswordVisibility = () => {
+        setPasswordVisible(!passwordVisible);
+      };
 
 
 
@@ -61,11 +64,13 @@ return(
         <Form.Control
         className='formInput border-end-0'
           aria-describedby="basic-addon2"
-          value={password} onChange={(e) => setPassword(e.target.value)}
-          type='password'
+          value={password}
+        
+          onChange={((e) => {setPassword(e.target.value);})}
+          type={passwordVisible ? 'text' : 'password'}
         />
-        <Button  className='buttInput text-primary' variant="outline-secondary" id="button-addon2">
-          Mostra
+        <Button onClick={togglePasswordVisibility}  className='buttInput text-primary' variant="outline-secondary" id="button-addon2">
+          {passwordVisible ? 'nascondi' : 'mostra' }
         </Button>
       </InputGroup>
       <Form.Text>
