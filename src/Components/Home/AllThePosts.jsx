@@ -16,17 +16,15 @@ const AllThePosts = ({ datas }) => {
         } else throw new Error("Error while getting the comments");
       })
       .then((data2) => {
-        console.log(data2);
         setComment(data2);
       })
       .catch((err) => console.log("Error: ", err));
   };
   useEffect(() => {
     myCommentsFetch();
-  }, [comment]);
+  }, []);
   return (
     <div>
-      {console.log(datas)}
       {datas.map((singleData) => {
         return (
           <SinglePost

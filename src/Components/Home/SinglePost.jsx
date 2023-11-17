@@ -37,12 +37,17 @@ const SinglePost = ({ data, comment }) => {
       </section>
       <section>
         {comment
-          .filter((allComments) => allComments.elementId === data._id)
-          .map((singleComment) => {
-            return (
-              <SingleComment key={singleComment._id} comment={singleComment} />
-            );
-          })}
+          ? comment
+              .filter((allComments) => allComments.elementId === data._id)
+              .map((singleComment) => {
+                return (
+                  <SingleComment
+                    key={singleComment._id}
+                    comment={singleComment}
+                  />
+                );
+              })
+          : ""}
       </section>
       <section>
         <AddComment dataId={data._id} />

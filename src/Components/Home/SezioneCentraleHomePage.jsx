@@ -27,7 +27,7 @@ const SezioneCentraleHomePage = () => {
   };
   useEffect(() => {
     myPostsFetch();
-  }, [post]);
+  }, []);
   return (
     <div>
       <AddPost />
