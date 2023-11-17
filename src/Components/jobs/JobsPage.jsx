@@ -17,6 +17,7 @@ import {
   List,
   ListTask,
 } from "react-bootstrap-icons";
+import { Link } from "react-router-dom";
 
 const JobsPage = ({ searchQuery }) => {
   const [jobsData, setJobsData] = useState([]);
@@ -51,46 +52,51 @@ const JobsPage = ({ searchQuery }) => {
         <h4 className="my-3">Risultati della ricerca:</h4>
         {jobsData.data && (
           <Row>
-            <Col className="col col-3">
+            <Col className="col col-md-3 col-12 mb-3">
               <Card className="shadow">
-                <CardBody>
-                  <div className="d-flex align-items-center mb-3 pointer">
+                <CardBody className="my">
+                  <div className="d-flex justify-content-center  align-items-center mb-3 pointer">
                     <div className="me-2">
-                      <BookmarkFill className="fs-4"></BookmarkFill>
+                      <BookmarkFill className="fs-4 "></BookmarkFill>
                     </div>
                     <p className="mb-0 fw-semibold ">
                       Le mie offerte di lavoro
                     </p>
+                    <div className="flex-grow-1 d-none d-md-block "></div>
                   </div>
-                  <div className="d-flex align-items-center mb-3 pointer">
+                  <div className="d-flex justify-content-center  align-items-center mb-3 pointer">
                     <div className="me-2">
                       <ListTask className="fs-4"></ListTask>
                     </div>
                     <p className="mb-0 fw-semibold ">Preferenze</p>
+                    <div className="flex-grow-1 d-none d-md-block "></div>
                   </div>
-                  <div className="d-flex align-items-center mb-3 pointer">
+                  <div className="d-flex justify-content-center  align-items-center mb-3 pointer">
                     <div className="me-2">
                       <Clipboard2Check className="fs-4"></Clipboard2Check>
                     </div>
                     <p className="mb-0 fw-semibold ">
                       Valutazioni delle competenze
                     </p>
+                    <div className="flex-grow-1 d-none d-md-block "></div>
                   </div>
-                  <div className="d-flex align-items-center mb-3 pointer">
+                  <div className="d-flex  justify-content-center align-items-center mb-3 pointer">
                     <div className="me-2">
                       <FilePlayFill className="fs-4"></FilePlayFill>
                     </div>
                     <p className="mb-0 fw-semibold ">
                       Indicazioni per chi cerca lavoro
                     </p>
+                    <div className="flex-grow-1 d-none d-md-block "></div>
                   </div>
-                  <div className="d-flex align-items-center pointer">
+                  <div className="d-flex  justify-content-center justify-content-md-start  align-items-center pointer">
                     <div className="me-2">
                       <GearFill className="fs-4"></GearFill>
                     </div>
                     <p className="mb-0 fw-semibold ">
                       Impostazioni di candidatura
                     </p>
+                    <div className="flex-grow-1 d-none d-md-block "></div>
                   </div>
                 </CardBody>
               </Card>
@@ -119,8 +125,22 @@ const JobsPage = ({ searchQuery }) => {
                   <Card key={singleJob._id} className="col col-12 mb-3 shadow">
                     {/* <Card.Img variant="top" src="holder.js/100px180?text=Image cap" /> */}
                     <Card.Body>
-                      <Card.Title>
-                        <b>{singleJob.title}</b>
+                      <Card.Title className="d-flex justify-content-between align-items-center">
+                        <div>
+                          <Link
+                            to={singleJob.url}
+                            className="text-decoration-none"
+                          >
+                            <b>{singleJob.title}</b>
+                          </Link>
+                        </div>
+                        <div>
+                          <img
+                            className="job-logo"
+                            src="https://st4.depositphotos.com/17797916/19996/v/450/depositphotos_199966220-stock-illustration-job-target-logo-icon-design.jpg"
+                            alt="mani in alto"
+                          />
+                        </div>
                       </Card.Title>
                       <Card.Text>
                         {/* <div id="myDiv"></div> */}
@@ -149,7 +169,7 @@ const JobsPage = ({ searchQuery }) => {
                   </Card>
                 ))}
             </Col>
-            <Col className="col col-3 md-block">
+            <Col className="col col-3 md-block d-none d-md-block ">
               <Card className="shadow">
                 <CardBody>
                   <div className="d-flex flex-column  justify-content-center mb-3">
